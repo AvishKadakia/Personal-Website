@@ -1,0 +1,274 @@
+@font-face {
+  font-family: MontserratRegular;
+  src: url("../Fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url("../Fonts/Montserrat/Montserrat-Medium.ttf");
+}
+
+@font-face {
+  font-family: MontserratThin;
+  src: url("../Fonts/Montserrat/Montserrat-Thin.ttf");
+}
+
+@font-face {
+  font-family: MontserratLight;
+  src: url("../Fonts/Montserrat/Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-family: MontserratBold;
+  src: url("../Fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: SofiaPro-Bold;
+  src: url("../Fonts/Sofia-Pro/SofiaPro-Bold.ttf");
+}
+
+@font-face {
+  font-family: SofiaPro-Regular;
+  src: url("../Fonts/Sofia-Pro/Sofia-Pro-Regular.ttf");
+}
+
+@font-face {
+  font-family: SofiaPro-SemiBold;
+  src: url("../Fonts/Sofia-Pro/SofiaPro-SemiBold.ttf");
+}
+
+.skillz-outer-container {
+  position: relative;
+  width: 100%;
+  height: 21.35417vw;
+  margin-bottom: 5.20833vw;
+}
+
+.skillz-outer-container .skillz-container {
+  position: relative;
+  width: 30vw;
+  height: 100%;
+}
+
+.skillz-outer-container .skillz-container .skillz-circle {
+  position: absolute;
+  width: 16.14583vw;
+  height: 16.14583vw;
+  background-color: #1a202b;
+  -webkit-animation: rotate 30s linear infinite;
+          animation: rotate 30s linear infinite;
+  z-index: -200;
+}
+
+.skillz-outer-container .skillz-container .skillz-image {
+  position: relative;
+  width: 17.1875vw;
+  height: auto;
+  margin: 0vw auto;
+  margin-top: 1.04167vw;
+}
+
+.skillz-outer-container .skillz-container h3 {
+  position: relative;
+  color: #fff;
+  font-family: SofiaPro-SemiBold;
+  margin-top: 0vw;
+  font-weight: normal;
+  font-size: 4.375vw;
+  line-height: 4.6875vw;
+  letter-spacing: -1px;
+}
+
+.skillz-outer-container .skillz-container h4 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: SofiaPro-Bold;
+  margin-top: -3.38542vw;
+  margin-bottom: 3.64583vw;
+  letter-spacing: 0.20833vw;
+  text-transform: uppercase;
+  color: #01b9c2;
+  font-size: 1.04167vw;
+}
+
+.skillz-outer-container .skillz-container p {
+  position: relative;
+  margin: 0px auto;
+  color: #7c8898;
+  text-align: center;
+  font-family: SofiaPro-Regular;
+  font-weight: normal;
+  font-size: 1.30208vw;
+  line-height: 2.29167vw;
+  margin-top: -1.5625vw;
+  width: 90%;
+}
+
+.skillz-outer-container .left {
+  float: left;
+}
+
+.skillz-outer-container .left .skillz-circle {
+  float: left;
+  left: 0px;
+}
+
+.skillz-outer-container .left .skillz-image {
+  float: left;
+}
+
+.skillz-outer-container .left h3 {
+  float: left;
+  text-align: left;
+}
+
+.skillz-outer-container .left h4 {
+  float: left;
+  text-align: left;
+}
+
+.skillz-outer-container .left p {
+  float: left;
+  text-align: left;
+}
+
+.skillz-outer-container .right {
+  float: right;
+}
+
+.skillz-outer-container .right .skillz-circle {
+  float: right;
+  right: 0px;
+}
+
+.skillz-outer-container .right .skillz-image {
+  float: right;
+}
+
+.skillz-outer-container .right h3 {
+  float: right;
+  text-align: right;
+}
+
+.skillz-outer-container .right h4 {
+  float: right;
+  text-align: right;
+}
+
+.skillz-outer-container .right p {
+  float: right;
+  text-align: right;
+}
+
+@media screen and (max-width: 800px) {
+  .skillz-outer-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 12.5vw;
+    z-index: 300;
+  }
+  .skillz-outer-container .skillz-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 15vw;
+  }
+  .skillz-outer-container .skillz-container .skillz-circle {
+    position: absolute;
+    width: 38.75vw;
+    height: 38.75vw;
+    background-color: #1a202b;
+    -webkit-animation: rotate 30s linear infinite;
+            animation: rotate 30s linear infinite;
+    z-index: -200;
+  }
+  .skillz-outer-container .skillz-container .skillz-image {
+    position: relative;
+    width: 41.25vw;
+    height: auto;
+    margin: 0vw auto;
+    margin-top: 2.5vw;
+  }
+  .skillz-outer-container .skillz-container h3 {
+    position: relative;
+    color: #fff;
+    font-family: SofiaPro-SemiBold;
+    margin-top: 0vw;
+    font-weight: normal;
+    font-size: 11.75vw;
+    line-height: 11.25vw;
+    letter-spacing: -1px;
+  }
+  .skillz-outer-container .skillz-container h4 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: SofiaPro-Bold;
+    margin-top: -8.125vw;
+    margin-bottom: 8.75vw;
+    letter-spacing: 0.5vw;
+    text-transform: uppercase;
+    color: #01b9c2;
+    font-size: 2.5vw;
+  }
+  .skillz-outer-container .skillz-container p {
+    position: relative;
+    margin: 0px auto;
+    color: #7c8898;
+    text-align: center;
+    font-family: SofiaPro-Regular;
+    font-weight: normal;
+    font-size: 4.125vw;
+    line-height: 6.875vw;
+    margin-top: -3.75vw;
+    width: 100%;
+  }
+  .skillz-outer-container .left {
+    float: left;
+  }
+  .skillz-outer-container .left .skillz-circle {
+    float: left;
+    left: 0px;
+  }
+  .skillz-outer-container .left .skillz-image {
+    float: left;
+  }
+  .skillz-outer-container .left h3 {
+    float: left;
+    text-align: left;
+  }
+  .skillz-outer-container .left h4 {
+    float: left;
+    text-align: left;
+  }
+  .skillz-outer-container .left p {
+    float: left;
+    text-align: left;
+  }
+  .skillz-outer-container .right {
+    float: right;
+  }
+  .skillz-outer-container .right .skillz-circle {
+    float: right;
+    right: 0px;
+  }
+  .skillz-outer-container .right .skillz-image {
+    float: right;
+  }
+  .skillz-outer-container .right h3 {
+    float: right;
+    text-align: right;
+  }
+  .skillz-outer-container .right h4 {
+    float: right;
+    text-align: right;
+  }
+  .skillz-outer-container .right p {
+    float: right;
+    text-align: right;
+  }
+}
+/*# sourceMappingURL=Skillz.css.map */

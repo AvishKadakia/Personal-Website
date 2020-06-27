@@ -1,0 +1,32 @@
+@import "../../CSS/color.scss";
+@import "../../CSS/font.scss";
+$desk: 100/1920;
+$mul: 100/800;
+.footer-container {
+  margin-top: 500 * $desk + vw;
+  width: 100vw;
+  height: 85 * $desk + vw;
+  background-color: $theme;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .copyright-text {
+    text-transform: uppercase;
+    font-family: MontserratRegular;
+    font-size: 16 * $desk + vw;
+    letter-spacing: 1 * $desk + vw;
+    font-weight: bold;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 800px) {
+  .footer-container {
+    padding: 40 * $mul + vw;
+    margin-top: 300 * $mul + vw;
+
+    .copyright-text {
+      font-size: 16 * $mul + vw;
+      letter-spacing: 1 * $mul + vw;
+    }
+  }
+}

@@ -1,0 +1,223 @@
+@import "../../CSS/color.scss";
+@import "../../CSS/font.scss";
+$desk: 100/1920;
+$mul: 100/800;
+.skillz-outer-container {
+  position: relative;
+  width: 100%;
+  height: 410 * $desk + vw;
+  margin-bottom: 100 * $desk + vw;
+  //background-color: red;
+  .skillz-container {
+    position: relative;
+    width: 30vw;
+    height: 100%;
+    .skillz-circle {
+      position: absolute;
+      width: 310 * $desk + vw;
+      height: 310 * $desk + vw;
+      background-color: #1a202b;
+      animation: rotate 30s linear infinite;
+      z-index: -200;
+    }
+    .skillz-image {
+      position: relative;
+      width: 330 * $desk + vw;
+      height: auto;
+      margin: 0 * $desk + vw auto;
+      margin-top: 20 * $desk + vw;
+      // margin-left: -150 * $desk + vw;
+    }
+    h3 {
+      position: relative;
+      color: #fff;
+      font-family: SofiaPro-SemiBold;
+      margin-top: 0 * $desk + vw;
+      font-weight: normal;
+      font-size: 84 * $desk + vw;
+      line-height: 90 * $desk + vw;
+      letter-spacing: -1px;
+    }
+    h4 {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      font-family: SofiaPro-Bold;
+      margin-top: -65 * $desk + vw;
+
+      margin-bottom: 70 * $desk + vw;
+      letter-spacing: 4 * $desk + vw;
+      text-transform: uppercase;
+      color: #01b9c2;
+      font-size: 20 * $desk + vw;
+    }
+    p {
+      position: relative;
+      margin: 0px auto;
+      color: #7c8898;
+      text-align: center;
+      font-family: SofiaPro-Regular;
+      font-weight: normal;
+      font-size: 25 * $desk + vw;
+      line-height: 44 * $desk + vw;
+      margin-top: -30 * $desk + vw;
+      width: 90%;
+    }
+  }
+  .left {
+    float: left;
+    .skillz-circle {
+      float: left;
+      left: 0px;
+    }
+    .skillz-image {
+      float: left;
+    }
+    h3 {
+      float: left;
+      text-align: left;
+    }
+    h4 {
+      float: left;
+      text-align: left;
+    }
+    p {
+      float: left;
+      text-align: left;
+    }
+  }
+  .right {
+    float: right;
+    .skillz-circle {
+      float: right;
+      right: 0px;
+    }
+    .skillz-image {
+      float: right;
+    }
+    h3 {
+      float: right;
+      text-align: right;
+    }
+    h4 {
+      float: right;
+      text-align: right;
+    }
+    p {
+      float: right;
+      text-align: right;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .skillz-outer-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 100 * $mul + vw;
+    z-index: 300;
+    .skillz-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 120 * $mul + vw;
+
+      .skillz-circle {
+        position: absolute;
+        width: 310 * $mul + vw;
+        height: 310 * $mul + vw;
+        background-color: #1a202b;
+        animation: rotate 30s linear infinite;
+        z-index: -200;
+      }
+      .skillz-image {
+        position: relative;
+        width: 330 * $mul + vw;
+        height: auto;
+        margin: 0 * $mul + vw auto;
+        margin-top: 20 * $mul + vw;
+        // margin-left: -150 * $mul + vw;
+      }
+      h3 {
+        position: relative;
+        color: #fff;
+        font-family: SofiaPro-SemiBold;
+        margin-top: 0 * $mul + vw;
+        font-weight: normal;
+        font-size: 94 * $mul + vw;
+        line-height: 90 * $mul + vw;
+        letter-spacing: -1px;
+      }
+      h4 {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        font-family: SofiaPro-Bold;
+        margin-top: -65 * $mul + vw;
+
+        margin-bottom: 70 * $mul + vw;
+        letter-spacing: 4 * $mul + vw;
+        text-transform: uppercase;
+        color: #01b9c2;
+        font-size: 20 * $mul + vw;
+      }
+      p {
+        position: relative;
+        margin: 0px auto;
+        color: #7c8898;
+        text-align: center;
+        font-family: SofiaPro-Regular;
+        font-weight: normal;
+        font-size: 33 * $mul + vw;
+        line-height: 55 * $mul + vw;
+        margin-top: -30 * $mul + vw;
+        width: 100%;
+      }
+    }
+    .left {
+      float: left;
+      .skillz-circle {
+        float: left;
+        left: 0px;
+      }
+      .skillz-image {
+        float: left;
+      }
+      h3 {
+        float: left;
+        text-align: left;
+      }
+      h4 {
+        float: left;
+        text-align: left;
+      }
+      p {
+        float: left;
+        text-align: left;
+      }
+    }
+    .right {
+      float: right;
+      .skillz-circle {
+        float: right;
+        right: 0px;
+      }
+      .skillz-image {
+        float: right;
+      }
+      h3 {
+        float: right;
+        text-align: right;
+      }
+      h4 {
+        float: right;
+        text-align: right;
+      }
+      p {
+        float: right;
+        text-align: right;
+      }
+    }
+  }
+}

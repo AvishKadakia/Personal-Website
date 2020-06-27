@@ -1,0 +1,88 @@
+@import "../../CSS/color.scss";
+@import "../../CSS/font.scss";
+$desk: 100/1920;
+$mul: 100/800;
+.coming-soon-container {
+  position: absolute;
+  overflow-x: hidden;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  .background {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: #00e5ea;
+    .line {
+      float: left;
+      margin-left: 16.5vw;
+      width: 1.5 * $desk + vw;
+      height: 100%;
+      background-color: #1c2330;
+      opacity: 0.1;
+    }
+    z-index: -2000;
+  }
+
+  .circle-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    .splatter {
+      position: absolute;
+      margin: -20 * $desk + vw auto;
+      width: 550 * $desk + vw;
+      height: 520 * $desk + vw;
+      z-index: -10;
+    }
+    .circle-big {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0px auto;
+      width: 900 * $desk + vw;
+      height: 900 * $desk + vw;
+
+      margin-top: -50 * $desk + vw;
+      z-index: 0;
+      .circle-small {
+        position: absolute;
+        animation: rotate 30s linear infinite;
+        width: 350 * $desk + vw;
+        height: 350 * $desk + vw;
+        background-color: #121822;
+        z-index: -5;
+        margin-left: -50 * $desk + vw;
+      }
+    }
+
+    .heading-container {
+      position: absolute;
+      margin: 0 * $desk + vw auto;
+      z-index: 21;
+      .type-wrap {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        font-size: 9vw;
+        font-family: "SofiaPro-Bold";
+        font-weight: normal;
+        letter-spacing: -6 * $desk + vw;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+      }
+      /* the above is for styling puposes only */
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .coming-soon-container {
+  }
+}

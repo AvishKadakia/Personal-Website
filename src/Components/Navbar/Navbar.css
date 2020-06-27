@@ -1,0 +1,554 @@
+@font-face {
+  font-family: MontserratRegular;
+  src: url("../Fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url("../Fonts/Montserrat/Montserrat-Medium.ttf");
+}
+
+@font-face {
+  font-family: MontserratThin;
+  src: url("../Fonts/Montserrat/Montserrat-Thin.ttf");
+}
+
+@font-face {
+  font-family: MontserratLight;
+  src: url("../Fonts/Montserrat/Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-family: MontserratBold;
+  src: url("../Fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: SofiaPro-Bold;
+  src: url("../Fonts/Sofia-Pro/SofiaPro-Bold.ttf");
+}
+
+@font-face {
+  font-family: SofiaPro-Regular;
+  src: url("../Fonts/Sofia-Pro/Sofia-Pro-Regular.ttf");
+}
+
+@font-face {
+  font-family: SofiaPro-SemiBold;
+  src: url("../Fonts/Sofia-Pro/SofiaPro-SemiBold.ttf");
+}
+
+.navigation-container .navbar .leftBar {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 4.94792vw;
+  background-color: #1a202b;
+  z-index: 2000;
+}
+
+.navigation-container .navbar .leftBar .navLink {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: fixed;
+  top: 26.04167vw;
+  left: -3.90625vw;
+  width: 13.02083vw;
+}
+
+.navigation-container .navbar .leftBar .navLink a {
+  font-family: SofiaPro-bold;
+  font-weight: normal;
+  font-size: 1.35417vw;
+  display: block;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.navigation-container .navbar .leftBar .left-navLink.active a {
+  color: #585f6d;
+  text-decoration: line-through;
+}
+
+.navigation-container .navbar .leftBar .copyright {
+  position: fixed;
+  bottom: 6.77083vw;
+  left: -5.20833vw;
+  width: 15.625vw;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.navigation-container .navbar .leftBar .copyright h4 {
+  color: #4f5765;
+  font-family: SofiaPro-Regular;
+  font-weight: normal;
+  text-align: right;
+  font-size: 1.14583vw;
+}
+
+.navigation-container .navbar .rightBar {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 4.94792vw;
+  background-color: #1a202b;
+  z-index: 2000;
+}
+
+.navigation-container .navbar .rightBar .logo {
+  position: fixed;
+  height: 1.82292vw;
+  width: 2.34375vw;
+  top: 1.5625vw;
+  left: 1.14583vw;
+  z-index: 2005;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .hamburger {
+  position: absolute;
+  top: 0.52083vw;
+  right: 0.26042vw;
+  height: 4.42708vw;
+  width: 4.42708vw;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .hamburger .bubble-wrap {
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 2005;
+  cursor: pointer;
+  -webkit-transform: scale(1);
+  -webkit-transition: all 0.3s ease-out;
+  display: block;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .hamburger .bubble-wrap .bar {
+  background-color: #fff;
+  height: 3px;
+  border-radius: 0.26042vw;
+  right: 1.19792vw;
+  top: 1.40625vw;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .hamburger .bubble-wrap .first {
+  position: absolute;
+  width: 50%;
+  -webkit-transition: all 0.2s ease-out;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .hamburger .bubble-wrap .first.active {
+  margin-top: 0.36458vw;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: all 0.2s ease-out;
+  -webkit-transition-delay: 0.4s;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .hamburger .bubble-wrap .second {
+  margin-top: 8px;
+  width: 50%;
+  position: absolute;
+  -webkit-transition: all 0.2s ease-out;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .hamburger .bubble-wrap .second.active {
+  opacity: 0;
+  margin-top: 0.36458vw;
+  -webkit-transition: all 0.2s ease-out;
+  -webkit-transition-delay: 0.4s;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .hamburger .bubble-wrap .third {
+  margin-top: 16px;
+  width: 25%;
+  position: absolute;
+  -webkit-transition: all 0.2s ease-out;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .hamburger .bubble-wrap .third.active {
+  margin-top: 0.36458vw;
+  width: 50%;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: all 0.2s ease-out;
+  -webkit-transition-delay: 0.4s;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .hamburger .bubble-wrap.active {
+  display: none;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .hamburger .bubble {
+  height: 100%;
+  width: 100%;
+  background-color: #1a202b;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-transform: scale(1);
+  -webkit-transition: all 0.3s ease-out;
+  z-index: 2004;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .hamburger .bubble.active {
+  -webkit-transform: scale(100);
+  -webkit-transition: all 0.6s ease-out;
+  -webkit-transition-delay: 0.4s;
+  background-color: #1a202b;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .hamburger .bubbleback {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-transform: scale(1);
+  opacity: 1;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .hamburger .bubbleback.active {
+  -webkit-transform: scale(1.5);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .menu-container {
+  position: fixed;
+  top: 18.48958vw;
+  left: 14.58333vw;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0s ease-in;
+  transition: all 0s ease-in;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  z-index: 2006;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .menu-container .nav-column {
+  float: left;
+  margin-right: 6.77083vw;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .menu-container .nav-column .nav-title {
+  font-family: SofiaPro-Bold;
+  text-align: left;
+  display: block;
+  margin-bottom: 1.82292vw;
+  font-size: 1.14583vw;
+  letter-spacing: 0.20833vw;
+  color: #01b9c2;
+  text-transform: uppercase;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .menu-container .nav-column .nav-item a {
+  font-family: SofiaPro-regular;
+  text-align: left;
+  margin-bottom: 1.5625vw;
+  display: block;
+  font-size: 2.1875vw;
+  letter-spacing: 0.05208vw;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .menu-container .nav-column .nav-item.active a {
+  color: #585f6d;
+  text-decoration: line-through;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .menu-container .double-column {
+  width: 28.64583vw;
+  height: auto;
+}
+
+.navigation-container .navbar .rightBar .navbar-container .menu-container.active {
+  visibility: visible;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  opacity: 1;
+}
+
+.navigation-container .navbar .rightBar .navLink {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: absolute;
+  top: 21.61458vw;
+  right: -4.16667vw;
+  width: 13.02083vw;
+}
+
+.navigation-container .navbar .rightBar .navLink a {
+  font-family: SofiaPro-bold;
+  font-weight: normal;
+  font-size: 1.35417vw;
+  display: block;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.navigation-container .navbar .rightBar .right-navLink.active a {
+  color: #585f6d;
+  text-decoration: line-through;
+}
+
+.navigation-container .navbar .rightBar .social-icon-container {
+  position: absolute;
+  bottom: 4vh;
+  right: 1.30208vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.navigation-container .navbar .rightBar .social-icon-container .social-media-icon {
+  width: 2.08333vw;
+  height: auto;
+  float: left;
+  margin-top: 0.36458vw;
+}
+
+@media screen and (max-width: 800px) {
+  .navigation-container .navbar .leftBar {
+    background-color: transparent;
+  }
+  .navigation-container .navbar .leftBar .navLink {
+    display: none;
+  }
+  .navigation-container .navbar .leftBar .copyright {
+    position: fixed;
+    bottom: 9vh;
+    left: -13.75vw;
+    width: 37.5vw;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .navigation-container .navbar .leftBar .copyright h4 {
+    color: #4f5765;
+    font-size: 3.5vw;
+  }
+  .navigation-container .navbar .rightBar {
+    background-color: transparent;
+  }
+  .navigation-container .navbar .rightBar .logo {
+    position: fixed;
+    top: 2.5vw;
+    left: 2.125vw;
+    z-index: 2005;
+    background-color: #1a202b;
+    height: 15vw;
+    width: 15vw;
+    border-radius: 50%;
+    padding: 4.375vw;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .hamburger {
+    position: absolute;
+    top: 2.5vw;
+    right: 2.125vw;
+    height: 15vw;
+    width: 15vw;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .hamburger .bubble-wrap {
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 2005;
+    cursor: pointer;
+    -webkit-transform: scale(1);
+    -webkit-transition: all 0.3s ease-out;
+    display: block;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .hamburger .bubble-wrap .bar {
+    background-color: #fff;
+    height: 3px;
+    border-radius: 0.625vw;
+    right: 4.125vw;
+    top: 5.25vw;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .hamburger .bubble-wrap .first {
+    position: absolute;
+    width: 50%;
+    -webkit-transition: all 0.2s ease-out;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .hamburger .bubble-wrap .first.active {
+    margin-top: 0.875vw;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all 0.2s ease-out;
+    -webkit-transition-delay: 0.4s;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .hamburger .bubble-wrap .second {
+    margin-top: 8px;
+    width: 50%;
+    position: absolute;
+    -webkit-transition: all 0.2s ease-out;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .hamburger .bubble-wrap .second.active {
+    opacity: 0;
+    margin-top: 0.875vw;
+    -webkit-transition: all 0.2s ease-out;
+    -webkit-transition-delay: 0.4s;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .hamburger .bubble-wrap .third {
+    margin-top: 16px;
+    width: 25%;
+    position: absolute;
+    -webkit-transition: all 0.2s ease-out;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .hamburger .bubble-wrap .third.active {
+    margin-top: 0.875vw;
+    width: 50%;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transition: all 0.2s ease-out;
+    -webkit-transition-delay: 0.4s;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .hamburger .bubble-wrap.active {
+    display: none;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .hamburger .bubble {
+    height: 100%;
+    width: 100%;
+    background-color: #1a202b;
+    position: absolute;
+    border-radius: 50%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    z-index: 2004;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .hamburger .bubble.active {
+    -webkit-transform: scale(100);
+            transform: scale(100);
+    -webkit-transition: all 1s ease-in;
+    transition: all 1s ease-in;
+    background-color: #1a202b;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .hamburger .bubbleback {
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    border-radius: 50%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .hamburger .bubbleback.active {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .menu-container {
+    position: fixed;
+    top: 31.875vw;
+    left: 18.75vw;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0s ease-in;
+    transition: all 0s ease-in;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+    z-index: 2006;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .menu-container .nav-column {
+    float: left;
+    margin-right: 16.25vw;
+    margin-bottom: 7.5vw;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .menu-container .nav-column .nav-title {
+    font-family: SofiaPro-Bold;
+    text-align: left;
+    display: block;
+    margin-bottom: 3.125vw;
+    font-size: 2.75vw;
+    letter-spacing: 0.5vw;
+    color: #01b9c2;
+    text-transform: uppercase;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .menu-container .nav-column .nav-item a {
+    font-family: SofiaPro-regular;
+    text-align: left;
+    margin-bottom: 3.75vw;
+    display: block;
+    font-size: 5.25vw;
+    letter-spacing: 0.125vw;
+    color: #fff;
+    text-decoration: underline;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .menu-container .nav-column .nav-item.active a {
+    color: #585f6d;
+    text-decoration: line-through;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .menu-container .double-column {
+    width: 56.25vw;
+    height: auto;
+  }
+  .navigation-container .navbar .rightBar .navbar-container .menu-container.active {
+    visibility: visible;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+    -webkit-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+    opacity: 1;
+  }
+  .navigation-container .navbar .rightBar .navLink {
+    display: none;
+  }
+  .navigation-container .navbar .rightBar .right-navLink.active a {
+    color: #585f6d;
+    text-decoration: line-through;
+  }
+  .navigation-container .navbar .rightBar .social-icon-container {
+    position: fixed;
+    bottom: 1vh;
+    right: 0.625vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .navigation-container .navbar .rightBar .social-icon-container .social-media-icon {
+    width: 10vw;
+    height: auto;
+    float: left;
+    margin-top: 0.875vw;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */

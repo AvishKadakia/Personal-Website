@@ -1,0 +1,139 @@
+@font-face {
+  font-family: MontserratRegular;
+  src: url("../Fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url("../Fonts/Montserrat/Montserrat-Medium.ttf");
+}
+
+@font-face {
+  font-family: MontserratThin;
+  src: url("../Fonts/Montserrat/Montserrat-Thin.ttf");
+}
+
+@font-face {
+  font-family: MontserratLight;
+  src: url("../Fonts/Montserrat/Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-family: MontserratBold;
+  src: url("../Fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: SofiaPro-Bold;
+  src: url("../Fonts/Sofia-Pro/SofiaPro-Bold.ttf");
+}
+
+@font-face {
+  font-family: SofiaPro-Regular;
+  src: url("../Fonts/Sofia-Pro/Sofia-Pro-Regular.ttf");
+}
+
+@font-face {
+  font-family: SofiaPro-SemiBold;
+  src: url("../Fonts/Sofia-Pro/SofiaPro-SemiBold.ttf");
+}
+
+.coming-soon-container {
+  position: absolute;
+  overflow-x: hidden;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+}
+
+.coming-soon-container .background {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: #00e5ea;
+  z-index: -2000;
+}
+
+.coming-soon-container .background .line {
+  float: left;
+  margin-left: 16.5vw;
+  width: 0.07812vw;
+  height: 100%;
+  background-color: #1c2330;
+  opacity: 0.1;
+}
+
+.coming-soon-container .circle-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+}
+
+.coming-soon-container .circle-section .splatter {
+  position: absolute;
+  margin: -1.04167vw auto;
+  width: 28.64583vw;
+  height: 27.08333vw;
+  z-index: -10;
+}
+
+.coming-soon-container .circle-section .circle-big {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px auto;
+  width: 46.875vw;
+  height: 46.875vw;
+  margin-top: -2.60417vw;
+  z-index: 0;
+}
+
+.coming-soon-container .circle-section .circle-big .circle-small {
+  position: absolute;
+  -webkit-animation: rotate 30s linear infinite;
+          animation: rotate 30s linear infinite;
+  width: 18.22917vw;
+  height: 18.22917vw;
+  background-color: #121822;
+  z-index: -5;
+  margin-left: -2.60417vw;
+}
+
+.coming-soon-container .circle-section .heading-container {
+  position: absolute;
+  margin: 0vw auto;
+  z-index: 21;
+  /* the above is for styling puposes only */
+}
+
+.coming-soon-container .circle-section .heading-container .type-wrap {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 9vw;
+  font-family: "SofiaPro-Bold";
+  font-weight: normal;
+  letter-spacing: -0.3125vw;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+/*# sourceMappingURL=Page404.css.map */

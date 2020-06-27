@@ -1,0 +1,428 @@
+@import "../../CSS/color.scss";
+@import "../../CSS/font.scss";
+
+$desk: 100/1920;
+$mul: 100/800;
+.section-container {
+  position: absolute;
+  overflow-x: hidden;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  .background {
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: #273040;
+    .line {
+      float: left;
+      margin-left: 16.5vw;
+      width: 1.5 * $desk + vw;
+      height: 100%;
+      background-color: #1c2330;
+    }
+    z-index: -2000;
+  }
+
+  .circle-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .circle-big {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0px auto;
+      width: 900 * $desk + vw;
+      height: 900 * $desk + vw;
+      border: #273040 solid 2px;
+      box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.2),
+        0 0 90px rgba(0, 0, 0, 0.8);
+
+      background-color: none;
+      animation: none;
+      margin-top: -50 * $desk + vw;
+      z-index: -200;
+      .circle-small {
+        position: absolute;
+        animation: rotate 30s linear infinite;
+        width: 350 * $desk + vw;
+        height: 350 * $desk + vw;
+        background-color: #00e5ea;
+        z-index: -190;
+      }
+      .map {
+        position: relative;
+        width: 520 * $desk + vw;
+        height: 420 * $desk + vw;
+        // margin-top: -150 * $desk + vw;
+        // margin-left: -150 * $desk + vw;
+      }
+    }
+    .heading-container {
+      position: absolute;
+      margin: 0px auto;
+      z-index: 20;
+      .type-wrap {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        .typed {
+          font-size: 150 * $desk + vw;
+          font-family: "SofiaPro-Bold";
+          font-weight: normal;
+          letter-spacing: -6 * $desk + vw;
+          color: #fff;
+          width: 100%;
+          text-align: center;
+        }
+        .typed-cursor {
+          font-size: 150 * $desk + vw;
+          font-family: "SofiaPro-Bold";
+          font-weight: normal;
+          letter-spacing: -6 * $desk + vw;
+          color: #fff;
+        }
+      }
+      /* the above is for styling puposes only */
+    }
+    .scroll-arrow {
+      position: absolute;
+      margin: 0px auto;
+      bottom: 20 * $desk + vw;
+      width: 13 * $desk + vw;
+      height: 70 * $desk + vw;
+    }
+    .bounce {
+      -moz-animation: bounce 2s infinite;
+      -webkit-animation: bounce 2s infinite;
+      animation: bounce 2s infinite;
+    }
+  }
+  .plane-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    z-index: 10;
+    .plane {
+      position: relative;
+      width: 440 * $desk + vw;
+      margin: 210 * $desk + vw auto;
+      height: 460 * $desk + vw;
+      animation: float 6s ease-in-out infinite;
+    }
+  }
+
+  .bubble1 {
+    width: 420 * $desk + vw;
+    height: 428 * $desk + vw;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-left: 0 * $desk + vw;
+    z-index: -200;
+  }
+  .bubble2 {
+    width: 790 * $desk + vw;
+    height: 752 * $desk + vw;
+    position: absolute;
+    top: 540 * $desk + vw;
+    right: -375 * $desk + vw;
+    margin-left: 0 * $desk + vw;
+    z-index: -200;
+  }
+  .about-me-container {
+    position: relative;
+
+    padding: 60 * $desk + vw;
+    padding-bottom: 170 * $desk + vw;
+    width: 1140 * $desk + vw;
+    margin: 0px auto;
+    margin-top: 330 * $desk + vw;
+
+    z-index: 200;
+    background-color: #273040bd;
+    box-shadow: 0 0 150 * $desk + vw #000000a6;
+    h2 {
+      color: #fff;
+      font-family: SofiaPro-SemiBold;
+      text-align: center;
+      font-weight: normal;
+      font-size: 5vw;
+      letter-spacing: -1px;
+    }
+    p {
+      position: relative;
+      margin: 0px auto;
+      color: #fff;
+      text-align: center;
+      font-family: SofiaPro-Regular;
+      font-weight: normal;
+      font-size: 45 * $desk + vw;
+      line-height: 64 * $desk + vw;
+      margin-top: -50 * $desk + vw;
+      width: 90%;
+    }
+  }
+  .wave-container {
+    margin-top: 80 * $desk + vw;
+    position: relative;
+    width: 100vw;
+    height: auto;
+    .wave {
+    }
+  }
+  .skillz-main-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-left: 320 * $desk + vw;
+    padding-right: 200 * $desk + vw;
+  }
+  .wave-container2 {
+    margin-top: 300 * $desk + vw;
+    position: relative;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 70 * $desk + vw;
+    .wave {
+    }
+  }
+
+  .circle-2 {
+    margin-top: 50 * $desk + vw;
+    margin-bottom: 50 * $desk + vw;
+    .type-wrap {
+      font-size: 120 * $desk + vw;
+      font-family: "SofiaPro-Bold";
+      font-weight: normal;
+      letter-spacing: -6 * $desk + vw;
+      color: #fff;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .bubble4 {
+    width: 265 * $desk + vw;
+    height: 403 * $desk + vw;
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    margin-right: -10 * $desk + vw;
+    margin-top: -850 * $desk + vw;
+    z-index: -200;
+    float: right;
+  }
+  .bubble5 {
+    width: 352 * $desk + vw;
+    height: 380 * $desk + vw;
+    position: relative;
+    margin-left: 50 * $desk + vw;
+    margin-top: -350 * $desk + vw;
+    z-index: -200;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .section-container {
+    .background {
+      .line {
+      }
+    }
+
+    .circle-section {
+      width: 100%;
+      height: 100%;
+
+      .circle-big {
+        margin: 100 * $mul + vw auto;
+        margin-top: 330 * $mul + vw;
+
+        width: 700 * $mul + vw;
+        height: 700 * $mul + vw;
+        border: #273040 solid 2px;
+        box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.2),
+          0 0 90px rgba(0, 0, 0, 0.8);
+
+        background-color: none;
+        animation: none;
+        z-index: -200;
+        .circle-small {
+          position: absolute;
+          animation: rotate 30s linear infinite;
+          width: 350 * $mul + vw;
+          height: 350 * $mul + vw;
+          background-color: #00e5ea;
+          z-index: -190;
+        }
+        .map {
+          position: relative;
+          width: 520 * $mul + vw;
+          height: 420 * $mul + vw;
+          // margin-top: -150 * $mul + vw;
+          // margin-left: -150 * $mul + vw;
+        }
+      }
+      .heading-container {
+        position: absolute;
+        margin: 100 * $mul + vw auto;
+        z-index: 20;
+        .type-wrap {
+          position: relative;
+          width: 100%;
+          text-align: center;
+          .typed {
+            font-size: 12.5vw;
+            font-family: "SofiaPro-Bold";
+            font-weight: normal;
+            letter-spacing: -6 * $mul + vw;
+            color: #fff;
+            width: 100%;
+            text-align: center;
+          }
+          .typed-cursor {
+            font-size: 9vw;
+            font-family: "SofiaPro-Bold";
+            font-weight: normal;
+            letter-spacing: -6 * $mul + vw;
+            color: #fff;
+          }
+        }
+        /* the above is for styling puposes only */
+      }
+      .scroll-arrow {
+        position: absolute;
+        margin: 0px auto;
+        bottom: 0 * $mul + vw;
+        width: 13 * $mul + vw;
+        height: 70 * $mul + vw;
+      }
+      .bounce {
+        -moz-animation: bounce 2s infinite;
+        -webkit-animation: bounce 2s infinite;
+        animation: bounce 2s infinite;
+      }
+    }
+    .plane-container {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-self: center;
+      justify-self: center;
+      z-index: 10;
+      .plane {
+        position: relative;
+        width: 380 * $mul + vw;
+        height: 400 * $mul + vw;
+        margin: 510 * $mul + vw auto;
+        animation: float 6s ease-in-out infinite;
+      }
+    }
+
+    .bubble1 {
+      display: none;
+    }
+    .bubble2 {
+      display: none;
+    }
+    .about-me-container {
+      position: relative;
+
+      padding: 60 * $mul + vw;
+      padding-bottom: 130 * $mul + vw;
+      width: 100vw;
+      margin: 0px auto;
+      margin-top: 230 * $mul + vw;
+
+      z-index: 200;
+      background-color: #273040bd;
+      box-shadow: 0 0 150 * $mul + vw #000000a6;
+      h2 {
+        color: #fff;
+        font-family: SofiaPro-SemiBold;
+        text-align: center;
+        font-weight: normal;
+        font-size: 80 * $mul + vw;
+        letter-spacing: -1px;
+      }
+      p {
+        position: relative;
+        margin: 0px auto;
+        color: #fff;
+        text-align: center;
+        font-family: SofiaPro-Regular;
+        font-weight: normal;
+        font-size: 36 * $mul + vw;
+        line-height: 64 * $mul + vw;
+        margin-top: 50 * $mul + vw;
+        width: 90%;
+      }
+    }
+    .wave-container {
+      margin-top: 80 * $mul + vw;
+      position: relative;
+      width: 100vw;
+      height: auto;
+      .wave {
+        width: 200%;
+      }
+    }
+    .skillz-main-container {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding-left: 60 * $mul + vw;
+      padding-right: 60 * $mul + vw;
+    }
+    .wave-container2 {
+      margin-top: 0 * $mul + vw;
+      position: relative;
+      width: 100vw;
+      height: auto;
+      margin-bottom: 0 * $mul + vw;
+      .wave {
+        width: 200%;
+      }
+    }
+
+    .circle-2 {
+      margin-top: 0 * $mul + vw;
+      margin-bottom: 300 * $mul + vw;
+      .circle-big {
+        margin-top: 100 * $mul + vw;
+      }
+      .heading-container {
+        margin-top: 0 * $mul + vw;
+        .type-wrap {
+          font-size: 80 * $mul + vw;
+          font-family: "SofiaPro-Bold";
+          font-weight: normal;
+          letter-spacing: -6 * $mul + vw;
+          color: #fff;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    .bubble4 {
+      display: none;
+    }
+    .bubble5 {
+      display: none;
+    }
+  }
+}

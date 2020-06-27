@@ -1,0 +1,486 @@
+@font-face {
+  font-family: MontserratRegular;
+  src: url("../Fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url("../Fonts/Montserrat/Montserrat-Medium.ttf");
+}
+
+@font-face {
+  font-family: MontserratThin;
+  src: url("../Fonts/Montserrat/Montserrat-Thin.ttf");
+}
+
+@font-face {
+  font-family: MontserratLight;
+  src: url("../Fonts/Montserrat/Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-family: MontserratBold;
+  src: url("../Fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: SofiaPro-Bold;
+  src: url("../Fonts/Sofia-Pro/SofiaPro-Bold.ttf");
+}
+
+@font-face {
+  font-family: SofiaPro-Regular;
+  src: url("../Fonts/Sofia-Pro/Sofia-Pro-Regular.ttf");
+}
+
+@font-face {
+  font-family: SofiaPro-SemiBold;
+  src: url("../Fonts/Sofia-Pro/SofiaPro-SemiBold.ttf");
+}
+
+.section-container {
+  position: absolute;
+  overflow-x: hidden;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+}
+
+.section-container .background {
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #273040;
+  z-index: -2000;
+}
+
+.section-container .background .line {
+  float: left;
+  margin-left: 16.5vw;
+  width: 0.07812vw;
+  height: 100%;
+  background-color: #1c2330;
+}
+
+.section-container .circle-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.section-container .circle-section .circle-big {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px auto;
+  width: 46.875vw;
+  height: 46.875vw;
+  border: #273040 solid 2px;
+  -webkit-box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.2), 0 0 90px rgba(0, 0, 0, 0.8);
+          box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.2), 0 0 90px rgba(0, 0, 0, 0.8);
+  background-color: none;
+  -webkit-animation: none;
+          animation: none;
+  margin-top: -2.60417vw;
+  z-index: -200;
+}
+
+.section-container .circle-section .circle-big .circle-small {
+  position: absolute;
+  -webkit-animation: rotate 30s linear infinite;
+          animation: rotate 30s linear infinite;
+  width: 18.22917vw;
+  height: 18.22917vw;
+  background-color: #00e5ea;
+  z-index: -190;
+}
+
+.section-container .circle-section .circle-big .map {
+  position: relative;
+  width: 27.08333vw;
+  height: 21.875vw;
+}
+
+.section-container .circle-section .heading-container {
+  position: absolute;
+  margin: 0px auto;
+  z-index: 20;
+  /* the above is for styling puposes only */
+}
+
+.section-container .circle-section .heading-container .type-wrap {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.section-container .circle-section .heading-container .type-wrap .typed {
+  font-size: 7.8125vw;
+  font-family: "SofiaPro-Bold";
+  font-weight: normal;
+  letter-spacing: -0.3125vw;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+
+.section-container .circle-section .heading-container .type-wrap .typed-cursor {
+  font-size: 7.8125vw;
+  font-family: "SofiaPro-Bold";
+  font-weight: normal;
+  letter-spacing: -0.3125vw;
+  color: #fff;
+}
+
+.section-container .circle-section .scroll-arrow {
+  position: absolute;
+  margin: 0px auto;
+  bottom: 1.04167vw;
+  width: 0.67708vw;
+  height: 3.64583vw;
+}
+
+.section-container .circle-section .bounce {
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+.section-container .plane-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+  z-index: 10;
+}
+
+.section-container .plane-container .plane {
+  position: relative;
+  width: 22.91667vw;
+  margin: 10.9375vw auto;
+  height: 23.95833vw;
+  -webkit-animation: float 6s ease-in-out infinite;
+          animation: float 6s ease-in-out infinite;
+}
+
+.section-container .bubble1 {
+  width: 21.875vw;
+  height: 22.29167vw;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin-left: 0vw;
+  z-index: -200;
+}
+
+.section-container .bubble2 {
+  width: 41.14583vw;
+  height: 39.16667vw;
+  position: absolute;
+  top: 28.125vw;
+  right: -19.53125vw;
+  margin-left: 0vw;
+  z-index: -200;
+}
+
+.section-container .about-me-container {
+  position: relative;
+  padding: 3.125vw;
+  padding-bottom: 8.85417vw;
+  width: 59.375vw;
+  margin: 0px auto;
+  margin-top: 17.1875vw;
+  z-index: 200;
+  background-color: #273040bd;
+  -webkit-box-shadow: 0 0 7.8125vw #000000a6;
+          box-shadow: 0 0 7.8125vw #000000a6;
+}
+
+.section-container .about-me-container h2 {
+  color: #fff;
+  font-family: SofiaPro-SemiBold;
+  text-align: center;
+  font-weight: normal;
+  font-size: 5vw;
+  letter-spacing: -1px;
+}
+
+.section-container .about-me-container p {
+  position: relative;
+  margin: 0px auto;
+  color: #fff;
+  text-align: center;
+  font-family: SofiaPro-Regular;
+  font-weight: normal;
+  font-size: 2.34375vw;
+  line-height: 3.33333vw;
+  margin-top: -2.60417vw;
+  width: 90%;
+}
+
+.section-container .wave-container {
+  margin-top: 4.16667vw;
+  position: relative;
+  width: 100vw;
+  height: auto;
+}
+
+.section-container .skillz-main-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-left: 16.66667vw;
+  padding-right: 10.41667vw;
+}
+
+.section-container .wave-container2 {
+  margin-top: 15.625vw;
+  position: relative;
+  width: 100vw;
+  height: auto;
+  margin-bottom: 3.64583vw;
+}
+
+.section-container .circle-2 {
+  margin-top: 2.60417vw;
+  margin-bottom: 2.60417vw;
+}
+
+.section-container .circle-2 .type-wrap {
+  font-size: 6.25vw;
+  font-family: "SofiaPro-Bold";
+  font-weight: normal;
+  letter-spacing: -0.3125vw;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+
+.section-container .bubble4 {
+  width: 13.80208vw;
+  height: 20.98958vw;
+  position: relative;
+  bottom: 0px;
+  right: 0px;
+  margin-right: -0.52083vw;
+  margin-top: -44.27083vw;
+  z-index: -200;
+  float: right;
+}
+
+.section-container .bubble5 {
+  width: 18.33333vw;
+  height: 19.79167vw;
+  position: relative;
+  margin-left: 2.60417vw;
+  margin-top: -18.22917vw;
+  z-index: -200;
+}
+
+@media screen and (max-width: 800px) {
+  .section-container .circle-section {
+    width: 100%;
+    height: 100%;
+  }
+  .section-container .circle-section .circle-big {
+    margin: 12.5vw auto;
+    margin-top: 41.25vw;
+    width: 87.5vw;
+    height: 87.5vw;
+    border: #273040 solid 2px;
+    -webkit-box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.2), 0 0 90px rgba(0, 0, 0, 0.8);
+            box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.2), 0 0 90px rgba(0, 0, 0, 0.8);
+    background-color: none;
+    -webkit-animation: none;
+            animation: none;
+    z-index: -200;
+  }
+  .section-container .circle-section .circle-big .circle-small {
+    position: absolute;
+    -webkit-animation: rotate 30s linear infinite;
+            animation: rotate 30s linear infinite;
+    width: 43.75vw;
+    height: 43.75vw;
+    background-color: #00e5ea;
+    z-index: -190;
+  }
+  .section-container .circle-section .circle-big .map {
+    position: relative;
+    width: 65vw;
+    height: 52.5vw;
+  }
+  .section-container .circle-section .heading-container {
+    position: absolute;
+    margin: 12.5vw auto;
+    z-index: 20;
+    /* the above is for styling puposes only */
+  }
+  .section-container .circle-section .heading-container .type-wrap {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+  .section-container .circle-section .heading-container .type-wrap .typed {
+    font-size: 12.5vw;
+    font-family: "SofiaPro-Bold";
+    font-weight: normal;
+    letter-spacing: -0.75vw;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+  }
+  .section-container .circle-section .heading-container .type-wrap .typed-cursor {
+    font-size: 9vw;
+    font-family: "SofiaPro-Bold";
+    font-weight: normal;
+    letter-spacing: -0.75vw;
+    color: #fff;
+  }
+  .section-container .circle-section .scroll-arrow {
+    position: absolute;
+    margin: 0px auto;
+    bottom: 0vw;
+    width: 1.625vw;
+    height: 8.75vw;
+  }
+  .section-container .circle-section .bounce {
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+  }
+  .section-container .plane-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    justify-self: center;
+    z-index: 10;
+  }
+  .section-container .plane-container .plane {
+    position: relative;
+    width: 47.5vw;
+    height: 50vw;
+    margin: 63.75vw auto;
+    -webkit-animation: float 6s ease-in-out infinite;
+            animation: float 6s ease-in-out infinite;
+  }
+  .section-container .bubble1 {
+    display: none;
+  }
+  .section-container .bubble2 {
+    display: none;
+  }
+  .section-container .about-me-container {
+    position: relative;
+    padding: 7.5vw;
+    padding-bottom: 16.25vw;
+    width: 100vw;
+    margin: 0px auto;
+    margin-top: 28.75vw;
+    z-index: 200;
+    background-color: #273040bd;
+    -webkit-box-shadow: 0 0 18.75vw #000000a6;
+            box-shadow: 0 0 18.75vw #000000a6;
+  }
+  .section-container .about-me-container h2 {
+    color: #fff;
+    font-family: SofiaPro-SemiBold;
+    text-align: center;
+    font-weight: normal;
+    font-size: 10vw;
+    letter-spacing: -1px;
+  }
+  .section-container .about-me-container p {
+    position: relative;
+    margin: 0px auto;
+    color: #fff;
+    text-align: center;
+    font-family: SofiaPro-Regular;
+    font-weight: normal;
+    font-size: 4.5vw;
+    line-height: 8vw;
+    margin-top: 6.25vw;
+    width: 90%;
+  }
+  .section-container .wave-container {
+    margin-top: 10vw;
+    position: relative;
+    width: 100vw;
+    height: auto;
+  }
+  .section-container .wave-container .wave {
+    width: 200%;
+  }
+  .section-container .skillz-main-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+  }
+  .section-container .wave-container2 {
+    margin-top: 0vw;
+    position: relative;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 0vw;
+  }
+  .section-container .wave-container2 .wave {
+    width: 200%;
+  }
+  .section-container .circle-2 {
+    margin-top: 0vw;
+    margin-bottom: 37.5vw;
+  }
+  .section-container .circle-2 .circle-big {
+    margin-top: 12.5vw;
+  }
+  .section-container .circle-2 .heading-container {
+    margin-top: 0vw;
+  }
+  .section-container .circle-2 .heading-container .type-wrap {
+    font-size: 10vw;
+    font-family: "SofiaPro-Bold";
+    font-weight: normal;
+    letter-spacing: -0.75vw;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+  }
+  .section-container .bubble4 {
+    display: none;
+  }
+  .section-container .bubble5 {
+    display: none;
+  }
+}
+/*# sourceMappingURL=HomePage.css.map */

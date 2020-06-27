@@ -1,0 +1,242 @@
+@import "../../CSS/color.scss";
+@import "../../CSS/font.scss";
+
+$desk: 100/1920;
+$mul: 100/800;
+.pageTransition-container {
+  .page-transition {
+    position: fixed;
+    z-index: 3000;
+    visibility: hidden;
+    .top-box {
+      position: fixed;
+      height: 50vh;
+      width: 100vw;
+      left: 0px;
+      top: -50vh;
+      background-color: #000;
+      transition: all 0.3s ease-out;
+    }
+    .bottom-box {
+      position: fixed;
+      height: 50vh;
+      width: 100vw;
+      left: 0px;
+      bottom: -50vh;
+      background-color: #000;
+      transition: all 0.3s ease-out;
+    }
+    .loading-bar {
+      position: fixed;
+      z-index: 2;
+      left: 50%;
+      top: 50%;
+      height: 4 * $desk + vw;
+      width: 100vw;
+      background-color: #273040;
+      opacity: 0;
+      transition: all 0.3s ease-out;
+      backface-visibility: visible;
+      // transform: translateZ(0);
+      transform: translateX(-50%) translateY(-50%);
+      transition-delay: 0.2s;
+      border-radius: 10 * $desk + vw;
+    }
+  }
+  .page-transition.active {
+    visibility: visible;
+    .top-box {
+      top: 0vh;
+    }
+    .bottom-box {
+      bottom: 0vh;
+    }
+    .loading-bar {
+      visibility: visible;
+      width: 30vw;
+      opacity: 1;
+    }
+  }
+  .page-transition-2 {
+    position: fixed;
+    z-index: 3000;
+    visibility: visible;
+    .top-box {
+      position: fixed;
+      height: 50vh;
+      width: 100vw;
+      left: 0px;
+      top: 0vh;
+      background-color: #000;
+    }
+    .bottom-box {
+      position: fixed;
+      height: 50vh;
+      width: 100vw;
+      left: 0px;
+      bottom: 0vh;
+      background-color: #000;
+    }
+    .loading-bar {
+      position: fixed;
+      z-index: 2;
+      left: 50%;
+      top: 50%;
+      height: 4 * $desk + vw;
+      width: 100vw;
+      background-color: #273040;
+      opacity: 1;
+      width: 30vw;
+      backface-visibility: visible;
+      transform: translateX(-50%) translateY(-50%);
+      border-radius: 10 * $desk + vw;
+      // transform: translateZ(0);
+      .load-fill {
+        background-color: #00e5ea;
+        width: 0%;
+        height: 100%;
+        transition: all 0.3s ease-out;
+      }
+    }
+  }
+  .page-transition-2.active {
+    .top-box {
+      top: -50vh;
+      transition: all 0.3s ease-out;
+      transition-delay: 1s;
+    }
+    .bottom-box {
+      bottom: -50vh;
+      transition: all 0.3s ease-out;
+      transition-delay: 1s;
+    }
+    .loading-bar {
+      width: 100vw;
+      opacity: 0;
+      transition: all 0.5s ease-out;
+      transition-delay: 0.3s;
+      .load-fill {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .pageTransition-container {
+    .page-transition {
+      position: fixed;
+      z-index: 3000;
+      visibility: hidden;
+      .top-box {
+        position: fixed;
+        height: 50vh;
+        width: 100vw;
+        left: 0px;
+        top: -50vh;
+        background-color: #000;
+        transition: all 0.3s ease-out;
+      }
+      .bottom-box {
+        position: fixed;
+        height: 50vh;
+        width: 100vw;
+        left: 0px;
+        bottom: -50vh;
+        background-color: #000;
+        transition: all 0.3s ease-out;
+      }
+      .loading-bar {
+        position: fixed;
+        z-index: 2;
+        left: 50%;
+        top: 50%;
+        height: 8 * $mul + vw;
+        width: 100vw;
+        background-color: #273040;
+        opacity: 0;
+        transition: all 0.3s ease-out;
+        backface-visibility: visible;
+        // transform: translateZ(0);
+        transform: translateX(-50%) translateY(-50%);
+        transition-delay: 0.2s;
+      }
+    }
+    .page-transition.active {
+      visibility: visible;
+      .top-box {
+        top: 0vh;
+      }
+      .bottom-box {
+        bottom: 0vh;
+      }
+      .loading-bar {
+        visibility: visible;
+        width: 30vw;
+        opacity: 1;
+      }
+    }
+    .page-transition-2 {
+      position: fixed;
+      z-index: 3000;
+      visibility: visible;
+      .top-box {
+        position: fixed;
+        height: 50vh;
+        width: 100vw;
+        left: 0px;
+        top: 0vh;
+        background-color: #000;
+      }
+      .bottom-box {
+        position: fixed;
+        height: 50vh;
+        width: 100vw;
+        left: 0px;
+        bottom: 0vh;
+        background-color: #000;
+      }
+      .loading-bar {
+        position: fixed;
+        z-index: 2;
+        left: 50%;
+        top: 50%;
+        height: 8 * $mul + vw;
+        width: 100vw;
+        background-color: #273040;
+        opacity: 1;
+        width: 30vw;
+        backface-visibility: visible;
+        transform: translateX(-50%) translateY(-50%);
+        // transform: translateZ(0);
+        .load-fill {
+          background-color: #00e5ea;
+          width: 0%;
+          height: 100%;
+          transition: all 0.3s ease-out;
+        }
+      }
+    }
+    .page-transition-2.active {
+      .top-box {
+        top: -50vh;
+        transition: all 0.3s ease-out;
+        transition-delay: 1s;
+      }
+      .bottom-box {
+        bottom: -50vh;
+        transition: all 0.3s ease-out;
+        transition-delay: 1s;
+      }
+      .loading-bar {
+        width: 100vw;
+        opacity: 0;
+        transition: all 0.5s ease-out;
+        transition-delay: 0.3s;
+        .load-fill {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
