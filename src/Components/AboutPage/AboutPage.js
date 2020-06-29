@@ -6,49 +6,31 @@ import Skillz from "../Skillz/Skillz";
 import selfImage from "../../Images/self-image1.png";
 import splatter from "../../Images/splatter.png";
 import plane from "../../Images/plane.png";
-import scroll from "../../Images/scroll.svg";
 import wave from "../../Images/wave.png";
 import wave2 from "../../Images/wave2.png";
-import skillz1 from "../../Images/skillz1.png";
-import skillz2 from "../../Images/skillz2.png";
-import skillz3 from "../../Images/skillz3.png";
+import diploma from "../../Images/diploma.png";
+import skillz1 from "../../Images/skillz2.png";
+import graduation from "../../Images/graduation.png";
 import companylogocollage from "../../Images/companylogocollage.png";
+import Particle from "../Particle/Particle";
+
 import $ from "jquery";
-import Typed from "typed.js";
-import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
 
-function setBorderRadius() {
-  var slides = document.getElementsByClassName("blob-animation");
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].style.setProperty("--br-blobby", generateBorderRadiusValue());
-  }
-}
-
-function generateBorderRadiusValue() {
-  return `${getRandomValue()}% ${getRandomValue()}% ${getRandomValue()}% ${getRandomValue()}% / ${getRandomValue()}% ${getRandomValue()}% ${getRandomValue()}%`;
-}
-
-function getRandomValue() {
-  return Math.floor(Math.random() * 50) + 50;
-}
 class AboutPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { forgotPasswordPopupStatus: false };
   }
   componentDidMount() {
-    AOS.init();
     $("window").scrollTop("0px");
-    setBorderRadius();
-    setInterval(setBorderRadius, 1500);
   }
 
   render() {
     return (
       <div className={"about-container  " + this.props.className}>
         <div className="background">
+          <Particle lineColor="#00e5ea"></Particle>
+
           <div className="line" id="line1"></div>
           <div className="line" id="line2"></div>
           <div className="line" id="line3"></div>
@@ -68,7 +50,7 @@ class AboutPage extends React.Component {
             ></img>
           </div>
           <div class="heading-container">
-            <h1 class="type-wrap typed">Hello.</h1>
+            <h1 class="type-wrap typed">Hello,</h1>
           </div>
         </div>
         <div className="plane-container">
@@ -78,16 +60,23 @@ class AboutPage extends React.Component {
           <h2 data-aos="fade-in">I develop things that people use</h2>
           <p data-aos="fade-in">
             I live and breathe all things digital. Currently, I head up the
-            digital design process at Jan Kelley and play a big part in
-            improving all user experiences across the agency. I began my career
-            in{" "}
-            <a href="#">
-              <span className="sky-blue">India</span>
+            development process at{" "}
+            <a href="https://proferotechno.com/">
+              <span className="sky-blue">&nbsp;Profero Techno</span>
             </a>{" "}
-            working in traditional design shops before learning web development,
-            and, more importantly, learning a love for a new level of creativity
-            and experimentation. From that moment on I was hooked on everything
-            online.
+            and play a big part in improving all user experiences across the
+            agency. I have been developing software products since past 7 years.
+            I began my career working as a junior software developer for{" "}
+            <a href="https://maqsoftware.com/">
+              <span className="sky-blue">MAQ </span>
+            </a>{" "}
+            &nbsp;before switching to work for a startup&nbsp;
+            <a href="https://devomark.com/">
+              <span className="sky-blue">Devomark</span>
+            </a>{" "}
+            &nbsp;, and more importantly, learning a love for a new level of
+            creativity and experimentation. Since than I have been hooked on
+            everything technical
           </p>
         </div>
         <div className="wave-container">
@@ -96,43 +85,52 @@ class AboutPage extends React.Component {
         <div className="skillz-main-container">
           <Skillz
             src={skillz1}
-            alt="Microphone"
-            title="Strong Direction"
-            className="left"
-            label="2014-PRESENT"
-          >
-            My day-to-day involves giving direction on UX strategy, architecture
-            and design as well as being hands on when it comes to visually
-            positioning brands like Topper’s Pizza and Mr. Lube.
-          </Skillz>
-          <Skillz
-            src={skillz2}
             alt="Book"
-            title="Deep Strategy"
-            className="right"
-            label="2014-PRESENT"
+            title="Education"
+            className="left"
+            label="June 2002 - March 2018"
           >
-            I bring strategic thought to the forefront with every project. I
-            always take the time to do the research and use it to create great
-            experiences that deliver on user needs and business objectives.
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. I
           </Skillz>
           <Skillz
-            src={skillz3}
-            alt="Bucket"
-            title="Rockin Design"
-            className="left"
-            label="2014-PRESENT"
+            src={diploma}
+            alt="Diploma"
+            title="First Job"
+            className="right image-fix-1"
+            label="2012-2015"
           >
-            Being creative is at the heart of everything I do. I’m obsessed with
-            current trends and always strive to create “what’s next in design”
-            to get brands noticed and push them forward.{" "}
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. I
+          </Skillz>
+          <Skillz
+            src={graduation}
+            alt="Bucket"
+            title="First Startup"
+            className="left image-fix-2"
+            label="2015-2018"
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. I.{" "}
           </Skillz>
         </div>
         <div className="wave-container2">
           <img className="wave" alt="Home Page Wave2" src={wave2}></img>
         </div>
         <div className="experience-container">
-          <h3>I've had the pleasure of working with:</h3>
+          <h3>I've had the pleasure of working at:</h3>
           <div className="experience-logo-container">
             <img src={companylogocollage} alt="Companies Logo collage" />
           </div>

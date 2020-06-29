@@ -80,7 +80,6 @@ $mul: 100/800;
             position: absolute;
             border-radius: 50%;
             z-index: 2005;
-            cursor: pointer;
             -webkit-transform: scale(1);
             -webkit-transition: all 0.3s ease-out;
             display: block;
@@ -329,10 +328,10 @@ $mul: 100/800;
               position: absolute;
               border-radius: 50%;
               z-index: 2005;
-              cursor: pointer;
+              display: block;
               -webkit-transform: scale(1);
               -webkit-transition: all 0.3s ease-out;
-              display: block;
+
               .bar {
                 background-color: #fff;
                 height: 3px;

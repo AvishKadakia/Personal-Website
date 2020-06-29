@@ -12,7 +12,7 @@ class Skillz extends React.Component {
 
   render() {
     let desk = 100 / 1920;
-    let mul = 100 / 800;
+    //let mul = 100 / 800;
     let containerStyle = {
       marginTop: this.props.marginTop * desk + "vw",
     };

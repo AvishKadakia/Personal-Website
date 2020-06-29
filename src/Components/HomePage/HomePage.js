@@ -6,7 +6,6 @@ import Skillz from "../Skillz/Skillz";
 import indiaMap from "../../Images/india-map.png";
 import bubble1 from "../../Images/bubble1.png";
 import bubble2 from "../../Images/bubble2.png";
-import bubble3 from "../../Images/bubble3.png";
 import bubble4 from "../../Images/bubble4.png";
 import bubble5 from "../../Images/bubble5.png";
 import plane from "../../Images/plane.png";
@@ -16,27 +15,13 @@ import wave2 from "../../Images/wave2.png";
 import skillz1 from "../../Images/skillz1.png";
 import skillz2 from "../../Images/skillz2.png";
 import skillz3 from "../../Images/skillz3.png";
-import PageTransition from "../PageTransition/PageTransition";
+import Particle from "../Particle/Particle";
 import $ from "jquery";
 import Typed from "typed.js";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
 
-function setBorderRadius() {
-  var slides = document.getElementsByClassName("blob-animation");
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].style.setProperty("--br-blobby", generateBorderRadiusValue());
-  }
-}
-
-function generateBorderRadiusValue() {
-  return `${getRandomValue()}% ${getRandomValue()}% ${getRandomValue()}% ${getRandomValue()}% / ${getRandomValue()}% ${getRandomValue()}% ${getRandomValue()}%`;
-}
-
-function getRandomValue() {
-  return Math.floor(Math.random() * 50) + 50;
-}
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
@@ -45,9 +30,8 @@ class HomePage extends React.Component {
   componentDidMount() {
     AOS.init();
     $("window").scrollTop("0px");
-    setBorderRadius();
-    setInterval(setBorderRadius, 1500);
-    var typed = new Typed("#typed", {
+
+    new Typed("#typed", {
       strings: [
         "Programmer",
         "UI / UX Developer",
@@ -68,6 +52,7 @@ class HomePage extends React.Component {
     return (
       <div className={"section-container  " + this.props.className}>
         <div className="background">
+          <Particle lineColor="#00e5ea"></Particle>
           <div className="line" id="line1"></div>
           <div className="line" id="line2"></div>
           <div className="line" id="line3"></div>
@@ -83,10 +68,10 @@ class HomePage extends React.Component {
               <img src={scroll} alt="Scroll Arrow"></img>
             </div>
           </div>
-          <div class="heading-container">
-            <h1 class="type-wrap">
+          <div className="heading-container">
+            <h1 className="type-wrap">
               {/* <!-- add static words/sentences here (i.e. text that you don't want to be removed)--> */}
-              <span id="typed" class="typed"></span>
+              <span id="typed" className="typed"></span>
             </h1>
           </div>
         </div>
@@ -96,16 +81,15 @@ class HomePage extends React.Component {
         <div className="plane-container">
           <img className="plane" alt="Home Page Plane" src={plane}></img>
         </div>
-        <div class="about-me-container">
+        <div className="about-me-container">
           <h2 data-aos="fade-in">Hello, I'm Avish</h2>
           <p data-aos="fade-in">
-            I'm a digital designer that made the trip across the pond from
-            Glasgow, Scotland to{" "}
-            <a href="#">
-              <span className="sky-blue">#HamOnt</span>
-            </a>
-            , Canada, in 2010. Now I work @ Jan Kelley in Burlington as UX Lead
-            and Senior Art Director.
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. I
           </p>
         </div>
         <div className="wave-container">
@@ -118,9 +102,10 @@ class HomePage extends React.Component {
             title="Strong Direction"
             className="left"
           >
-            My day-to-day involves giving direction on UX strategy, architecture
-            and design as well as being hands on when it comes to visually
-            positioning brands like Topper’s Pizza and Mr. Lube.
+            My day-to-day involves giving direction on development strategy,
+            architecture and design as well as being hands on when it comes to
+            execution of complicated tasks. I also interact with client's on a
+            daily basis to ensure top quality delivery.
           </Skillz>
           <Skillz
             src={skillz2}
@@ -130,17 +115,18 @@ class HomePage extends React.Component {
           >
             I bring strategic thought to the forefront with every project. I
             always take the time to do the research and use it to create great
-            experiences that deliver on user needs and business objectives.
+            experiences that deliver on client needs and business objectives.
           </Skillz>
           <Skillz
             src={skillz3}
             alt="Bucket"
-            title="Rockin Design"
+            title="Rockin Code"
             className="left"
           >
-            Being creative is at the heart of everything I do. I’m obsessed with
-            current trends and always strive to create “what’s next in design”
-            to get brands noticed and push them forward.{" "}
+            Being creative and efficient is at the heart of everything I do. I’m
+            obsessed with current trends and always strive to create “what’s
+            next in technology” to push clients forward and help them acheive
+            maximum results with minimal investments.{" "}
           </Skillz>
         </div>
         <div className="wave-container2">
@@ -154,8 +140,8 @@ class HomePage extends React.Component {
             <img className="map" alt="India Map" src={indiaMap}></img>
           </div>
 
-          <div class="heading-container">
-            <h1 class="type-wrap" data-aos="fade-in">
+          <div className="heading-container">
+            <h1 className="type-wrap" data-aos="fade-in">
               I've landed, let's &nbsp;
               <a className="link" href="/contact">
                 <span className="sky-blue" data-aos="fade-in">

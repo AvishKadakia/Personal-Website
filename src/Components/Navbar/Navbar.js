@@ -1,30 +1,46 @@
 import React from "react";
 import "./Navbar.scss";
-import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import logo from "../../Images/logo2.png";
 import WhatsappIcon from "../../Images/whatsapp-icon.png";
 import linkdenIcon from "../../Images/linkden-icon.png";
 import instaIcon from "../../Images/insta-icon.png";
+import cvIcon from "../../Images/cv-icon.png";
 import $ from "jquery";
+function setBorderRadius() {
+  var slides = document.getElementsByClassName("blob-animation");
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].style.setProperty("--br-blobby", generateBorderRadiusValue());
+  }
+}
+
+function generateBorderRadiusValue() {
+  return `${getRandomValue()}% ${getRandomValue()}% ${getRandomValue()}% ${getRandomValue()}% / ${getRandomValue()}% ${getRandomValue()}% ${getRandomValue()}%`;
+}
+
+function getRandomValue() {
+  return Math.floor(Math.random() * 50) + 50;
+}
+let mouseX = 0;
+let mouseY = 0;
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = { changePasswordPopupStatus: false };
   }
+
   getYear() {
     var dt = new Date();
     return dt.getFullYear();
   }
+
   componentDidMount() {
     let navLinks = document.querySelectorAll("a");
-    let that = this;
 
     if (navLinks) {
       navLinks.forEach((link) => {
         if (link.classList.contains("link")) {
           link.onclick = (e) => {
-            let body = document.querySelector("body");
             e.preventDefault();
 
             if (
@@ -50,6 +66,38 @@ class Navbar extends React.Component {
         }
       });
     }
+    setBorderRadius();
+    setInterval(setBorderRadius, 1500);
+    document.addEventListener("mousemove", (e) => {
+      mouseX = e.clientY;
+      mouseY = e.clientX;
+      document
+        .querySelector(".cursor")
+        .setAttribute(
+          "style",
+          "top: " +
+            (mouseX - document.querySelector(".cursor").clientHeight / 2 + 0) +
+            "px; left: " +
+            (mouseY - document.querySelector(".cursor").clientWidth / 2 + 0) +
+            "px;"
+        );
+    });
+    $("a").hover(function () {
+      document.querySelector(".cursor").classList.toggle("link-animate");
+    });
+    $(".bubble-wrap").hover(function () {
+      document.querySelector(".cursor").classList.toggle("link-animate");
+    });
+    $(".send-button").hover(function () {
+      document.querySelector(".cursor").classList.toggle("link-animate");
+    });
+    $(".input-field").hover(function () {
+      document.querySelector(".cursor").classList.toggle("link-animate");
+    });
+    $(".input-field-textarea").hover(function () {
+      document.querySelector(".cursor").classList.toggle("link-animate");
+    });
+    //setInterval(this.setCursor, 100);
   }
 
   hideElements() {
@@ -75,10 +123,12 @@ class Navbar extends React.Component {
   render() {
     return (
       <div className="navigation-container">
+        <div className="cursor"></div>
+
         <div className="navbar">
           <div className="leftBar">
             <div className="navLink left-navLink">
-              <a class="link" href="/about">
+              <a className="link" href="/about">
                 About Me
               </a>
             </div>
@@ -88,30 +138,33 @@ class Navbar extends React.Component {
           </div>
           <div className="rightBar">
             <div className="logo">
-              <a class="link" href="/">
+              <a className="link" href="/">
                 <img src={logo} alt="logo"></img>
               </a>
             </div>
             <nav className="navbar-container">
-              <div class="hamburger">
-                <div class="bubbleback"></div>
-                <div class="bubble"></div>
-                <div class="bubble-wrap" onClick={() => this.hamburgerClick()}>
-                  <div class="bar first"></div>
-                  <div class="bar second"></div>
-                  <div class="bar third"></div>
+              <div className="hamburger">
+                <div className="bubbleback"></div>
+                <div className="bubble"></div>
+                <div
+                  className="bubble-wrap"
+                  onClick={() => this.hamburgerClick()}
+                >
+                  <div className="bar first"></div>
+                  <div className="bar second"></div>
+                  <div className="bar third"></div>
                 </div>
               </div>
               <div className="menu-container">
                 <div className="nav-column">
                   <h2 className="nav-title">About</h2>
                   <div className="nav-item">
-                    <a class="link" href="/">
+                    <a className="link" href="/">
                       Home
                     </a>
                   </div>
                   <div className="nav-item">
-                    <a class="link" href="/about">
+                    <a className="link" href="/about">
                       My Story
                     </a>
                   </div>
@@ -119,28 +172,28 @@ class Navbar extends React.Component {
                 <div className="nav-column double-column">
                   <h2 className="nav-title">Work</h2>
                   <div className="nav-item float-left">
-                    <a class="link" href="/formdesk">
+                    <a className="link" href="/formdesk">
                       FormDesk
                     </a>
                   </div>
                   <div className="nav-item float-right">
-                    <a class="link" href="/savrai">
+                    <a className="link" href="/savrai">
                       SAVARAI
                     </a>
                   </div>
 
                   <div className="nav-item float-left">
-                    <a class="link" href="/morphlab">
+                    <a className="link" href="/morphlab">
                       Morphlab
                     </a>
                   </div>
                   <div className="nav-item float-right">
-                    <a class="link" href="/rlagent">
+                    <a className="link" href="/rlagent">
                       RL Agent
                     </a>
                   </div>
                   <div className="nav-item float-left">
-                    <a class="link" href="/devomark">
+                    <a className="link" href="/devomark">
                       Devomark
                     </a>
                   </div>
@@ -148,7 +201,7 @@ class Navbar extends React.Component {
                 <div className="nav-column">
                   <h2 className="nav-title">Contact</h2>
                   <div className="nav-item">
-                    <a class="link" href="/contact">
+                    <a className="link" href="/contact">
                       Let's Talk
                     </a>
                   </div>
@@ -156,25 +209,30 @@ class Navbar extends React.Component {
               </div>
             </nav>
             <div className="navLink right-navLink">
-              <a class="link" href="/contact">
+              <a className="link" href="/contact">
                 Contact Me
               </a>
             </div>
             <div className="social-icon-container">
-              <div class="social-media-icon">
+              <div className="social-media-icon">
                 <a href="https://api.whatsapp.com/send?phone=+917977905493">
                   <img src={WhatsappIcon} alt="Whatsapp Icon"></img>
                 </a>
               </div>
 
-              <div class="social-media-icon">
+              <div className="social-media-icon">
                 <a href="https://www.instagram.com/avishkadakia">
                   <img src={instaIcon} alt="Instagram Icon"></img>
                 </a>
               </div>
-              <div class="social-media-icon">
+              <div className="social-media-icon">
                 <a href="https://www.linkedin.com/in/avish-kadakia-3a6591116">
                   <img src={linkdenIcon} alt="Linkden Icon"></img>
+                </a>
+              </div>
+              <div className="social-media-icon">
+                <a href="Resume.pdf" download="Avish Kadakia Resume">
+                  <img src={cvIcon} alt="Resume"></img>
                 </a>
               </div>
             </div>

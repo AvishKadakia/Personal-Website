@@ -274,4 +274,237 @@
   font-size: 5vw;
   letter-spacing: -1px;
 }
+
+@media screen and (max-width: 800px) {
+  .about-container {
+    position: absolute;
+    overflow-x: hidden;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+  }
+  .about-container .background {
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: #273040;
+    z-index: -2000;
+  }
+  .about-container .background .line {
+    float: left;
+    margin-left: 16.5vw;
+    width: 0.1875vw;
+    height: 100%;
+    background-color: #1c2330;
+  }
+  .about-container .circle-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .about-container .circle-section .splatter {
+    position: absolute;
+    margin: 2.5vw auto;
+    width: 83.375vw;
+    height: 60vw;
+  }
+  .about-container .circle-section .circle-big {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0px auto;
+    width: 62.5vw;
+    height: 62.5vw;
+    background-color: #00e5ea;
+    -webkit-animation: none;
+            animation: none;
+    margin-top: 6.25vw;
+    z-index: 21;
+  }
+  .about-container .circle-section .circle-big .selfImage {
+    position: relative;
+    width: 53.75vw;
+    height: 93.75vw;
+    margin-top: 35vw;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+  }
+  .about-container .circle-section .heading-container {
+    position: absolute;
+    margin: 18.75vw auto;
+    z-index: 21;
+    /* the above is for styling puposes only */
+  }
+  .about-container .circle-section .heading-container .type-wrap {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 20vw;
+    font-family: "SofiaPro-Bold";
+    font-weight: normal;
+    letter-spacing: -0.5vw;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+  }
+  .about-container .plane-container {
+    position: fixed;
+    top: 0px;
+    left: 80vw;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    justify-self: flex-end;
+    z-index: -10;
+  }
+  .about-container .plane-container .plane {
+    position: relative;
+    width: 40vw;
+    margin-top: 87.5vw;
+    height: 43.75vw;
+    -webkit-animation: float 6s ease-in-out infinite;
+            animation: float 6s ease-in-out infinite;
+  }
+  .about-container .about-me-container {
+    position: relative;
+    padding: 4vw;
+    width: 100vw;
+    margin: 0px auto;
+    margin-top: 16.25vw;
+    z-index: 200;
+    background-color: #273040;
+    -webkit-box-shadow: 0 0 18.75vw #000000a6;
+            box-shadow: 0 0 18.75vw #000000a6;
+  }
+  .about-container .about-me-container h2 {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-family: SofiaPro-SemiBold;
+    text-align: center;
+    font-weight: normal;
+    font-size: 10vw;
+    letter-spacing: -1px;
+    margin-bottom: 10vw;
+  }
+  .about-container .about-me-container p {
+    position: relative;
+    margin: 0px auto;
+    color: #7c8898;
+    text-align: center;
+    font-family: SofiaPro-Regular;
+    font-weight: normal;
+    font-size: 3.75vw;
+    line-height: 6.25vw;
+    width: 90%;
+    margin-bottom: 10vw;
+  }
+  .about-container .wave-container {
+    margin-top: 37.5vw;
+    position: relative;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 8.75vw;
+    z-index: -1;
+  }
+  .about-container .wave-container .wave {
+    width: 200%;
+  }
+  .about-container .skillz-main-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+  }
+  .about-container .wave-container2 {
+    margin-top: 37.5vw;
+    position: relative;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 8.75vw;
+    z-index: -1;
+  }
+  .about-container .wave-container2 .wave {
+    width: 200%;
+  }
+  .about-container .experience-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 6% 6% 10% 6%;
+    margin: 0px auto;
+  }
+  .about-container .experience-container h3 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-family: SofiaPro-SemiBold;
+    text-align: center;
+    font-weight: normal;
+    font-size: 7.5vw;
+    letter-spacing: -1px;
+    margin-bottom: 10vw;
+  }
+  .about-container .experience-container .experience-logo-container {
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+  }
+  .about-container .work-container {
+    width: 100vw;
+    height: 75vw;
+    margin: 0 auto;
+    background: url(../../Images/wine.png) #ff4338;
+    background-repeat: no-repeat;
+    background-size: 23%;
+    background-position: bottom center;
+    -webkit-box-shadow: 0 0 18.75vw #000000a6;
+            box-shadow: 0 0 18.75vw #000000a6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 18.75vw;
+    margin-bottom: 0vw;
+  }
+  .about-container .work-container h3 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-family: SofiaPro-SemiBold;
+    text-align: center;
+    font-weight: normal;
+    font-size: 8.75vw;
+    letter-spacing: -1px;
+  }
+}
 /*# sourceMappingURL=AboutPage.css.map */

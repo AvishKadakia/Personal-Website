@@ -1,6 +1,5 @@
 import React from "react";
 import "./PageTransition.scss";
-import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
 class PageTransition extends React.Component {

@@ -7,6 +7,7 @@ body {
   margin: 0 !important;
   width: 100%;
   height: auto;
+  cursor: none;
 }
 img {
   width: 100%;
@@ -15,6 +16,42 @@ img {
 * {
   box-sizing: border-box;
 }
+.cursor {
+  position: fixed;
+  background-color: transparent;
+  width: 25 * $desk + vw;
+  height: 25 * $desk + vw;
+  border: 2px solid #000;
+  border-radius: 95% 89% 78% 71% / 91% 70% 84%;
+  z-index: 10000;
+  transition: 0.5s, top 0s, left 0s !important;
+  animation: cursorAnim 0.5s infinite alternate;
+  pointer-events: none;
+  //transition: all 1s;
+}
+.link-animate {
+  width: 50 * $desk + vw;
+  height: 50 * $desk + vw;
+  border: 2px solid #fff;
+  background-color: #fff;
+  mix-blend-mode: exclusion;
+}
+input,
+textarea {
+  cursor: none;
+}
+// .link-animate::after {
+//   content: "";
+//   width: 100 * $desk + vw;
+//   height: 100 * $desk + vw;
+//   position: absolute;
+//   border: 8 * $desk + vw solid gray;
+//   border-radius: 50%;
+//   opacity: 0.9;
+//   top: -25 * $desk + vw;
+//   left: -25 * $desk + vw;
+//   animation: cursorAnim2 0.5s infinite alternate;
+// }
 .blob-animation {
   position: relative;
   border-radius: 50%;
@@ -37,8 +74,9 @@ textarea {
 }
 a {
   text-decoration: none;
+  cursor: none;
   span {
-    cursor: pointer;
+    cursor: none;
   }
 }
 .float-left {
@@ -54,6 +92,22 @@ a {
 
   100% {
     transform: rotate(359deg);
+  }
+}
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(0.4);
   }
 }
 @keyframes float {

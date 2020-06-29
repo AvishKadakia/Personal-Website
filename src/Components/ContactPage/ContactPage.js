@@ -2,46 +2,26 @@ import React from "react";
 import "./ContactPage.scss";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import Skillz from "../Skillz/Skillz";
 import contactplane from "../../Images/contactplane.png";
 import scroll2 from "../../Images/scroll2.svg";
 import splatterDark from "../../Images/splatterdark.png";
+import Particle from "../Particle/Particle";
 import $ from "jquery";
-import Typed from "typed.js";
-import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
 
-function setBorderRadius() {
-  var slides = document.getElementsByClassName("blob-animation");
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].style.setProperty("--br-blobby", generateBorderRadiusValue());
-  }
-}
-
-function generateBorderRadiusValue() {
-  return `${getRandomValue()}% ${getRandomValue()}% ${getRandomValue()}% ${getRandomValue()}% / ${getRandomValue()}% ${getRandomValue()}% ${getRandomValue()}%`;
-}
-
-function getRandomValue() {
-  return Math.floor(Math.random() * 50) + 50;
-}
 class ContactPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { forgotPasswordPopupStatus: false };
   }
   componentDidMount() {
-    AOS.init();
     $("window").scrollTop("0px");
-    setBorderRadius();
-    setInterval(setBorderRadius, 1500);
   }
 
   render() {
     return (
       <div className={"contact-container  " + this.props.className}>
         <div className="background">
+          <Particle lineColor="#fff" lineOpacity="0.8"></Particle>
           <div className="line" id="line1"></div>
           <div className="line" id="line2"></div>
           <div className="line" id="line3"></div>
@@ -85,7 +65,7 @@ class ContactPage extends React.Component {
               </div>
               <div className="input-field float-right">
                 <input type="text" id="email" required autocomplete="off" />
-                <label for="email">What's your e-mail address?</label>
+                <label for="email">What's your e-mail?</label>
               </div>
               <div className="input-field-textarea float-left">
                 <textarea

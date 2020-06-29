@@ -141,6 +141,17 @@ $mul: 100/800;
     position: relative;
     padding-left: 320 * $desk + vw;
     padding-right: 200 * $desk + vw;
+    .image-fix-1 {
+      .skillz-image {
+        width: 500 * $desk + vw;
+        margin-top: -40 * $desk + vw;
+      }
+    }
+    .image-fix-2 {
+      .skillz-image {
+        width: 380 * $desk + vw;
+      }
+    }
   }
   .wave-container2 {
     margin-top: 300 * $desk + vw;
@@ -205,6 +216,228 @@ $mul: 100/800;
 }
 
 @media screen and (max-width: 800px) {
-  .section-container {
+  .about-container {
+    position: absolute;
+    overflow-x: hidden;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    .background {
+      top: 0px;
+      left: 0px;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      background-color: #273040;
+      .line {
+        float: left;
+        margin-left: 16.5vw;
+        width: 1.5 * $mul + vw;
+        height: 100%;
+        background-color: #1c2330;
+      }
+      z-index: -2000;
+    }
+
+    .circle-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      .splatter {
+        position: absolute;
+        margin: 20 * $mul + vw auto;
+        width: 667 * $mul + vw;
+        height: 480 * $mul + vw;
+      }
+      .circle-big {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px auto;
+        width: 500 * $mul + vw;
+        height: 500 * $mul + vw;
+
+        background-color: #00e5ea;
+        animation: none;
+        margin-top: 50 * $mul + vw;
+        z-index: 21;
+        .selfImage {
+          position: relative;
+          width: 430 * $mul + vw;
+          height: 750 * $mul + vw;
+          margin-top: 280 * $mul + vw;
+          filter: grayscale(100%);
+          // margin-top: -150 * $mul + vw;
+          // margin-left: -150 * $mul + vw;
+        }
+      }
+      .heading-container {
+        position: absolute;
+        margin: 150 * $mul + vw auto;
+        z-index: 21;
+        .type-wrap {
+          position: relative;
+          width: 100%;
+          text-align: center;
+          font-size: 20vw;
+          font-family: "SofiaPro-Bold";
+          font-weight: normal;
+          letter-spacing: -4 * $mul + vw;
+          color: #fff;
+          width: 100%;
+          text-align: center;
+        }
+        /* the above is for styling puposes only */
+      }
+    }
+    .plane-container {
+      position: fixed;
+      top: 0px;
+      left: 80vw;
+      right: 0px;
+      width: 100%;
+      height: 100%;
+      display: block;
+      align-self: flex-end;
+      justify-self: flex-end;
+      z-index: -10;
+      .plane {
+        position: relative;
+        width: 320 * $mul + vw;
+        margin-top: 700 * $mul + vw;
+        height: 350 * $mul + vw;
+        animation: float 6s ease-in-out infinite;
+      }
+    }
+
+    .about-me-container {
+      position: relative;
+      padding: 4vw;
+      //padding-bottom: 170 * $mul + vw;
+      width: 100vw;
+      margin: 0px auto;
+      margin-top: 130 * $mul + vw;
+
+      z-index: 200;
+      background-color: #273040;
+      box-shadow: 0 0 150 * $mul + vw #000000a6;
+      h2 {
+        padding: 0;
+        margin: 0;
+        color: #fff;
+        font-family: SofiaPro-SemiBold;
+        text-align: center;
+        font-weight: normal;
+        font-size: 10vw;
+        letter-spacing: -1px;
+        margin-bottom: 80 * $mul + vw;
+      }
+      p {
+        position: relative;
+        margin: 0px auto;
+        color: #7c8898;
+        text-align: center;
+        font-family: SofiaPro-Regular;
+        font-weight: normal;
+        font-size: 30 * $mul + vw;
+        line-height: 50 * $mul + vw;
+        width: 90%;
+        margin-bottom: 80 * $mul + vw;
+      }
+    }
+    .wave-container {
+      margin-top: 300 * $mul + vw;
+      position: relative;
+      width: 100vw;
+      height: auto;
+      margin-bottom: 70 * $mul + vw;
+      z-index: -1;
+      .wave {
+        width: 200%;
+      }
+    }
+    .skillz-main-container {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding-left: 60 * $mul + vw;
+      padding-right: 60 * $mul + vw;
+      .image-fix-1 {
+        .skillz-image {
+          width: 500 * $mul + vw;
+          margin-top: -40 * $mul + vw;
+        }
+      }
+      .image-fix-2 {
+        .skillz-image {
+          width: 380 * $mul + vw;
+        }
+      }
+    }
+    .wave-container2 {
+      margin-top: 300 * $mul + vw;
+      position: relative;
+      width: 100vw;
+      height: auto;
+      margin-bottom: 70 * $mul + vw;
+      z-index: -1;
+      .wave {
+        width: 200%;
+      }
+    }
+    .experience-container {
+      position: relative;
+      width: 100%;
+      height: auto;
+      padding: 6% 6% 10% 6%;
+      margin: 0px auto;
+      h3 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        color: #fff;
+        font-family: SofiaPro-SemiBold;
+        text-align: center;
+        font-weight: normal;
+        font-size: 60 * $mul + vw;
+        letter-spacing: -1px;
+        margin-bottom: 80 * $mul + vw;
+      }
+      .experience-logo-container {
+        width: 100%;
+        height: auto;
+        margin: 0px auto;
+      }
+    }
+    .work-container {
+      width: 100vw;
+      height: 600 * $mul + vw;
+      margin: 0 auto;
+      background: url(../../Images/wine.png) #ff4338;
+      background-repeat: no-repeat;
+      background-size: 23%;
+      background-position: bottom center;
+      box-shadow: 0 0 150 * $mul + vw #000000a6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 150 * $mul + vw;
+      margin-bottom: 0 * $mul + vw;
+      h3 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        color: #fff;
+        font-family: SofiaPro-SemiBold;
+        text-align: center;
+        font-weight: normal;
+        font-size: 70 * $mul + vw;
+        letter-spacing: -1px;
+      }
+    }
   }
 }

@@ -317,4 +317,257 @@
   cursor: pointer;
   font-size: 1.5625vw;
 }
+
+@media screen and (max-width: 800px) {
+  .contact-container {
+    position: absolute;
+    overflow-x: hidden;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+  }
+  .contact-container .background {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: #00e5ea;
+    z-index: -2000;
+  }
+  .contact-container .background .line {
+    float: left;
+    margin-left: 16.5vw;
+    width: 0.1875vw;
+    height: 100%;
+    background-color: #1c2330;
+    opacity: 0.1;
+  }
+  .contact-container .circle-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+  }
+  .contact-container .circle-section .splatter {
+    position: absolute;
+    margin: -22.5vw auto;
+    width: 68.75vw;
+    height: 65vw;
+    z-index: -10;
+  }
+  .contact-container .circle-section .circle-big {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0px auto;
+    width: 112.5vw;
+    height: 112.5vw;
+    margin-top: -6.25vw;
+    z-index: 0;
+  }
+  .contact-container .circle-section .circle-big .circle-small {
+    position: absolute;
+    -webkit-animation: rotate 30s linear infinite;
+            animation: rotate 30s linear infinite;
+    width: 60vw;
+    height: 60vw;
+    background-color: #121822;
+    z-index: -5;
+    margin-left: 0vw;
+  }
+  .contact-container .circle-section .circle-big .contact-plane {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    -webkit-animation: float 6s ease-in-out infinite;
+            animation: float 6s ease-in-out infinite;
+    margin-top: 18.75vw;
+  }
+  .contact-container .circle-section .scroll-arrow {
+    position: absolute;
+    margin: 0px auto;
+    bottom: 2.5vw;
+    width: 1.625vw;
+    height: 8.75vw;
+  }
+  .contact-container .circle-section .bounce {
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+  }
+  .contact-container .circle-section .heading-container {
+    position: absolute;
+    margin: 0vw auto;
+    z-index: 21;
+    /* the above is for styling puposes only */
+  }
+  .contact-container .circle-section .heading-container .type-wrap {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 14vw;
+    font-family: "SofiaPro-Bold";
+    font-weight: normal;
+    letter-spacing: -0.75vw;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+  }
+  .contact-container .contact-form-container {
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+  .contact-container .contact-form-container .background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    background-color: #273040;
+    z-index: -2000;
+  }
+  .contact-container .contact-form-container .background .line {
+    float: left;
+    margin-left: 16.5vw;
+    width: 0.1875vw;
+    height: 100%;
+    background-color: #1c2330;
+    opacity: 1;
+  }
+  .contact-container .contact-form-container .contact-form-card {
+    position: absolute;
+    background-color: #273040;
+    -webkit-box-shadow: 0px 0px 14.375vw #000000a6;
+            box-shadow: 0px 0px 14.375vw #000000a6;
+    padding: 6vw;
+    width: 95vw;
+    top: 15vw;
+  }
+  .contact-container .contact-form-container .contact-form-card .input-field {
+    position: relative;
+    width: 100%;
+    margin-top: 15vw;
+  }
+  .contact-container .contact-form-container .contact-form-card label {
+    position: absolute;
+    top: 3.125vw;
+    left: 1.875vw;
+    color: #fff;
+    font-family: SofiaPro-SemiBold;
+    text-align: left;
+    font-weight: normal;
+    font-size: 4.375vw;
+    letter-spacing: -1px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+    cursor: text;
+  }
+  .contact-container .contact-form-container .contact-form-card input {
+    width: 100%;
+    padding: 2.5vw 2.25vw;
+    margin: 1vw 0;
+    display: inline-block;
+    border-radius: 0.5vw;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #273040;
+    border: none;
+    color: #fff;
+    font-family: SofiaPro-SemiBold;
+    font-weight: normal;
+    font-size: 4.375vw;
+    border-bottom: 2px solid #d3d3d3;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+  .contact-container .contact-form-container .contact-form-card .input-field-textarea {
+    position: relative;
+    width: 100%;
+    margin-top: 18.75vw;
+  }
+  .contact-container .contact-form-container .contact-form-card textarea {
+    width: 100%;
+    padding: 2.5vw 2.25vw;
+    margin: 1vw 0;
+    display: inline-block;
+    border-radius: 0.5vw;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #273040;
+    border: none;
+    color: #fff;
+    font-family: SofiaPro-SemiBold;
+    font-weight: normal;
+    font-size: 3.75vw;
+    border-bottom: 2px solid #d3d3d3;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+    resize: none;
+    height: 32.5vw;
+  }
+  .contact-container .contact-form-container .contact-form-card input:invalid {
+    outline: 0;
+  }
+  .contact-container .contact-form-container .contact-form-card input:focus,
+  .contact-container .contact-form-container .contact-form-card input:valid {
+    border-color: #fff;
+    border: 0.25vw solid #fff;
+    background-color: #0e131c;
+  }
+  .contact-container .contact-form-container .contact-form-card input:focus ~ label,
+  .contact-container .contact-form-container .contact-form-card input:valid ~ label {
+    font-size: 3.625vw;
+    top: -5vw;
+    color: #fff;
+  }
+  .contact-container .contact-form-container .contact-form-card textarea:invalid {
+    outline: 0;
+  }
+  .contact-container .contact-form-container .contact-form-card textarea:focus,
+  .contact-container .contact-form-container .contact-form-card textarea:valid {
+    border-color: #fff;
+    border: 0.25vw solid #fff;
+    background-color: #0e131c;
+  }
+  .contact-container .contact-form-container .contact-form-card textarea:focus ~ label,
+  .contact-container .contact-form-container .contact-form-card textarea:valid ~ label {
+    font-size: 3.625vw;
+    top: -7.5vw;
+    color: #fff;
+  }
+  .contact-container .contact-form-container .contact-form-card .send-button {
+    position: relative;
+    margin: 10vw auto;
+    width: 100%;
+    color: #fff;
+    color: #00e5ea;
+    font-family: SofiaPro-SemiBold;
+    text-align: center;
+    font-weight: normal;
+    text-decoration: underline;
+    display: block;
+    background-color: transparent;
+    letter-spacing: -1px;
+    border: none;
+    cursor: pointer;
+    font-size: 4.375vw;
+  }
+}
 /*# sourceMappingURL=ContactPage.css.map */

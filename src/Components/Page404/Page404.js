@@ -1,33 +1,14 @@
 import React from "react";
 import "./Page404.scss";
-import { Link } from "react-router-dom";
-import Navbar from "../Navbar/Navbar";
-import contactplane from "../../Images/contactplane.png";
-import scroll2 from "../../Images/scroll2.svg";
+
 import splatterDark from "../../Images/splatterdark.png";
 import $ from "jquery";
-import Typed from "typed.js";
-import AOS from "aos";
-function setBorderRadius() {
-  var slides = document.getElementsByClassName("blob-animation");
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].style.setProperty("--br-blobby", generateBorderRadiusValue());
-  }
-}
 
-function generateBorderRadiusValue() {
-  return `${getRandomValue()}% ${getRandomValue()}% ${getRandomValue()}% ${getRandomValue()}% / ${getRandomValue()}% ${getRandomValue()}% ${getRandomValue()}%`;
-}
+import Particle from "../Particle/Particle";
 
-function getRandomValue() {
-  return Math.floor(Math.random() * 50) + 50;
-}
 class Page404 extends React.Component {
   componentDidMount() {
-    AOS.init();
     $("window").scrollTop("0px");
-    setBorderRadius();
-    setInterval(setBorderRadius, 1500);
   }
   render() {
     console.log("loadingNewPage " + localStorage.getItem("loadingNewPage"));
@@ -36,6 +17,8 @@ class Page404 extends React.Component {
       <React.Fragment>
         <div className={"coming-soon-container " + this.props.className}>
           <div className="background">
+            <Particle lineColor="#fff" lineOpacity="0.8"></Particle>
+
             <div className="line" id="line1"></div>
             <div className="line" id="line2"></div>
             <div className="line" id="line3"></div>
