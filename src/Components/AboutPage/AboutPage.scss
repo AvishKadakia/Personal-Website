@@ -134,7 +134,16 @@ $mul: 100/800;
       width: 90%;
     }
   }
-
+  .wave-container {
+    margin-top: 100 * $desk + vw;
+    position: relative;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 70 * $desk + vw;
+    z-index: -1;
+    .wave {
+    }
+  }
   .skillz-main-container {
     width: 100%;
     height: auto;
@@ -154,7 +163,7 @@ $mul: 100/800;
     }
   }
   .wave-container2 {
-    margin-top: 300 * $desk + vw;
+    margin-top: 700 * $desk + vw;
     position: relative;
     width: 100vw;
     height: auto;
@@ -185,32 +194,6 @@ $mul: 100/800;
       width: 80%;
       height: auto;
       margin: 0px auto;
-    }
-  }
-  .work-container {
-    width: 70vw;
-    height: 600 * $desk + vw;
-    margin: 0 auto;
-    background: url(../../Images/wine.png) #ff4338;
-    background-repeat: no-repeat;
-    background-size: 23%;
-    background-position: bottom center;
-    box-shadow: 0 0 150 * $desk + vw #000000a6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 150 * $desk + vw;
-    margin-bottom: 150 * $desk + vw;
-    h3 {
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      color: #fff;
-      font-family: SofiaPro-SemiBold;
-      text-align: center;
-      font-weight: normal;
-      font-size: 5vw;
-      letter-spacing: -1px;
     }
   }
 }
@@ -301,9 +284,10 @@ $mul: 100/800;
       right: 0px;
       width: 100%;
       height: 100%;
-      display: block;
+      display: none;
       align-self: flex-end;
       justify-self: flex-end;
+
       z-index: -10;
       .plane {
         position: relative;
@@ -355,7 +339,7 @@ $mul: 100/800;
       width: 100vw;
       height: auto;
       margin-bottom: 70 * $mul + vw;
-      z-index: -1;
+      z-index: 0;
       .wave {
         width: 200%;
       }
@@ -384,7 +368,7 @@ $mul: 100/800;
       width: 100vw;
       height: auto;
       margin-bottom: 70 * $mul + vw;
-      z-index: -1;
+      z-index: 0;
       .wave {
         width: 200%;
       }
@@ -411,32 +395,6 @@ $mul: 100/800;
         width: 100%;
         height: auto;
         margin: 0px auto;
-      }
-    }
-    .work-container {
-      width: 100vw;
-      height: 600 * $mul + vw;
-      margin: 0 auto;
-      background: url(../../Images/wine.png) #ff4338;
-      background-repeat: no-repeat;
-      background-size: 23%;
-      background-position: bottom center;
-      box-shadow: 0 0 150 * $mul + vw #000000a6;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 150 * $mul + vw;
-      margin-bottom: 0 * $mul + vw;
-      h3 {
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        color: #fff;
-        font-family: SofiaPro-SemiBold;
-        text-align: center;
-        font-weight: normal;
-        font-size: 70 * $mul + vw;
-        letter-spacing: -1px;
       }
     }
   }

@@ -1,0 +1,430 @@
+@font-face {
+  font-family: MontserratRegular;
+  src: url("../Fonts/woff2Format/Montserrat-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: SofiaPro-Bold;
+  src: url("../Fonts/woff2Format/SofiaPro-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: SofiaPro-Regular;
+  src: url("../Fonts/woff2Format/Sofia-Pro-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: SofiaPro-SemiBold;
+  src: url("../Fonts/woff2Format/SofiaPro-SemiBold.woff2") format("woff2");
+}
+
+.FormDesk-container {
+  position: absolute;
+  overflow-x: hidden;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+}
+
+.FormDesk-container .background {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: #00ed86;
+  z-index: -2000;
+}
+
+.FormDesk-container .background .line {
+  float: left;
+  margin-left: 16.5vw;
+  width: 0.07812vw;
+  height: 100%;
+  background-color: #1c2330;
+  opacity: 0.1;
+}
+
+.FormDesk-container .circle-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+}
+
+.FormDesk-container .circle-section .splatter {
+  position: absolute;
+  margin: -2.08333vw auto;
+  width: 26.04167vw;
+  height: 27.08333vw;
+  z-index: -10;
+}
+
+.FormDesk-container .circle-section .circle-big {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px auto;
+  width: 46.875vw;
+  height: 46.875vw;
+  margin-top: -2.60417vw;
+  z-index: 0;
+}
+
+.FormDesk-container .circle-section .circle-big .circle-small {
+  position: absolute;
+  -webkit-animation: rotate 30s linear infinite;
+          animation: rotate 30s linear infinite;
+  width: 18.22917vw;
+  height: 18.22917vw;
+  background-color: #121822;
+  z-index: -5;
+  margin-left: 0vw;
+}
+
+.FormDesk-container .circle-section .circle-big .hand {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url(https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/hand2.png);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: left 70%;
+}
+
+.FormDesk-container .circle-section .scroll-arrow {
+  position: absolute;
+  margin: 0px auto;
+  bottom: 1.04167vw;
+  width: 0.67708vw;
+  height: 3.64583vw;
+}
+
+.FormDesk-container .circle-section .bounce {
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+.FormDesk-container .circle-section .heading-container {
+  position: absolute;
+  margin: 0vw auto;
+  z-index: 21;
+  /* the above is for styling puposes only */
+}
+
+.FormDesk-container .circle-section .heading-container .type-wrap {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 9vw;
+  font-family: "SofiaPro-Bold";
+  font-weight: normal;
+  letter-spacing: -0.3125vw;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+
+.FormDesk-container .section-container {
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: auto;
+  position: relative;
+}
+
+.FormDesk-container .section-container .background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  background-color: #273040;
+  z-index: -2000;
+}
+
+.FormDesk-container .section-container .background .line {
+  float: left;
+  margin-left: 16.5vw;
+  width: 0.07812vw;
+  height: 100%;
+  background-color: #1c2330;
+  opacity: 1;
+}
+
+.FormDesk-container .section-container .container {
+  position: relative;
+  width: 100vw;
+  height: auto;
+}
+
+.FormDesk-container .section-container .container-1 .outer-image {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  width: 52.39583vw;
+  height: 45.3125vw;
+  margin-top: 8.85417vw;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-image: url("https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/desktop.png");
+  z-index: 20;
+}
+
+.FormDesk-container .section-container .container-1 .outer-image .inner-image-1 {
+  position: absolute;
+  top: 3.17708vw;
+  left: 1.66667vw;
+  width: 49.16667vw;
+  height: 28.125vw;
+}
+
+.FormDesk-container .section-container .container-1 .outer-image .inner-image-1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.FormDesk-container .section-container .container-1 .work-info-container {
+  position: relative;
+  padding: 3.125vw;
+  padding-bottom: 3.64583vw;
+  width: 66.66667vw;
+  margin: 0px auto;
+  margin-top: -9.89583vw;
+  background-color: #273040bd;
+  -webkit-box-shadow: 0 0 7.8125vw #000000a6;
+          box-shadow: 0 0 7.8125vw #000000a6;
+}
+
+.FormDesk-container .section-container .container-1 .work-info-container h2 {
+  color: #fff;
+  font-family: SofiaPro-SemiBold;
+  font-size: 4vw;
+  text-align: center;
+  margin-top: 6.77083vw;
+  margin-bottom: 1.5625vw;
+  letter-spacing: -1px;
+}
+
+.FormDesk-container .section-container .container-1 .work-info-container p {
+  font-size: 1.30208vw;
+  text-align: center;
+  line-height: 2.60417vw;
+  color: #7c8898;
+  font-family: SofiaPro-Regular;
+  font-weight: normal;
+}
+
+.FormDesk-container .wave-container {
+  margin-top: 4.16667vw;
+  position: relative;
+  width: 100vw;
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .FormDesk-container {
+    position: absolute;
+    overflow-x: hidden;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+  }
+  .FormDesk-container .background {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: -2000;
+  }
+  .FormDesk-container .background .line {
+    float: left;
+    margin-left: 16.5vw;
+    width: 0.1875vw;
+    height: 100%;
+    background-color: #1c2330;
+    opacity: 0.1;
+  }
+  .FormDesk-container .circle-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+  }
+  .FormDesk-container .circle-section .splatter {
+    position: absolute;
+    margin: -5vw auto;
+    width: 62.5vw;
+    height: 65vw;
+    z-index: -10;
+  }
+  .FormDesk-container .circle-section .circle-big {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0px auto;
+    width: 112.5vw;
+    height: 112.5vw;
+    margin-top: -6.25vw;
+    z-index: 0;
+  }
+  .FormDesk-container .circle-section .circle-big .circle-small {
+    position: absolute;
+    -webkit-animation: rotate 30s linear infinite;
+            animation: rotate 30s linear infinite;
+    width: 43.75vw;
+    height: 43.75vw;
+    background-color: #121822;
+    z-index: -5;
+    margin-left: 0vw;
+  }
+  .FormDesk-container .circle-section .circle-big .hand {
+    background-size: 90%;
+    background-position: left 50%;
+  }
+  .FormDesk-container .circle-section .scroll-arrow {
+    position: absolute;
+    margin: 0px auto;
+    bottom: 2.5vw;
+    width: 1.625vw;
+    height: 8.75vw;
+  }
+  .FormDesk-container .circle-section .bounce {
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+  }
+  .FormDesk-container .circle-section .heading-container {
+    position: absolute;
+    margin: 0vw auto;
+    z-index: 21;
+    /* the above is for styling puposes only */
+  }
+  .FormDesk-container .circle-section .heading-container .type-wrap {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 20vw;
+    font-family: "SofiaPro-Bold";
+    font-weight: normal;
+    letter-spacing: -0.75vw;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+  }
+  .FormDesk-container .section-container {
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: auto;
+    position: relative;
+  }
+  .FormDesk-container .section-container .background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    background-color: #273040;
+    z-index: -2000;
+  }
+  .FormDesk-container .section-container .background .line {
+    float: left;
+    margin-left: 16.5vw;
+    width: 0.1875vw;
+    height: 100%;
+    background-color: #1c2330;
+    opacity: 1;
+  }
+  .FormDesk-container .section-container .container {
+    position: relative;
+    width: 100vw;
+    height: auto;
+  }
+  .FormDesk-container .section-container .container-1 .outer-image {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    width: 94.5vw;
+    height: 77.5vw;
+    margin-top: 21.25vw;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 20;
+  }
+  .FormDesk-container .section-container .container-1 .outer-image .inner-image-1 {
+    position: absolute;
+    top: 5vw;
+    left: 5.375vw;
+    width: 85vw;
+    height: 48.75vw;
+  }
+  .FormDesk-container .section-container .container-1 .outer-image .inner-image-1 img {
+    width: 100%;
+    height: 100%;
+  }
+  .FormDesk-container .section-container .container-1 .work-info-container {
+    position: relative;
+    padding: 7.5vw;
+    padding-bottom: 8.75vw;
+    width: 100vw;
+    margin: 0px auto;
+    margin-top: -18.75vw;
+    background-color: #273040bd;
+    -webkit-box-shadow: 0 0 18.75vw #000000a6;
+            box-shadow: 0 0 18.75vw #000000a6;
+  }
+  .FormDesk-container .section-container .container-1 .work-info-container h2 {
+    color: #fff;
+    font-family: SofiaPro-SemiBold;
+    font-size: 10vw;
+    text-align: center;
+    margin-top: 16.25vw;
+    margin-bottom: 3.75vw;
+    letter-spacing: -1px;
+  }
+  .FormDesk-container .section-container .container-1 .work-info-container p {
+    font-size: 4.375vw;
+    text-align: center;
+    line-height: 8.75vw;
+    color: #7c8898;
+    font-family: SofiaPro-Regular;
+    font-weight: normal;
+  }
+  .FormDesk-container .wave-container .wave {
+    width: 200%;
+  }
+}
+/*# sourceMappingURL=FormDesk.css.map */

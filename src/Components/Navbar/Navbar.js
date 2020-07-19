@@ -1,12 +1,30 @@
 import React from "react";
 import "./Navbar.scss";
 import { connect } from "react-redux";
-import logo from "../../Images/logo2.png";
-import WhatsappIcon from "../../Images/whatsapp-icon.png";
-import linkdenIcon from "../../Images/linkden-icon.png";
-import instaIcon from "../../Images/insta-icon.png";
-import cvIcon from "../../Images/cv-icon.png";
-import $ from "jquery";
+//import $ from "jquery";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// import ReactGA from "react-ga";
+// import auth from "./auth.ts"; // Sample authentication provider
+
+// const trackingId = "UA-91489722-1"; // Replace with your Google Analytics tracking ID
+// ReactGA.initialize(trackingId);
+// ReactGA.set({
+//   userId: auth.currentUserId(),
+//   // any data that is relevant to the user session
+//   // that you would like to track with google analytics
+// });
+
+let cvIcon =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/cv-icon.png";
+let logo =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/logo2.png";
+let WhatsappIcon =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/whatsapp-icon.png";
+let linkdenIcon =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/linkden-icon.png";
+let instaIcon =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/insta-icon.png";
 function setBorderRadius() {
   var slides = document.getElementsByClassName("blob-animation");
   for (var i = 0; i < slides.length; i++) {
@@ -21,8 +39,8 @@ function generateBorderRadiusValue() {
 function getRandomValue() {
   return Math.floor(Math.random() * 50) + 50;
 }
-let mouseX = 0;
-let mouseY = 0;
+//let mouseX = 0;
+//let mouseY = 0;
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -35,31 +53,24 @@ class Navbar extends React.Component {
   }
 
   componentDidMount() {
-    let navLinks = document.querySelectorAll("a");
+    AOS.init({ disable: "mobile" });
 
+    let navLinks = document.querySelectorAll("a");
     if (navLinks) {
       navLinks.forEach((link) => {
         if (link.classList.contains("link")) {
           link.onclick = (e) => {
             e.preventDefault();
+            console.log(link);
 
-            if (
-              window.location.href !== e.srcElement.href &&
-              window.location.href !== e.srcElement.parentElement.href
-            ) {
+            if (window.location.href !== link.getAttribute("href")) {
               document
                 .querySelector(".page-transition")
                 .classList.toggle("active");
               setTimeout(function () {
-                if (!e.srcElement.parentElement.href) {
-                  localStorage.setItem("loadingNewPage", true);
-                  localStorage.setItem("previousPage", window.location.href);
-                  window.location = e.srcElement.href;
-                } else {
-                  localStorage.setItem("loadingNewPage", true);
-                  window.location = e.srcElement.parentElement.href;
-                  localStorage.setItem("previousPage", window.location.href);
-                }
+                localStorage.setItem("loadingNewPage", true);
+                localStorage.setItem("previousPage", window.location.href);
+                window.location = link.getAttribute("href");
               }, 500);
             }
           };
@@ -68,36 +79,57 @@ class Navbar extends React.Component {
     }
     setBorderRadius();
     setInterval(setBorderRadius, 1500);
-    document.addEventListener("mousemove", (e) => {
-      mouseX = e.clientY;
-      mouseY = e.clientX;
-      document
-        .querySelector(".cursor")
-        .setAttribute(
-          "style",
-          "top: " +
-            (mouseX - document.querySelector(".cursor").clientHeight / 2 + 0) +
-            "px; left: " +
-            (mouseY - document.querySelector(".cursor").clientWidth / 2 + 0) +
-            "px;"
-        );
-    });
-    $("a").hover(function () {
-      document.querySelector(".cursor").classList.toggle("link-animate");
-    });
-    $(".bubble-wrap").hover(function () {
-      document.querySelector(".cursor").classList.toggle("link-animate");
-    });
-    $(".send-button").hover(function () {
-      document.querySelector(".cursor").classList.toggle("link-animate");
-    });
-    $(".input-field").hover(function () {
-      document.querySelector(".cursor").classList.toggle("link-animate");
-    });
-    $(".input-field-textarea").hover(function () {
-      document.querySelector(".cursor").classList.toggle("link-animate");
-    });
+    // document.addEventListener("mousemove", (e) => {
+    //   mouseX = e.clientY;
+    //   mouseY = e.clientX;
+    //   document
+    //     .querySelector(".cursor")
+    //     .setAttribute(
+    //       "style",
+    //       "top: " +
+    //         (mouseX - document.querySelector(".cursor").clientHeight / 2 + 0) +
+    //         "px; left: " +
+    //         (mouseY - document.querySelector(".cursor").clientWidth / 2 + 0) +
+    //         "px;"
+    //     );
+    // });
+    // $("a").hover(function () {
+    //   document.querySelector(".cursor").classList.toggle("link-animate");
+    // });
+    // $(".bubble-wrap").hover(function () {
+    //   document.querySelector(".cursor").classList.toggle("link-animate");
+    // });
+    // $(".send-button").hover(function () {
+    //   document.querySelector(".cursor").classList.toggle("link-animate");
+    // });
+    // $(".input-field").hover(function () {
+    //   document.querySelector(".cursor").classList.toggle("link-animate");
+    // });
+    // $(".input-field-textarea").hover(function () {
+    //   document.querySelector(".cursor").classList.toggle("link-animate");
+    // });
     //setInterval(this.setCursor, 100);
+    if (document.getElementsByClassName("Loading-container")[0] !== undefined) {
+      document.getElementsByClassName(
+        "Loading-container"
+      )[0].style.transitionDuration = "0.4s";
+      document.getElementsByClassName("Loading-container")[0].style.top =
+        "-10vh";
+
+      setInterval(function () {
+        if (
+          document.getElementsByClassName("Loading-container")[0] !== undefined
+        ) {
+          document.getElementsByClassName(
+            "Loading-container"
+          )[0].style.transitionDuration = "1s";
+          document.getElementsByClassName("Loading-container")[0].style.top =
+            "-110vh";
+
+          document.cookie = "loadedOnce=True";
+        }
+      }, 700);
+    }
   }
 
   hideElements() {
@@ -123,7 +155,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <div className="navigation-container">
-        <div className="cursor"></div>
+        {/* <div className="cursor"></div> */}
 
         <div className="navbar">
           <div className="leftBar">
@@ -139,7 +171,7 @@ class Navbar extends React.Component {
           <div className="rightBar">
             <div className="logo">
               <a className="link" href="/">
-                <img src={logo} alt="logo"></img>
+                <img src={logo} alt="logo" />
               </a>
             </div>
             <nav className="navbar-container">
@@ -172,8 +204,8 @@ class Navbar extends React.Component {
                 <div className="nav-column double-column">
                   <h2 className="nav-title">Work</h2>
                   <div className="nav-item float-left">
-                    <a className="link" href="/formdesk">
-                      FormDesk
+                    <a className="link" href="/devomark">
+                      Devomark
                     </a>
                   </div>
                   <div className="nav-item float-right">
@@ -193,8 +225,8 @@ class Navbar extends React.Component {
                     </a>
                   </div>
                   <div className="nav-item float-left">
-                    <a className="link" href="/devomark">
-                      Devomark
+                    <a className="link" href="/formdesk">
+                      FormDesk
                     </a>
                   </div>
                 </div>
@@ -215,24 +247,41 @@ class Navbar extends React.Component {
             </div>
             <div className="social-icon-container">
               <div className="social-media-icon">
-                <a href="https://api.whatsapp.com/send?phone=+917977905493">
-                  <img src={WhatsappIcon} alt="Whatsapp Icon"></img>
+                <a
+                  href="https://api.whatsapp.com/send?phone=+917977905493"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={WhatsappIcon} alt="Whatsapp Icon" />
                 </a>
               </div>
 
               <div className="social-media-icon">
-                <a href="https://www.instagram.com/avishkadakia">
-                  <img src={instaIcon} alt="Instagram Icon"></img>
+                <a
+                  href="https://www.instagram.com/avishkadakia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={instaIcon} alt="Instagram Icon" />
                 </a>
               </div>
               <div className="social-media-icon">
-                <a href="https://www.linkedin.com/in/avish-kadakia-3a6591116">
-                  <img src={linkdenIcon} alt="Linkden Icon"></img>
+                <a
+                  href="https://www.linkedin.com/in/avish-kadakia-3a6591116"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={linkdenIcon} alt="Linkden Icon" />
                 </a>
               </div>
               <div className="social-media-icon">
-                <a href="Resume.pdf" download="Avish Kadakia Resume">
-                  <img src={cvIcon} alt="Resume"></img>
+                <a
+                  href="https://res.cloudinary.com/dleeu99na/image/upload/v1593752865/personal%20website/Documents/Resume_qivxp9.pdf"
+                  download="Avish Kadakia Resume"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={cvIcon} alt="Resume" />
                 </a>
               </div>
             </div>
@@ -246,31 +295,13 @@ class Navbar extends React.Component {
 const mapStateToProps = (state) => {
   return {
     sessionInfo: { ...state.sessionInfo },
-    roles: { ...state.roles },
-    form: { ...state.form },
-    organisation: { ...state.organisation },
   };
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    InputChangeHandle: (input) =>
+    UpdateFirstLoad: (input) =>
       dispatch({
-        type: "InputChangeHandle",
-        value: input,
-      }),
-    FormError: (input) =>
-      dispatch({
-        type: "FormError",
-        value: input,
-      }),
-    StoreSessionInfo: (input) =>
-      dispatch({
-        type: "StoreSessionInfo",
-        value: input,
-      }),
-    UpdateData: (input) =>
-      dispatch({
-        type: "UpdateData",
+        type: "UpdateFirstLoad",
         value: input,
       }),
   };

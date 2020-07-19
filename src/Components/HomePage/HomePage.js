@@ -2,35 +2,57 @@ import React from "react";
 import "./HomePage.scss";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
+
 import Skillz from "../Skillz/Skillz";
-import indiaMap from "../../Images/india-map.png";
-import bubble1 from "../../Images/bubble1.png";
-import bubble2 from "../../Images/bubble2.png";
-import bubble4 from "../../Images/bubble4.png";
-import bubble5 from "../../Images/bubble5.png";
-import plane from "../../Images/plane.png";
-import scroll from "../../Images/scroll.svg";
-import wave from "../../Images/wave.png";
-import wave2 from "../../Images/wave2.png";
-import skillz1 from "../../Images/skillz1.png";
-import skillz2 from "../../Images/skillz2.png";
-import skillz3 from "../../Images/skillz3.png";
 import Particle from "../Particle/Particle";
-import $ from "jquery";
+import InfoBox from "../InfoBox/InfoBox";
 import Typed from "typed.js";
-import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
+import $ from "jquery";
 // ..
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
+let indiaMap =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/india-map.png";
+
+let bubble1 =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/bubble1.png";
+let bubble2 =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/bubble2.png";
+let bubble4 =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/bubble4.png";
+let bubble5 =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/bubble5.png";
+let plane =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/plane.png";
+let scroll =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/scroll.svg";
+let wave =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/wave.png";
+let wave2 =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/wave2.png";
+let skillz1 =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/skillz1.png";
+let skillz2 =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/skillz2.png";
+let skillz3 =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/skillz3.png";
+let morphLab =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/morphlab/home.png";
+let mobileLogin =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/formdesk/mobileLogin.png";
+let mobileSplash =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/formdesk/mobileSplash.png";
+let homepage =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/devomark/homepage.png";
+let mobileHome =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/devomark/mobileHome.jpeg";
 
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { forgotPasswordPopupStatus: false };
+    this.state = { rerender: false };
   }
   componentDidMount() {
-    AOS.init();
-    $("window").scrollTop("0px");
-
     new Typed("#typed", {
       strings: [
         "Programmer",
@@ -38,13 +60,50 @@ class HomePage extends React.Component {
         "Philosopher",
         "Entrepreneur",
       ],
-      typeSpeed: 100,
+      typeSpeed: 50,
       startDelay: 0,
-      backSpeed: 60,
-      backDelay: 2000,
+      backSpeed: 30,
+      backDelay: 1000,
       loop: true,
       cursorChar: "|",
       contentType: "html",
+    });
+    var prevscrollTop = 0;
+    var imageLowestScale = 0.8;
+    var currentScale = 1;
+    document.addEventListener("scroll", () => {
+      var scrollTop = $(window).scrollTop();
+
+      if (scrollTop >= $(window).height() * 0.65) {
+        if (scrollTop - prevscrollTop >= 100) {
+          prevscrollTop = scrollTop;
+          if (currentScale - 0.025 >= imageLowestScale) {
+            currentScale = currentScale - 0.025;
+          }
+          $(".plane-container").css("transform", "scale(" + currentScale + ")");
+          $(".plane-container").css("opacity", currentScale);
+        }
+
+        //$(".plane-container").css("transform", "scale()");
+      }
+      if (
+        document.documentElement.scrollHeight -
+          document.documentElement.clientHeight ===
+        scrollTop
+      ) {
+        $(".plane-container").css("transform", "scale(1)");
+        $(".plane-container").css("opacity", 1);
+      }
+      if (scrollTop <= $(window).height() * 0.65) {
+        if (prevscrollTop - scrollTop >= 25) {
+          prevscrollTop = scrollTop;
+          if (currentScale + 0.025 <= 1) {
+            currentScale = currentScale + 0.025;
+          }
+          $(".plane-container").css("transform", "scale(" + currentScale + ")");
+          $(".plane-container").css("opacity", currentScale);
+        }
+      }
     });
   }
 
@@ -52,7 +111,10 @@ class HomePage extends React.Component {
     return (
       <div className={"section-container  " + this.props.className}>
         <div className="background">
-          <Particle lineColor="#00e5ea"></Particle>
+          {window.innerWidth > 800 ? (
+            <Particle lineColor="#00e5ea"></Particle>
+          ) : null}
+
           <div className="line" id="line1"></div>
           <div className="line" id="line2"></div>
           <div className="line" id="line3"></div>
@@ -63,9 +125,9 @@ class HomePage extends React.Component {
           <div className="blob-animation circle-big">
             {/*Reference Website: https://codepen.io/FlorinPop17/pen/PooXqaQ */}
             <div className="blob-animation circle-small"></div>
-            <img className="map" alt="India Map" src={indiaMap}></img>
+            <LazyLoadImage className="map" alt="India Map" src={indiaMap} />
             <div className="scroll-arrow bounce">
-              <img src={scroll} alt="Scroll Arrow"></img>
+              <LazyLoadImage src={scroll} alt="Scroll Arrow" />
             </div>
           </div>
           <div className="heading-container">
@@ -75,25 +137,39 @@ class HomePage extends React.Component {
             </h1>
           </div>
         </div>
-        <img className="bubble1" alt="Bubble Effect 1" src={bubble1}></img>
+        <LazyLoadImage
+          className="bubble1"
+          alt="Bubble Effect 1"
+          src={bubble1}
+        />
 
-        <img className="bubble2" alt="Bubble Effect 2" src={bubble2}></img>
+        <LazyLoadImage
+          className="bubble2"
+          alt="Bubble Effect 2"
+          src={bubble2}
+        />
         <div className="plane-container">
-          <img className="plane" alt="Home Page Plane" src={plane}></img>
+          <LazyLoadImage
+            id="#plane"
+            className="plane"
+            alt="Home Page Plane"
+            src={plane}
+          />
         </div>
         <div className="about-me-container">
           <h2 data-aos="fade-in">Hello, I'm Avish</h2>
           <p data-aos="fade-in">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
+            I create beautiful things, that make a difference. I turn ideas into
+            reality. Innovation &amp; creativy are at the heart of everything I
+            do. I strive to acheive perfection in every task I undertake.
+            {/* Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. I
+            and scrambled it to make a type specimen book. */}
           </p>
         </div>
         <div className="wave-container">
-          <img className="wave" alt="Home Page Wave" src={wave}></img>
+          <LazyLoadImage className="wave" alt="Home Page Wave" src={wave} />
         </div>
         <div className="skillz-main-container">
           <Skillz
@@ -129,15 +205,112 @@ class HomePage extends React.Component {
             maximum results with minimal investments.{" "}
           </Skillz>
         </div>
+        <InfoBox
+          src1={homepage}
+          alt1="Devomark Desktop Home"
+          src2={mobileHome}
+          alt2="Devomark Mobile Homepage"
+          title="Devomark"
+          className="left tab-mobile"
+          marginTop="650"
+          link="/devomark"
+          circleColor="#1bd3ca"
+        >
+          Devomark needed to improve their online presence in the digital agency
+          space. So they approached me as part of their bold rebrand. With speed
+          and scalability seo optimization was also one of their key concerns.
+          The entire project took around 2 months to complete.
+        </InfoBox>
+
+        <InfoBox
+          src1={mobileSplash}
+          alt1="Formdesk Splash"
+          src2={mobileLogin}
+          alt2="Formdesk App Login"
+          title="Formdesk"
+          className="right dual-mobile"
+          marginTop="300"
+          link="/formdesk"
+          circleColor="#1bd3ca"
+        >
+          FormDesk was one of my first experiences as a project manager handling
+          a team of 6 people. The goal was to create a large scale web
+          application which organizations could use internally to create,
+          distribute and manage various forms. It was a very intense experience
+          from the start with very strict deadlines. The entire project turned
+          out to be a great learning experience and helped me mature as a
+          project manager greatly.
+        </InfoBox>
+        <InfoBox
+          src1={morphLab}
+          alt1="Morphlab"
+          title="Morphlab"
+          className="left desktop"
+          marginTop="300"
+          link="/morphlab"
+          circleColor="#1bd3ca"
+        >
+          Morphlab was not just about developing a simple static website. As
+          Morphlab being an architectural studio wanted their website to be
+          innovative and standout by not having a generic feel to it. Which
+          resulted in custom UI/UX interface development. Having had no prior
+          designing experience it was quite challenging but the finished product
+          turned out to be beautiful and just what the client wanted.
+        </InfoBox>
+        {/*  <InfoBox
+          src1={desktopContent}
+          alt1="Bucket"
+          src2={desktopContent}
+          alt2="Devomark"
+          title="Rockin Code"
+          className="left dual-mobile"
+          marginTop="250"
+          link="/devomark"
+        >
+          My day-to-day involves giving direction on development strategy,
+          architecture and design as well as being hands on when it comes to
+          execution of complicated tasks. I also interact with client's on a
+          daily basis to ensure top quality delivery.
+        </InfoBox>
+        <InfoBox
+          src1={desktopContent}
+          alt1="Bucket"
+          src2={desktopContent}
+          alt2="Bucket 2"
+          title="Savrai"
+          className="right tab-mobile"
+          marginTop="250"
+          link="/savrai"
+        >
+          My day-to-day involves giving direction on development strategy,
+          architecture and design as well as being hands on when it comes to
+          execution of complicated tasks. I also interact with client's on a
+          daily basis to ensure top quality delivery.
+        </InfoBox>
+        <InfoBox
+          src1={desktopContent}
+          alt1="Bucket"
+          src2={desktopContent}
+          alt2="Bucket 2"
+          title="Rl Agent"
+          className="right tab-mobile"
+          marginTop="250"
+          link="/rlagent"
+        >
+          My day-to-day involves giving direction on development strategy,
+          architecture and design as well as being hands on when it comes to
+          execution of complicated tasks. I also interact with client's on a
+          daily basis to ensure top quality delivery.
+        </InfoBox> */}
         <div className="wave-container2">
-          <img className="wave" alt="Home Page Wave2" src={wave2}></img>
+          <LazyLoadImage className="wave" alt="Home Page Wave2" src={wave2} />
         </div>
 
         <div className="circle-section circle-2">
           <div className="blob-animation circle-big">
             {/*Reference Website: https://codepen.io/FlorinPop17/pen/PooXqaQ */}
             <div className="blob-animation circle-small"></div>
-            <img className="map" alt="India Map" src={indiaMap}></img>
+            <LazyLoadImage className="map" alt="India Map" src={indiaMap} />
           </div>
 
           <div className="heading-container">
@@ -152,10 +325,10 @@ class HomePage extends React.Component {
           </div>
         </div>
         <div className="bubble4">
-          <img alt="Bubble Effect 4" src={bubble4}></img>
+          <LazyLoadImage alt="Bubble Effect 4" src={bubble4} />
         </div>
         <div className="bubble5">
-          <img alt="Bubble Effect 5" src={bubble5}></img>
+          <LazyLoadImage alt="Bubble Effect 5" src={bubble5} />
         </div>
       </div>
     );

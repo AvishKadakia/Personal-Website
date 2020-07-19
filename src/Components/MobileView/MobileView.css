@@ -1,0 +1,75 @@
+@font-face {
+  font-family: MontserratRegular;
+  src: url("../Fonts/woff2Format/Montserrat-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: SofiaPro-Bold;
+  src: url("../Fonts/woff2Format/SofiaPro-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: SofiaPro-Regular;
+  src: url("../Fonts/woff2Format/Sofia-Pro-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: SofiaPro-SemiBold;
+  src: url("../Fonts/woff2Format/SofiaPro-SemiBold.woff2") format("woff2");
+}
+
+.MobileViewcontainer {
+  position: relative;
+  width: 70%;
+  height: auto;
+  margin: 0px auto;
+}
+
+.MobileViewcontainer .mobileScreen {
+  width: 31%;
+  height: auto;
+  overflow: auto;
+  float: left;
+  padding: 1.5625vw;
+  margin: 0;
+  background-color: #273040f2;
+  -webkit-box-shadow: 0px 0px 7.8125vw #000000a6;
+          box-shadow: 0px 0px 7.8125vw #000000a6;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 4%;
+}
+
+.MobileViewcontainer .mobileScreen img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .MobileViewcontainer {
+    position: relative;
+    width: 70%;
+    height: auto;
+    margin: 0px auto;
+  }
+  .MobileViewcontainer .mobileScreen {
+    width: 98%;
+    height: auto;
+    overflow: auto;
+    float: left;
+    padding: 0vw;
+    margin: 0;
+    background-color: #273040f2;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 6.25vw;
+  }
+  .MobileViewcontainer .mobileScreen img {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+  }
+}
+/*# sourceMappingURL=MobileView.css.map */

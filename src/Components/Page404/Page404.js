@@ -2,17 +2,12 @@ import React from "react";
 import "./Page404.scss";
 
 import splatterDark from "../../Images/splatterdark.png";
-import $ from "jquery";
 
 import Particle from "../Particle/Particle";
 
 class Page404 extends React.Component {
-  componentDidMount() {
-    $("window").scrollTop("0px");
-  }
+  componentDidMount() {}
   render() {
-    console.log("loadingNewPage " + localStorage.getItem("loadingNewPage"));
-
     return (
       <React.Fragment>
         <div className={"coming-soon-container " + this.props.className}>

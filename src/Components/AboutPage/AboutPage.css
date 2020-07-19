@@ -1,41 +1,21 @@
 @font-face {
   font-family: MontserratRegular;
-  src: url("../Fonts/Montserrat/Montserrat-Regular.ttf");
-}
-
-@font-face {
-  font-family: MontserratMedium;
-  src: url("../Fonts/Montserrat/Montserrat-Medium.ttf");
-}
-
-@font-face {
-  font-family: MontserratThin;
-  src: url("../Fonts/Montserrat/Montserrat-Thin.ttf");
-}
-
-@font-face {
-  font-family: MontserratLight;
-  src: url("../Fonts/Montserrat/Montserrat-Light.ttf");
-}
-
-@font-face {
-  font-family: MontserratBold;
-  src: url("../Fonts/Montserrat/Montserrat-Bold.ttf");
+  src: url("../Fonts/woff2Format/Montserrat-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: SofiaPro-Bold;
-  src: url("../Fonts/Sofia-Pro/SofiaPro-Bold.ttf");
+  src: url("../Fonts/woff2Format/SofiaPro-Bold.woff2") format("woff2");
 }
 
 @font-face {
   font-family: SofiaPro-Regular;
-  src: url("../Fonts/Sofia-Pro/Sofia-Pro-Regular.ttf");
+  src: url("../Fonts/woff2Format/Sofia-Pro-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: SofiaPro-SemiBold;
-  src: url("../Fonts/Sofia-Pro/SofiaPro-SemiBold.ttf");
+  src: url("../Fonts/woff2Format/SofiaPro-SemiBold.woff2") format("woff2");
 }
 
 .about-container {
@@ -204,6 +184,15 @@
   padding-right: 10.41667vw;
 }
 
+.about-container .skillz-main-container .image-fix-1 .skillz-image {
+  width: 26.04167vw;
+  margin-top: -2.08333vw;
+}
+
+.about-container .skillz-main-container .image-fix-2 .skillz-image {
+  width: 19.79167vw;
+}
+
 .about-container .wave-container2 {
   margin-top: 15.625vw;
   position: relative;
@@ -238,41 +227,6 @@
   width: 80%;
   height: auto;
   margin: 0px auto;
-}
-
-.about-container .work-container {
-  width: 70vw;
-  height: 31.25vw;
-  margin: 0 auto;
-  background: url(../../Images/wine.png) #ff4338;
-  background-repeat: no-repeat;
-  background-size: 23%;
-  background-position: bottom center;
-  -webkit-box-shadow: 0 0 7.8125vw #000000a6;
-          box-shadow: 0 0 7.8125vw #000000a6;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 7.8125vw;
-  margin-bottom: 7.8125vw;
-}
-
-.about-container .work-container h3 {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  color: #fff;
-  font-family: SofiaPro-SemiBold;
-  text-align: center;
-  font-weight: normal;
-  font-size: 5vw;
-  letter-spacing: -1px;
 }
 
 @media screen and (max-width: 800px) {
@@ -438,6 +392,13 @@
     padding-left: 7.5vw;
     padding-right: 7.5vw;
   }
+  .about-container .skillz-main-container .image-fix-1 .skillz-image {
+    width: 62.5vw;
+    margin-top: -5vw;
+  }
+  .about-container .skillz-main-container .image-fix-2 .skillz-image {
+    width: 47.5vw;
+  }
   .about-container .wave-container2 {
     margin-top: 37.5vw;
     position: relative;
@@ -472,39 +433,6 @@
     width: 100%;
     height: auto;
     margin: 0px auto;
-  }
-  .about-container .work-container {
-    width: 100vw;
-    height: 75vw;
-    margin: 0 auto;
-    background: url(../../Images/wine.png) #ff4338;
-    background-repeat: no-repeat;
-    background-size: 23%;
-    background-position: bottom center;
-    -webkit-box-shadow: 0 0 18.75vw #000000a6;
-            box-shadow: 0 0 18.75vw #000000a6;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 18.75vw;
-    margin-bottom: 0vw;
-  }
-  .about-container .work-container h3 {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    color: #fff;
-    font-family: SofiaPro-SemiBold;
-    text-align: center;
-    font-weight: normal;
-    font-size: 8.75vw;
-    letter-spacing: -1px;
   }
 }
 /*# sourceMappingURL=AboutPage.css.map */

@@ -41,9 +41,8 @@ $mul: 100/800;
       margin: 0px auto;
       width: 900 * $desk + vw;
       height: 900 * $desk + vw;
-      border: #273040 solid 2px;
-      box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.2),
-        0 0 90px rgba(0, 0, 0, 0.8);
+      border: none;
+      box-shadow: none;
 
       background-color: none;
       animation: none;
@@ -114,7 +113,7 @@ $mul: 100/800;
     display: flex;
     align-self: center;
     justify-self: center;
-    z-index: 10;
+    z-index: 0;
     .plane {
       position: relative;
       width: 440 * $desk + vw;
@@ -165,7 +164,7 @@ $mul: 100/800;
     p {
       position: relative;
       margin: 0px auto;
-      color: #fff;
+      color: #7c8898;
       text-align: center;
       font-family: SofiaPro-Regular;
       font-weight: normal;
@@ -233,7 +232,9 @@ $mul: 100/800;
     z-index: -200;
   }
 }
-
+.hideme {
+  opacity: 0;
+}
 @media screen and (max-width: 800px) {
   .section-container {
     .background {
@@ -251,9 +252,8 @@ $mul: 100/800;
 
         width: 700 * $mul + vw;
         height: 700 * $mul + vw;
-        border: #273040 solid 2px;
-        box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.2),
-          0 0 90px rgba(0, 0, 0, 0.8);
+        border: none;
+        box-shadow: none;
 
         background-color: none;
         animation: none;
@@ -261,15 +261,15 @@ $mul: 100/800;
         .circle-small {
           position: absolute;
           animation: rotate 30s linear infinite;
-          width: 350 * $mul + vw;
-          height: 350 * $mul + vw;
+          width: 450 * $mul + vw;
+          height: 450 * $mul + vw;
           background-color: #00e5ea;
           z-index: -190;
         }
         .map {
           position: relative;
-          width: 520 * $mul + vw;
-          height: 420 * $mul + vw;
+          width: 620 * $mul + vw;
+          height: 520 * $mul + vw;
           // margin-top: -150 * $mul + vw;
           // margin-left: -150 * $mul + vw;
         }
@@ -324,6 +324,7 @@ $mul: 100/800;
       align-self: center;
       justify-self: center;
       z-index: 10;
+      display: none;
       .plane {
         position: relative;
         width: 380 * $mul + vw;
@@ -401,7 +402,7 @@ $mul: 100/800;
 
     .circle-2 {
       margin-top: 0 * $mul + vw;
-      margin-bottom: 300 * $mul + vw;
+      margin-bottom: 0 * $mul + vw;
       .circle-big {
         margin-top: 100 * $mul + vw;
       }

@@ -2,7 +2,7 @@
 //import $ from "jquery";
 const initialState = {
   sessionInfo: {
-    isAuthenticted: false,
+    firstLoad: false,
     // currentLoginEmail: "admin@test.com",
     // currentLoginRole: "Admin",
     // currentRoleKey: "0",
@@ -15,8 +15,9 @@ const reducer = (state = initialState, action) => {
   const newState = { ...state };
 
   switch (action.type) {
-    case "UpdateData": {
-      console.log(newState);
+    case "UpdateFirstLoad": {
+      newState.sessionInfo.firstLoad = action.value;
+      console.log("Updated firstLoad " + newState.firstLoad);
       break;
     }
 

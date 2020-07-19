@@ -2,20 +2,22 @@ import React from "react";
 import "./ContactPage.scss";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import contactplane from "../../Images/contactplane.png";
-import scroll2 from "../../Images/scroll2.svg";
-import splatterDark from "../../Images/splatterdark.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import Particle from "../Particle/Particle";
-import $ from "jquery";
+
+let contactplane =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/contactplane.png";
+let scroll2 =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/scroll2.svg";
+let splatterDark =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/splatterdark.png";
 
 class ContactPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { forgotPasswordPopupStatus: false };
   }
-  componentDidMount() {
-    $("window").scrollTop("0px");
-  }
+  componentDidMount() {}
 
   render() {
     return (
@@ -30,18 +32,19 @@ class ContactPage extends React.Component {
         </div>
         <div className="circle-section">
           <div className="splatter">
-            <img alt="Splatter Dark" src={splatterDark}></img>
+            <LazyLoadImage alt="Splatter Dark" src={splatterDark} />
           </div>
           <div className="circle-big">
             {/*Reference Website: https://codepen.io/FlorinPop17/pen/PooXqaQ */}
             <div className="blob-animation circle-small"></div>
-            <img
+            <LazyLoadImage
               className="contact-plane"
               alt="Contact Plane"
               src={contactplane}
-            ></img>
+            />
+
             <div className="scroll-arrow bounce">
-              <img src={scroll2} alt="Scroll Arrow"></img>
+              <LazyLoadImage src={scroll2} alt="Scroll Arrow" />
             </div>
             <div className="heading-container">
               <h1 className="type-wrap typed">Float me a note</h1>
@@ -60,28 +63,27 @@ class ContactPage extends React.Component {
           <form action="">
             <div className="contact-form-card">
               <div className="input-field float-left">
-                <input type="text" id="name" required autocomplete="off" />
-                <label for="name">What's your name?</label>
+                <input type="text" id="name" required autoComplete="off" />
+                <label htmlFor="name">What's your name?</label>
               </div>
               <div className="input-field float-right">
-                <input type="text" id="email" required autocomplete="off" />
-                <label for="email">What's your e-mail?</label>
+                <input type="text" id="email" required autoComplete="off" />
+                <label htmlFor="email">What's your e-mail?</label>
               </div>
               <div className="input-field-textarea float-left">
                 <textarea
                   type="text"
                   id="message"
                   required
-                  autocomplete="off"
-                  multiline
-                  onChangeText={(text) => this.setState({ text })}
+                  autoComplete="off"
+                  // onChangeText={(text) => this.setState({ text })}
                   value={this.state.text}
                 />
-                <label for="message ">What's your message?</label>
+                <label htmlFor="message ">What's your message?</label>
               </div>
               {/* <div className="input-field">
                 <input type="text" id="name" required />
-                <label for="name">What's your message?</label>
+                <label htmlFor="name">What's your message?</label>
               </div> */}
               <div className="send-button float-left">Send Message</div>
             </div>

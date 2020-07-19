@@ -1,0 +1,390 @@
+@import "../../CSS/color.scss";
+@import "../../CSS/font.scss";
+
+$desk: 100/1920;
+$mul: 100/800;
+.Morphlab-container {
+  position: absolute;
+  overflow-x: hidden;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  .background {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: #1b3ed3;
+
+    .line {
+      float: left;
+      margin-left: 16.5vw;
+      width: 1.5 * $desk + vw;
+      height: 100%;
+      background-color: #1c2330;
+      opacity: 0.1;
+    }
+    z-index: -2000;
+  }
+
+  .circle-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    .splatter {
+      position: absolute;
+      margin: -40 * $desk + vw auto;
+      width: 500 * $desk + vw;
+      height: 520 * $desk + vw;
+      z-index: -10;
+    }
+    .circle-big {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0px auto;
+      width: 900 * $desk + vw;
+      height: 900 * $desk + vw;
+
+      margin-top: -50 * $desk + vw;
+      z-index: 0;
+      .circle-small {
+        position: absolute;
+        animation: rotate 30s linear infinite;
+        width: 350 * $desk + vw;
+        height: 350 * $desk + vw;
+        background-color: #121822;
+        z-index: -5;
+        margin-left: 0 * $desk + vw;
+      }
+
+      .key {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: url(https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/key.png);
+        background-repeat: no-repeat;
+        background-size: 26%;
+        background-position: top center;
+      }
+    }
+
+    .scroll-arrow {
+      position: absolute;
+      margin: 0px auto;
+      bottom: 20 * $desk + vw;
+      width: 13 * $desk + vw;
+      height: 70 * $desk + vw;
+    }
+    .bounce {
+      -moz-animation: bounce 2s infinite;
+      -webkit-animation: bounce 2s infinite;
+      animation: bounce 2s infinite;
+    }
+    .heading-container {
+      position: absolute;
+      margin: 0 * $desk + vw auto;
+      z-index: 21;
+      .type-wrap {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        font-size: 9vw;
+        font-family: "SofiaPro-Bold";
+        font-weight: normal;
+        letter-spacing: -6 * $desk + vw;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+      }
+      /* the above is for styling puposes only */
+    }
+  }
+  .section-container {
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: auto;
+    position: relative;
+    overflow-x: hidden;
+    .background {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      background-color: #273040;
+      .line {
+        float: left;
+        margin-left: 16.5vw;
+        width: 1.5 * $desk + vw;
+        height: 100%;
+        background-color: #1c2330;
+        opacity: 1;
+      }
+      z-index: -2000;
+    }
+    .container {
+      position: relative;
+
+      width: 100vw;
+      height: auto;
+    }
+    .container-1 {
+      .outer-image {
+        position: relative;
+        background-size: cover;
+        background-position: center center;
+        width: 1006 * $desk + vw;
+        height: 870 * $desk + vw;
+        margin-top: 170 * $desk + vw;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url("https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/desktop.png");
+        z-index: 20;
+        .inner-image-1 {
+          position: absolute;
+
+          top: 61 * $desk + vw;
+          left: 32 * $desk + vw;
+          width: 944 * $desk + vw;
+          height: 540 * $desk + vw;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .work-info-container {
+        position: relative;
+
+        padding: 60 * $desk + vw;
+        padding-bottom: 70 * $desk + vw;
+        width: 1280 * $desk + vw;
+        margin: 0px auto;
+        margin-top: -190 * $desk + vw;
+
+        background-color: #273040bd;
+        box-shadow: 0 0 150 * $desk + vw #000000a6;
+        h2 {
+          color: #fff;
+          font-family: SofiaPro-SemiBold;
+          font-size: 4vw;
+          text-align: center;
+          margin-top: 130 * $desk + vw;
+          margin-bottom: 30 * $desk + vw;
+          letter-spacing: -1px;
+        }
+        p {
+          font-size: 25 * $desk + vw;
+          text-align: center;
+          line-height: 50 * $desk + vw;
+          color: #7c8898;
+          font-family: SofiaPro-Regular;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+  .wave-container {
+    margin-top: 80 * $desk + vw;
+    position: relative;
+    width: 100vw;
+    height: auto;
+    .wave {
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Morphlab-container {
+    position: absolute;
+    overflow-x: hidden;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    .background {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      .line {
+        float: left;
+        margin-left: 16.5vw;
+        width: 1.5 * $mul + vw;
+        height: 100%;
+        background-color: #1c2330;
+        opacity: 0.1;
+      }
+      z-index: -2000;
+    }
+
+    .circle-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      top: 0px;
+      left: 0px;
+      .splatter {
+        position: absolute;
+        margin: -40 * $mul + vw auto;
+        width: 500 * $mul + vw;
+        height: 520 * $mul + vw;
+        z-index: -10;
+      }
+      .circle-big {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px auto;
+        width: 900 * $mul + vw;
+        height: 900 * $mul + vw;
+
+        margin-top: -50 * $mul + vw;
+        z-index: 0;
+        .circle-small {
+          position: absolute;
+          animation: rotate 30s linear infinite;
+          width: 350 * $mul + vw;
+          height: 350 * $mul + vw;
+          background-color: #121822;
+          z-index: -5;
+          margin-left: 0 * $mul + vw;
+        }
+        .key {
+          background-size: 70%;
+        }
+      }
+
+      .scroll-arrow {
+        position: absolute;
+        margin: 0px auto;
+        bottom: 20 * $mul + vw;
+        width: 13 * $mul + vw;
+        height: 70 * $mul + vw;
+      }
+      .bounce {
+        -moz-animation: bounce 2s infinite;
+        -webkit-animation: bounce 2s infinite;
+        animation: bounce 2s infinite;
+      }
+      .heading-container {
+        position: absolute;
+        margin: 0 * $mul + vw auto;
+        z-index: 21;
+        .type-wrap {
+          position: relative;
+          width: 100%;
+          text-align: center;
+          font-size: 20vw;
+          font-family: "SofiaPro-Bold";
+          font-weight: normal;
+          letter-spacing: -6 * $mul + vw;
+          color: #fff;
+          width: 100%;
+          text-align: center;
+        }
+        /* the above is for styling puposes only */
+      }
+    }
+    .section-container {
+      top: 0px;
+      left: 0px;
+      width: 100vw;
+      height: auto;
+      position: relative;
+      .background {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        background-color: #273040;
+        .line {
+          float: left;
+          margin-left: 16.5vw;
+          width: 1.5 * $mul + vw;
+          height: 100%;
+          background-color: #1c2330;
+          opacity: 1;
+        }
+        z-index: -2000;
+      }
+      .container {
+        position: relative;
+
+        width: 100vw;
+        height: auto;
+      }
+      .container-1 {
+        .outer-image {
+          position: relative;
+          background-size: cover;
+          background-position: center center;
+          width: 756 * $mul + vw;
+          height: 620 * $mul + vw;
+          margin-top: 170 * $mul + vw;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 20;
+          .inner-image-1 {
+            position: absolute;
+
+            top: 40 * $mul + vw;
+            left: 43 * $mul + vw;
+            width: 680 * $mul + vw;
+            height: 390 * $mul + vw;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+
+        .work-info-container {
+          position: relative;
+
+          padding: 60 * $mul + vw;
+          padding-bottom: 70 * $mul + vw;
+          width: 100vw;
+          margin: 0px auto;
+          margin-top: -150 * $mul + vw;
+
+          background-color: #273040bd;
+          box-shadow: 0 0 150 * $mul + vw #000000a6;
+          h2 {
+            color: #fff;
+            font-family: SofiaPro-SemiBold;
+            font-size: 10vw;
+            text-align: center;
+            margin-top: 130 * $mul + vw;
+            margin-bottom: 30 * $mul + vw;
+            letter-spacing: -1px;
+          }
+          p {
+            font-size: 35 * $mul + vw;
+            text-align: center;
+            line-height: 70 * $mul + vw;
+            color: #7c8898;
+            font-family: SofiaPro-Regular;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+    .wave-container {
+      .wave {
+        width: 200%;
+      }
+    }
+  }
+}

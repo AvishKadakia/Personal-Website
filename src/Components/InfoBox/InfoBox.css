@@ -1,0 +1,497 @@
+@font-face {
+  font-family: MontserratRegular;
+  src: url("../Fonts/woff2Format/Montserrat-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: SofiaPro-Bold;
+  src: url("../Fonts/woff2Format/SofiaPro-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: SofiaPro-Regular;
+  src: url("../Fonts/woff2Format/Sofia-Pro-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: SofiaPro-SemiBold;
+  src: url("../Fonts/woff2Format/SofiaPro-SemiBold.woff2") format("woff2");
+}
+
+.info-box-outer-container {
+  position: relative;
+  width: 100%;
+  height: 31.77083vw;
+  z-index: 20;
+  padding-left: 5.20833vw;
+  padding-right: 5.20833vw;
+}
+
+.info-box-outer-container .info-box-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.info-box-outer-container .info-box-container .section-1 {
+  position: relative;
+  width: 50%;
+}
+
+.info-box-outer-container .info-box-container .section-1 .info-circle {
+  position: absolute;
+  width: 31.77083vw;
+  height: 31.77083vw;
+  background-color: #00e6ea;
+  -webkit-animation: rotate 30s linear infinite;
+          animation: rotate 30s linear infinite;
+  z-index: -20;
+}
+
+.info-box-outer-container .info-box-container .section-1 .outer-image {
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+}
+
+.info-box-outer-container .info-box-container .section-2 {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.info-box-outer-container .info-box-container .section-2 h3 {
+  position: relative;
+  color: #fff;
+  font-family: SofiaPro-SemiBold;
+  margin-top: 5.20833vw;
+  font-weight: normal;
+  font-size: 4.375vw;
+  line-height: 4.6875vw;
+  letter-spacing: -1px;
+}
+
+.info-box-outer-container .info-box-container .section-2 h4 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: SofiaPro-Bold;
+  margin-top: -3.38542vw;
+  width: 100%;
+  margin-bottom: 3.64583vw;
+  letter-spacing: 0.20833vw;
+  text-transform: uppercase;
+  color: #01b9c2;
+  font-size: 1.04167vw;
+}
+
+.info-box-outer-container .info-box-container .section-2 p {
+  position: relative;
+  margin: 0px auto;
+  color: #7c8898;
+  text-align: center;
+  font-family: SofiaPro-Regular;
+  font-weight: normal;
+  font-size: 1.45833vw;
+  line-height: 2.60417vw;
+  margin-top: -3.125vw;
+  width: 80%;
+}
+
+.info-box-outer-container .info-box-container .section-2 .workpagelink {
+  position: relative;
+}
+
+.info-box-outer-container .info-box-container .section-2 .workpagelink a {
+  color: #00e7ea;
+  text-decoration: underline;
+  padding-top: 25px;
+  display: block;
+  font-family: SofiaPro-SemiBold;
+  font-size: 23px;
+  text-decoration: underline;
+}
+
+.info-box-outer-container .left .section-1 {
+  padding-left: 2.60417vw;
+  float: left;
+}
+
+.info-box-outer-container .left .section-1 .info-circle {
+  left: 2.60417vw;
+}
+
+.info-box-outer-container .left .section-1 .outer-image {
+  left: 7.8125vw;
+  margin-top: 5.20833vw;
+}
+
+.info-box-outer-container .left .section-2 {
+  padding-right: 7.29167vw;
+  float: right;
+}
+
+.info-box-outer-container .left .section-2 h3 {
+  float: right;
+  text-align: right;
+}
+
+.info-box-outer-container .left .section-2 h4 {
+  float: right;
+  text-align: right;
+}
+
+.info-box-outer-container .left .section-2 p {
+  float: right;
+  text-align: right;
+}
+
+.info-box-outer-container .left .section-2 .workpagelink {
+  float: right;
+  text-align: right;
+}
+
+.info-box-outer-container .right .section-1 {
+  padding-right: 2.60417vw;
+  float: right;
+}
+
+.info-box-outer-container .right .section-1 .info-circle {
+  right: 2.60417vw;
+}
+
+.info-box-outer-container .right .section-1 .outer-image {
+  right: 7.8125vw;
+  margin-top: 5.20833vw;
+}
+
+.info-box-outer-container .right .section-2 {
+  padding-left: 7.29167vw;
+  float: left;
+}
+
+.info-box-outer-container .right .section-2 h3 {
+  float: left;
+  text-align: left;
+}
+
+.info-box-outer-container .right .section-2 h4 {
+  float: left;
+  text-align: left;
+}
+
+.info-box-outer-container .right .section-2 p {
+  float: left;
+  text-align: left;
+}
+
+.info-box-outer-container .right .section-2 .workpagelink {
+  float: left;
+  text-align: left;
+}
+
+.info-box-outer-container .desktop .outer-image {
+  width: 31.5625vw;
+  height: 24.47917vw;
+  background-image: url("https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/desktop.png");
+}
+
+.info-box-outer-container .desktop .outer-image .inner-image-1 {
+  position: absolute;
+  top: 0.88542vw;
+  left: 1.66667vw;
+  width: 28.33333vw;
+  height: 16.35417vw;
+}
+
+.info-box-outer-container .desktop .outer-image .inner-image-1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.info-box-outer-container .laptop .outer-image {
+  background-image: url("https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/laptop.png");
+  width: 34.11458vw;
+  height: 21.875vw;
+}
+
+.info-box-outer-container .laptop .inner-image-1 {
+  position: absolute;
+  top: 1.82292vw;
+  left: 4.42708vw;
+  width: 25.52083vw;
+  height: 15.98958vw;
+}
+
+.info-box-outer-container .laptop .inner-image-1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.info-box-outer-container .dual-mobile .outer-image {
+  background-image: url("https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/dual-mobile.png");
+  width: 31.25vw;
+  height: 28.22917vw;
+}
+
+.info-box-outer-container .dual-mobile .outer-image .inner-image-1 {
+  position: absolute;
+  top: 2.60417vw;
+  left: 2.1875vw;
+  width: 11.875vw;
+  height: 21.09375vw;
+}
+
+.info-box-outer-container .dual-mobile .outer-image .inner-image-1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.info-box-outer-container .dual-mobile .outer-image .inner-image-2 {
+  position: absolute;
+  top: 2.60417vw;
+  left: 17.1875vw;
+  width: 11.875vw;
+  height: 21.09375vw;
+}
+
+.info-box-outer-container .dual-mobile .outer-image .inner-image-2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.info-box-outer-container .tab-mobile .outer-image {
+  width: 35.67708vw;
+  height: 22.13542vw;
+  background-image: url("https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/tab-mobile.png");
+}
+
+.info-box-outer-container .tab-mobile .outer-image .inner-image-1 {
+  position: absolute;
+  top: 1.30208vw;
+  left: 3.75vw;
+  width: 23.64583vw;
+  height: 17.86458vw;
+  z-index: -1;
+}
+
+.info-box-outer-container .tab-mobile .outer-image .inner-image-1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.info-box-outer-container .tab-mobile .outer-image .inner-image-2 {
+  position: absolute;
+  top: 5.83333vw;
+  left: 27.13542vw;
+  width: 7.39583vw;
+  height: 12.96875vw;
+}
+
+.info-box-outer-container .tab-mobile .outer-image .inner-image-2 img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .info-box-outer-container {
+    position: relative;
+    width: 100%;
+    height: 101.25vw;
+    z-index: 20;
+    padding-left: 12.5vw;
+    padding-right: 0vw;
+  }
+  .info-box-outer-container .info-box-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .info-box-outer-container .info-box-container .section-1 {
+    position: relative;
+  }
+  .info-box-outer-container .info-box-container .section-1 .info-circle {
+    position: relative;
+    width: 76.25vw;
+    height: 76.25vw;
+    background-color: #00e6ea;
+    -webkit-animation: rotate 30s linear infinite;
+            animation: rotate 30s linear infinite;
+  }
+  .info-box-outer-container .info-box-container .section-1 .outer-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-position: center center;
+    background-size: cover;
+  }
+  .info-box-outer-container .info-box-container .section-2 {
+    position: relative;
+    height: 100%;
+  }
+  .info-box-outer-container .info-box-container .section-2 h3 {
+    position: relative;
+    color: #fff;
+    font-family: SofiaPro-SemiBold;
+    font-weight: normal;
+    font-size: 10.5vw;
+    line-height: 11.25vw;
+    letter-spacing: -1px;
+  }
+  .info-box-outer-container .info-box-container .section-2 h4 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: SofiaPro-Bold;
+    width: 100%;
+    margin-bottom: 8.75vw;
+    letter-spacing: 0.5vw;
+    text-transform: uppercase;
+    color: #01b9c2;
+    font-size: 2.5vw;
+  }
+  .info-box-outer-container .info-box-container .section-2 p {
+    position: relative;
+    margin: 0px auto;
+    color: #7c8898;
+    text-align: center;
+    font-family: SofiaPro-Regular;
+    font-weight: normal;
+    font-size: 4vw;
+    line-height: 6.25vw;
+    width: 85%;
+  }
+  .info-box-outer-container .right .section-1,
+  .info-box-outer-container .left .section-1 {
+    width: 100%;
+    padding-left: 0vw;
+    float: left;
+  }
+  .info-box-outer-container .right .section-1 .info-circle,
+  .info-box-outer-container .left .section-1 .info-circle {
+    left: 0vw;
+  }
+  .info-box-outer-container .right .section-1 .outer-image,
+  .info-box-outer-container .left .section-1 .outer-image {
+    left: 0vw;
+    margin-top: 12.5vw;
+  }
+  .info-box-outer-container .right .section-2,
+  .info-box-outer-container .left .section-2 {
+    width: 100%;
+    padding-right: 0vw;
+    padding-left: 0vw;
+    float: left;
+  }
+  .info-box-outer-container .right .section-2 h3,
+  .info-box-outer-container .left .section-2 h3 {
+    float: none;
+    margin: 12.5vw auto;
+    text-align: left;
+  }
+  .info-box-outer-container .right .section-2 h4,
+  .info-box-outer-container .left .section-2 h4 {
+    margin: -8.125vw auto;
+    text-align: left;
+  }
+  .info-box-outer-container .right .section-2 p,
+  .info-box-outer-container .left .section-2 p {
+    margin: -7.5vw 0;
+    float: none;
+    text-align: left;
+  }
+  .info-box-outer-container .right .section-2 .workpagelink,
+  .info-box-outer-container .left .section-2 .workpagelink {
+    margin: 6.25vw 0;
+    float: left;
+    text-align: left;
+  }
+  .info-box-outer-container .desktop .outer-image {
+    width: 75.75vw;
+    height: 58.75vw;
+    background-image: url("https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/desktop.png");
+  }
+  .info-box-outer-container .desktop .outer-image .inner-image-1 {
+    position: absolute;
+    top: 2.125vw;
+    left: 4vw;
+    width: 68vw;
+    height: 39.25vw;
+  }
+  .info-box-outer-container .desktop .outer-image .inner-image-1 img {
+    width: 100%;
+    height: 100%;
+  }
+  .info-box-outer-container .laptop .outer-image {
+    background-image: url("https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/laptop.png");
+    width: 81.875vw;
+    height: 52.5vw;
+  }
+  .info-box-outer-container .laptop .inner-image-1 {
+    position: absolute;
+    top: 4.375vw;
+    left: 10.625vw;
+    width: 61.25vw;
+    height: 38.375vw;
+  }
+  .info-box-outer-container .laptop .inner-image-1 img {
+    width: 100%;
+    height: 100%;
+  }
+  .info-box-outer-container .dual-mobile .outer-image {
+    background-image: url("https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/dual-mobile.png");
+    width: 75vw;
+    height: 67.75vw;
+  }
+  .info-box-outer-container .dual-mobile .outer-image .inner-image-1 {
+    position: absolute;
+    top: 6.25vw;
+    left: 5.25vw;
+    width: 28.5vw;
+    height: 50.625vw;
+  }
+  .info-box-outer-container .dual-mobile .outer-image .inner-image-1 img {
+    width: 100%;
+    height: 100%;
+  }
+  .info-box-outer-container .dual-mobile .outer-image .inner-image-2 {
+    position: absolute;
+    top: 6.25vw;
+    left: 41.25vw;
+    width: 28.5vw;
+    height: 50.625vw;
+  }
+  .info-box-outer-container .dual-mobile .outer-image .inner-image-2 img {
+    width: 100%;
+    height: 100%;
+  }
+  .info-box-outer-container .tab-mobile .outer-image {
+    width: 85.625vw;
+    height: 53.125vw;
+    background-image: url("https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/tab-mobile.png");
+  }
+  .info-box-outer-container .tab-mobile .outer-image .inner-image-1 {
+    position: absolute;
+    top: 3.125vw;
+    left: 9vw;
+    width: 56.75vw;
+    height: 42.875vw;
+    z-index: -1;
+  }
+  .info-box-outer-container .tab-mobile .outer-image .inner-image-1 img {
+    width: 100%;
+    height: 100%;
+  }
+  .info-box-outer-container .tab-mobile .outer-image .inner-image-2 {
+    position: absolute;
+    top: 14vw;
+    left: 65.125vw;
+    width: 17.75vw;
+    height: 31.125vw;
+  }
+  .info-box-outer-container .tab-mobile .outer-image .inner-image-2 img {
+    width: 100%;
+    height: 100%;
+  }
+}
+/*# sourceMappingURL=InfoBox.css.map */

@@ -73,6 +73,7 @@ $mul: 100/800;
           right: 5 * $desk + vw;
           height: 85 * $desk + vw;
           width: 85 * $desk + vw;
+          cursor: pointer;
           .bubble-wrap {
             background-color: transparent;
             height: 100%;

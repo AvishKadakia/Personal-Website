@@ -1,0 +1,28 @@
+@font-face {
+  font-family: MontserratRegular;
+  src: url("../Fonts/woff2Format/Montserrat-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: SofiaPro-Bold;
+  src: url("../Fonts/woff2Format/SofiaPro-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: SofiaPro-Regular;
+  src: url("../Fonts/woff2Format/Sofia-Pro-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: SofiaPro-SemiBold;
+  src: url("../Fonts/woff2Format/SofiaPro-SemiBold.woff2") format("woff2");
+}
+
+.particle-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=Particle.css.map */

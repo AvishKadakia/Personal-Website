@@ -1,41 +1,25 @@
 @font-face {
   font-family: MontserratRegular;
-  src: url("../Fonts/Montserrat/Montserrat-Regular.ttf");
-}
-
-@font-face {
-  font-family: MontserratMedium;
-  src: url("../Fonts/Montserrat/Montserrat-Medium.ttf");
-}
-
-@font-face {
-  font-family: MontserratThin;
-  src: url("../Fonts/Montserrat/Montserrat-Thin.ttf");
-}
-
-@font-face {
-  font-family: MontserratLight;
-  src: url("../Fonts/Montserrat/Montserrat-Light.ttf");
-}
-
-@font-face {
-  font-family: MontserratBold;
-  src: url("../Fonts/Montserrat/Montserrat-Bold.ttf");
+  src: url("../Fonts/woff2Format/Montserrat-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: SofiaPro-Bold;
-  src: url("../Fonts/Sofia-Pro/SofiaPro-Bold.ttf");
+  src: url("../Fonts/woff2Format/SofiaPro-Bold.woff2") format("woff2");
 }
 
 @font-face {
   font-family: SofiaPro-Regular;
-  src: url("../Fonts/Sofia-Pro/Sofia-Pro-Regular.ttf");
+  src: url("../Fonts/woff2Format/Sofia-Pro-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: SofiaPro-SemiBold;
-  src: url("../Fonts/Sofia-Pro/SofiaPro-SemiBold.ttf");
+  src: url("../Fonts/woff2Format/SofiaPro-SemiBold.woff2") format("woff2");
+}
+
+:root {
+  --br-blobby: 50%;
 }
 
 body {
@@ -43,6 +27,7 @@ body {
   margin: 0 !important;
   width: 100%;
   height: auto;
+  cursor: none;
 }
 
 img {
@@ -53,6 +38,34 @@ img {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.cursor {
+  position: fixed;
+  background-color: transparent;
+  width: 1.78571vw;
+  height: 1.78571vw;
+  border: 2px solid #000;
+  border-radius: 95% 89% 78% 71% / 91% 70% 84%;
+  z-index: 10000;
+  -webkit-transition: 0.5s, top 0s, left 0s !important;
+  transition: 0.5s, top 0s, left 0s !important;
+  -webkit-animation: cursorAnim 0.5s infinite alternate;
+          animation: cursorAnim 0.5s infinite alternate;
+  pointer-events: none;
+}
+
+.link-animate {
+  width: 3.57143vw;
+  height: 3.57143vw;
+  border: 2px solid #fff;
+  background-color: #fff;
+  mix-blend-mode: exclusion;
+}
+
+input,
+textarea {
+  cursor: none;
 }
 
 .blob-animation {
@@ -82,10 +95,11 @@ textarea {
 
 a {
   text-decoration: none;
+  cursor: none;
 }
 
 a span {
-  cursor: pointer;
+  cursor: none;
 }
 
 .float-left {
@@ -115,6 +129,50 @@ a span {
   100% {
     -webkit-transform: rotate(359deg);
             transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes cursorAnim {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
+
+@keyframes cursorAnim {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
+
+@-webkit-keyframes cursorAnim2 {
+  from {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  to {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+}
+
+@keyframes cursorAnim2 {
+  from {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  to {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
   }
 }
 
@@ -216,6 +274,18 @@ a span {
     margin: 0 !important;
     width: 100%;
     padding-top: 6.875vw;
+    cursor: context-menu;
+  }
+  a,
+  .send-message {
+    cursor: pointer;
+  }
+  input,
+  textarea {
+    cursor: text;
+  }
+  .cursor {
+    display: none;
   }
   .hide-mobile {
     display: none;

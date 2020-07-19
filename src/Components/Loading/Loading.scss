@@ -1,0 +1,82 @@
+@import "../../CSS/color.scss";
+@import "../../CSS/font.scss";
+
+$desk: 100/1920;
+$mul: 100/800;
+.Loading-container {
+  position: fixed;
+  z-index: 30000;
+  width: 100vw;
+  height: 110vh;
+  top: 0px;
+  left: 0px;
+  background-color: #1a202b;
+  transition: all 1s ease-in;
+
+  .loader-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    margin: -50px auto 0;
+    .logo {
+      animation: spin-1 2s infinite linear;
+    }
+  }
+}
+.pageTransition-container {
+  .page-transition {
+    position: fixed;
+    z-index: 30000;
+    visibility: visible;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    background-color: #000;
+
+    .loading-bar {
+      position: fixed;
+      z-index: 2;
+      left: 50%;
+      top: 50%;
+      height: 4 * $desk + vw;
+      width: 30vw;
+      opacity: 1;
+      background-color: #273040;
+      // transform: translateZ(0);
+      transform: translateX(-50%) translateY(-50%);
+      border-radius: 10 * $desk + vw;
+    }
+  }
+}
+@keyframes spin-1 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .pageTransition-container {
+    .page-transition {
+      .loading-bar {
+        height: 6 * $desk + vw;
+        width: 30vw;
+      }
+    }
+  }
+}

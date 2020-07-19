@@ -1,13 +1,16 @@
 @import "./font";
 @import "./color";
+@import "./mixins";
 $desk: 100/1400;
 $mul: 100/800;
+:root {
+  --br-blobby: 50%;
+}
 body {
   overflow-x: hidden;
   margin: 0 !important;
   width: 100%;
   height: auto;
-  cursor: none;
 }
 img {
   width: 100%;
@@ -38,7 +41,7 @@ img {
 }
 input,
 textarea {
-  cursor: none;
+  cursor: pointer;
 }
 // .link-animate::after {
 //   content: "";
@@ -74,9 +77,9 @@ textarea {
 }
 a {
   text-decoration: none;
-  cursor: none;
+  cursor: pointer;
   span {
-    cursor: none;
+    cursor: pointer;
   }
 }
 .float-left {
@@ -168,8 +171,20 @@ a {
     margin: 0 !important;
     width: 100%;
     padding-top: 55 * $mul + vw;
+    cursor: context-menu;
+  }
+  a,
+  .send-message {
+    cursor: pointer;
+  }
+  input,
+  textarea {
+    cursor: text;
   }
 
+  .cursor {
+    display: none;
+  }
   .hide-mobile {
     display: none;
   }

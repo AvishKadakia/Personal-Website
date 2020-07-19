@@ -1,0 +1,58 @@
+@import "../../CSS/color.scss";
+@import "../../CSS/font.scss";
+
+$desk: 100/1920;
+$mul: 100/800;
+.WebViewcontainer {
+  position: relative;
+  width: 70%;
+  height: auto;
+  margin: 100 * $desk + vw auto;
+  display: flex;
+  flex-direction: column;
+  .webScreen {
+    width: 98%;
+    height: auto;
+    overflow: auto;
+    float: left;
+    padding: 0 * $desk + vw;
+    margin: 0;
+    background-color: #273040f2;
+    box-shadow: 0 0 10 * $desk + vw #000000a6;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 4%;
+
+    img {
+      width: 100%;
+      height: auto;
+      overflow: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .WebViewcontainer {
+    position: relative;
+    width: 70%;
+    height: auto;
+    margin: 0px auto;
+    .webScreen {
+      width: 98%;
+      height: auto;
+      overflow: auto;
+      float: left;
+      padding: 0 * $mul + vw;
+      margin: 0;
+      background-color: #273040f2;
+      box-shadow: none;
+      margin-left: 1%;
+      margin-right: 1%;
+      margin-bottom: 50 * $mul + vw;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

@@ -31,6 +31,7 @@ $mul: 100/800;
     justify-content: center;
     align-items: center;
     position: absolute;
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
     top: 0px;
@@ -150,7 +151,7 @@ $mul: 100/800;
         font-weight: normal;
         font-size: 30 * $desk + vw;
         letter-spacing: -1px;
-        cursor: none;
+        cursor: pointer;
         transition: 0.2s all;
       }
       input {

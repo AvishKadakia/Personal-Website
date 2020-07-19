@@ -6,7 +6,7 @@ $mul: 100/800;
   position: relative;
   width: 100%;
   height: 410 * $desk + vw;
-  margin-bottom: 100 * $desk + vw;
+  margin-bottom: 200 * $desk + vw;
   //background-color: red;
   .skillz-container {
     position: relative;
@@ -58,10 +58,10 @@ $mul: 100/800;
       text-align: center;
       font-family: SofiaPro-Regular;
       font-weight: normal;
-      font-size: 25 * $desk + vw;
+      font-size: 22 * $desk + vw;
       line-height: 44 * $desk + vw;
       margin-top: -30 * $desk + vw;
-      width: 90%;
+      width: 85%;
     }
   }
   .left {
@@ -154,7 +154,7 @@ $mul: 100/800;
         padding: 0;
         position: relative;
         font-family: SofiaPro-Bold;
-        margin-top: -65 * $mul + vw;
+        margin-top: -35 * $mul + vw;
 
         margin-bottom: 70 * $mul + vw;
         letter-spacing: 4 * $mul + vw;
@@ -175,7 +175,8 @@ $mul: 100/800;
         width: 100%;
       }
     }
-    .left {
+    .left,
+    .right {
       float: left;
       .skillz-circle {
         float: left;
@@ -195,28 +196,6 @@ $mul: 100/800;
       p {
         float: left;
         text-align: left;
-      }
-    }
-    .right {
-      float: right;
-      .skillz-circle {
-        float: right;
-        right: 0px;
-      }
-      .skillz-image {
-        float: right;
-      }
-      h3 {
-        float: right;
-        text-align: right;
-      }
-      h4 {
-        float: right;
-        text-align: right;
-      }
-      p {
-        float: right;
-        text-align: right;
       }
     }
   }

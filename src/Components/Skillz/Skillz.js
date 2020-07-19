@@ -1,14 +1,10 @@
 import React from "react";
 import "./Skillz.scss";
 import { connect } from "react-redux";
-import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 class Skillz extends React.Component {
-  componentDidMount() {
-    AOS.init();
-  }
+  componentDidMount() {}
 
   render() {
     let desk = 100 / 1920;
@@ -27,11 +23,11 @@ class Skillz extends React.Component {
         >
           <div className="blob-animation skillz-circle"></div>
           <div data-aos="fade-in" className="skillz-image">
-            <img
+            <LazyLoadImage
               data-aos="fade-in"
               src={this.props.src}
               alt={this.props.alt}
-            ></img>
+            />
           </div>
           <h3 data-aos="fade-in">{this.props.title}</h3>
           {this.props.label !== undefined ? (

@@ -1,40 +1,20 @@
 @font-face {
   font-family: MontserratRegular;
-  src: url("../Fonts/Montserrat/Montserrat-Regular.ttf");
-}
-
-@font-face {
-  font-family: MontserratMedium;
-  src: url("../Fonts/Montserrat/Montserrat-Medium.ttf");
-}
-
-@font-face {
-  font-family: MontserratThin;
-  src: url("../Fonts/Montserrat/Montserrat-Thin.ttf");
-}
-
-@font-face {
-  font-family: MontserratLight;
-  src: url("../Fonts/Montserrat/Montserrat-Light.ttf");
-}
-
-@font-face {
-  font-family: MontserratBold;
-  src: url("../Fonts/Montserrat/Montserrat-Bold.ttf");
+  src: url("../Fonts/woff2Format/Montserrat-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: SofiaPro-Bold;
-  src: url("../Fonts/Sofia-Pro/SofiaPro-Bold.ttf");
+  src: url("../Fonts/woff2Format/SofiaPro-Bold.woff2") format("woff2");
 }
 
 @font-face {
   font-family: SofiaPro-Regular;
-  src: url("../Fonts/Sofia-Pro/Sofia-Pro-Regular.ttf");
+  src: url("../Fonts/woff2Format/Sofia-Pro-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: SofiaPro-SemiBold;
-  src: url("../Fonts/Sofia-Pro/SofiaPro-SemiBold.ttf");
+  src: url("../Fonts/woff2Format/SofiaPro-SemiBold.woff2") format("woff2");
 }
 /*# sourceMappingURL=font.css.map */

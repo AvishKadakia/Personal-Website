@@ -1,0 +1,92 @@
+@import "../../CSS/color.scss";
+@import "../../CSS/font.scss";
+
+$desk: 100/1920;
+$mul: 100/800;
+.WorkContainer {
+  height: auto;
+  overflow: auto;
+  .work-container {
+    width: 70vw;
+    height: 600 * $desk + vw;
+    margin: 0 auto;
+
+    box-shadow: 0 0 150 * $desk + vw #000000a6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150 * $desk + vw;
+    margin-bottom: 150 * $desk + vw;
+    h3 {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      text-align: center;
+      color: #fff;
+      font-family: SofiaPro-SemiBold;
+      text-align: center;
+      font-weight: normal;
+      font-size: 5vw;
+      letter-spacing: -1px;
+      a {
+      }
+    }
+  }
+  .bottle {
+    background: url(https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/wine2.png)
+      #ffad37;
+    background-repeat: no-repeat;
+    background-size: 23%;
+    background-position: bottom center;
+  }
+  .hand {
+    background: url(https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/hand2.png)
+      #00ed86;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: left 70%;
+  }
+  .key {
+    background: url(https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/key.png)
+      #1b3ed3;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: top center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .WorkContainer {
+    .work-container {
+      width: 100vw;
+      height: 500 * $mul + vw;
+      margin: 0 auto;
+      box-shadow: 0 0 150 * $mul + vw #000000a6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 150 * $mul + vw;
+      margin-bottom: 0 * $mul + vw;
+      h3 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        color: #fff;
+        font-family: SofiaPro-SemiBold;
+        text-align: center;
+        font-weight: normal;
+        font-size: 70 * $mul + vw;
+        letter-spacing: -1px;
+      }
+    }
+    .bottle {
+      background-size: 50%;
+    }
+    .hand {
+      background-size: 80%;
+    }
+    .key {
+      background-size: 50%;
+    }
+  }
+}

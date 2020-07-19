@@ -3,34 +3,45 @@ import "./AboutPage.scss";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import Skillz from "../Skillz/Skillz";
-import selfImage from "../../Images/self-image1.png";
-import splatter from "../../Images/splatter.png";
-import plane from "../../Images/plane.png";
-import wave from "../../Images/wave.png";
-import wave2 from "../../Images/wave2.png";
-import diploma from "../../Images/diploma.png";
-import skillz1 from "../../Images/skillz2.png";
-import graduation from "../../Images/graduation.png";
-import companylogocollage from "../../Images/companylogocollage.png";
+
 import Particle from "../Particle/Particle";
+import WorkContainer from "../WorkContainer/WorkContainer";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
-import $ from "jquery";
-
+let selfImage =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/self-image1.png";
+let splatter =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/splatter.png";
+let plane =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/plane.png";
+let wave =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/wave.png";
+let wave2 =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/wave2.png";
+let diploma =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/diploma.png";
+let skillz1 =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/skillz2.png";
+let microphone =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/skillz1.png";
+let graduation =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/graduation.png";
+let companylogocollage =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/companylogocollage1.png";
 class AboutPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { forgotPasswordPopupStatus: false };
   }
-  componentDidMount() {
-    $("window").scrollTop("0px");
-  }
+  componentDidMount() {}
 
   render() {
     return (
       <div className={"about-container  " + this.props.className}>
         <div className="background">
-          <Particle lineColor="#00e5ea"></Particle>
-
+          {window.innerWidth > 800 ? (
+            <Particle lineColor="#00e5ea"></Particle>
+          ) : null}
           <div className="line" id="line1"></div>
           <div className="line" id="line2"></div>
           <div className="line" id="line3"></div>
@@ -39,24 +50,24 @@ class AboutPage extends React.Component {
         </div>
         <div className="circle-section">
           <div className="splatter">
-            <img alt="Splatter" src={splatter}></img>
+            <LazyLoadImage alt="Splatter" src={splatter} />
           </div>
           <div className="blob-animation circle-big">
             {/*Reference Website: https://codepen.io/FlorinPop17/pen/PooXqaQ */}
-            <img
+            <LazyLoadImage
               className="selfImage"
               alt="Avish Potrait"
               src={selfImage}
-            ></img>
+            />
           </div>
-          <div class="heading-container">
-            <h1 class="type-wrap typed">Hello,</h1>
+          <div className="heading-container">
+            <h1 className="type-wrap typed">Hello,</h1>
           </div>
         </div>
         <div className="plane-container">
-          <img className="plane" alt="Home Page Plane" src={plane}></img>
+          <LazyLoadImage className="plane" alt="Home Page Plane" src={plane} />
         </div>
-        <div class="about-me-container">
+        <div className="about-me-container">
           <h2 data-aos="fade-in">I develop things that people use</h2>
           <p data-aos="fade-in">
             I live and breathe all things digital. Currently, I head up the
@@ -68,19 +79,18 @@ class AboutPage extends React.Component {
             agency. I have been developing software products since past 7 years.
             I began my career working as a junior software developer for{" "}
             <a href="https://maqsoftware.com/">
-              <span className="sky-blue">MAQ </span>
+              <span className="sky-blue">MAQ Software </span>
             </a>{" "}
             &nbsp;before switching to work for a startup&nbsp;
             <a href="https://devomark.com/">
               <span className="sky-blue">Devomark</span>
             </a>{" "}
             &nbsp;, and more importantly, learning a love for a new level of
-            creativity and experimentation. Since than I have been hooked on
-            everything technical
+            creativity and experimentation.
           </p>
         </div>
         <div className="wave-container">
-          <img className="wave" alt="Home Page Wave" src={wave}></img>
+          <LazyLoadImage className="wave" alt="Home Page Wave" src={wave} />
         </div>
         <div className="skillz-main-container">
           <Skillz
@@ -90,58 +100,79 @@ class AboutPage extends React.Component {
             className="left"
             label="June 2002 - March 2018"
           >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. I
+            Technology has been a subject of interest for me since my childhood
+            (Must have been all those video games). So at a very early age I had
+            decided that I wanted to pursure a career developing these
+            technologies . As a result I went on to get a Diploma &amp;
+            Bachelor's Degree in Computer Engineering. After completing my
+            Bachelor's Degree I decided to get some practical experience and
+            decided to get a job.
           </Skillz>
           <Skillz
             src={diploma}
             alt="Diploma"
-            title="First Job"
+            title="Maq Software"
             className="right image-fix-1"
-            label="2012-2015"
+            label="August 2018 - Februrary 2019"
           >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. I
+            After completing my Bachelor's degree I joined Maq Software as a
+            Junior S\W Developer. At MAQ software I had a chance to work under
+            great mentors and gained a lot of industry knowledge. The learning
+            curve was very steep being a fresher but given software development
+            is one of my biggest passions, I was quickly able to overcome the
+            challenges and became an integral part of the project teams. My
+            project managers on multiple occasions had commended me for the
+            same.
           </Skillz>
           <Skillz
             src={graduation}
             alt="Bucket"
-            title="First Startup"
+            title="Devomark Digital Agency"
             className="left image-fix-2"
-            label="2015-2018"
+            label="March 2018 - October 2019"
           >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. I.{" "}
+            After I left MAQ software I had an oppurtunity to work as a project
+            manager for Devomark. Given my previous experience as a software
+            engineer it was quite challenging to lead entire project teams, plan
+            project architecture, achieve milestone and deliver on time as well.
+            But with perseverance and hard work I was able to rise up to the
+            challenge and was often praised by the organization’s upper
+            management for the same.
+          </Skillz>
+          <Skillz
+            src={microphone}
+            alt="Microphone"
+            title="Profero Techno"
+            className="right "
+            label="November 2019 - Present"
+          >
+            Working at Profero Techno has greatly improved my communication
+            skills as a project manager due to constant interaction with
+            clients. This has helped me understand and bridge the gap between
+            the client's expectations and the technological barrier in
+            implementing them greatly. Being a project manager at a company with
+            such a large product suite is very challenging at times and has
+            greatly pushed my mental as well and physical capabilities. But it
+            has been a great learning experience so far.
           </Skillz>
         </div>
         <div className="wave-container2">
-          <img className="wave" alt="Home Page Wave2" src={wave2}></img>
+          <LazyLoadImage className="wave" alt="Home Page Wave2" src={wave2} />
         </div>
         <div className="experience-container">
-          <h3>I've had the pleasure of working at:</h3>
+          <h3>I've had the pleasure of working with:</h3>
           <div className="experience-logo-container">
-            <img src={companylogocollage} alt="Companies Logo collage" />
+            <LazyLoadImage
+              src={companylogocollage}
+              alt="Companies Logo collage"
+            />
           </div>
         </div>
-        <a className="link" href="/formdesk">
-          <div className="work-container">
-            <a className="link" href="/formdesk">
-              <h3>Check out my work</h3>
-            </a>
-          </div>
-        </a>
+        <WorkContainer
+          link="/devomark"
+          className="bottle"
+          title="Check out my work"
+        ></WorkContainer>
       </div>
     );
   }

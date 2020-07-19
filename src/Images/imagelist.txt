@@ -1,0 +1,71 @@
+  <link rel="preload" href="bg-image-narrow.png" as="image">" as="image">
+
+
+
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753251/personal%20website/Images/work-lb-background.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753250/personal%20website/Images/XavBoysAcaMumbai.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753250/personal%20website/Images/wine2.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753250/personal%20website/Images/wine.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753250/personal%20website/Images/whatsapp-icon.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753250/personal%20website/Images/splatter.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753250/personal%20website/Images/wave.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753250/personal%20website/Images/wave2.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/tab-mobile.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/VIT.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/splatterdark.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/skillz3.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/skillz2.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/skillz1.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753248/personal%20website/Images/scroll2.svg" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753248/personal%20website/Images/scroll.svg" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753248/personal%20website/Images/self-image1.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753248/personal%20website/Images/plane.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753246/personal%20website/Images/logo2.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753246/personal%20website/Images/logo.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753246/personal%20website/Images/key.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753246/personal%20website/Images/laptop.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753246/personal%20website/Images/linkden-icon.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753246/personal%20website/Images/insta-icon.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753245/personal%20website/Images/india-map.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753245/personal%20website/Images/hand2.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753245/personal%20website/Images/hand.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753245/personal%20website/Images/graduation.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753243/personal%20website/Images/dual-mobile.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753243/personal%20website/Images/fb-icon.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753243/personal%20website/Images/fb-icon.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753242/personal%20website/Images/diploma.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753241/personal%20website/Images/desktop.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753240/personal%20website/Images/contactplane.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753240/personal%20website/Images/cv-icon.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753239/personal%20website/Images/bubble3.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753239/personal%20website/Images/bubble2.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753239/personal%20website/Images/bubble5.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753239/personal%20website/Images/companylogo1.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753239/personal%20website/Images/bubble4.png" as="image">
+<link rel="preload" href="https://res.cloudinary.com/dleeu99na/image/upload/v1593753238/personal%20website/Images/bubble1.png" as="image">
+
+
+
+
+
+<link
+      rel="preload"
+      href="./static/media/SofiaPro-Bold.05428692.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./static/media/Sofia-Pro-Regular.65e0f064.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./static/media/SofiaPro-SemiBold.42441faa.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />

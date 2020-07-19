@@ -1,0 +1,485 @@
+@import "../../CSS/color.scss";
+@import "../../CSS/font.scss";
+$desk: 100/1920;
+$mul: 100/800;
+.info-box-outer-container {
+  position: relative;
+  width: 100%;
+  height: 610 * $desk + vw;
+  z-index: 20;
+  padding-left: 100 * $desk + vw;
+  padding-right: 100 * $desk + vw;
+  .info-box-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .section-1 {
+      position: relative;
+      width: 50%;
+
+      .info-circle {
+        position: absolute;
+        width: 610 * $desk + vw;
+        height: 610 * $desk + vw;
+        background-color: #00e6ea;
+        animation: rotate 30s linear infinite;
+        z-index: -20;
+      }
+      .outer-image {
+        position: absolute;
+
+        background-size: cover;
+        //margin: 0 * $desk + vw auto;
+
+        background-position: center center;
+
+        // margin-left: -150 * $desk + vw;
+      }
+    }
+
+    .section-2 {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      //background-color: green;
+      h3 {
+        position: relative;
+        color: #fff;
+        font-family: SofiaPro-SemiBold;
+        margin-top: 100 * $desk + vw;
+        font-weight: normal;
+        font-size: 84 * $desk + vw;
+        line-height: 90 * $desk + vw;
+        letter-spacing: -1px;
+      }
+      h4 {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        font-family: SofiaPro-Bold;
+        margin-top: -65 * $desk + vw;
+        width: 100%;
+        margin-bottom: 70 * $desk + vw;
+        letter-spacing: 4 * $desk + vw;
+        text-transform: uppercase;
+        color: #01b9c2;
+        font-size: 20 * $desk + vw;
+      }
+      p {
+        position: relative;
+        margin: 0px auto;
+        color: #7c8898;
+        text-align: center;
+        font-family: SofiaPro-Regular;
+        font-weight: normal;
+        font-size: 23 * $desk + vw;
+        line-height: 50 * $desk + vw;
+        margin-top: -60 * $desk + vw;
+        width: 80%;
+      }
+      .workpagelink {
+        position: relative;
+        a {
+          color: #00e7ea;
+          text-decoration: underline;
+          padding-top: 25px;
+          display: block;
+          font-family: SofiaPro-SemiBold;
+          font-size: 23px;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .left {
+    .section-1 {
+      padding-left: 50 * $desk + vw;
+
+      float: left;
+      .info-circle {
+        left: 50 * $desk + vw;
+      }
+      .outer-image {
+        left: 150 * $desk + vw;
+        margin-top: 100 * $desk + vw;
+      }
+    }
+    .section-2 {
+      padding-right: 140 * $desk + vw;
+      float: right;
+      h3 {
+        float: right;
+        text-align: right;
+      }
+      h4 {
+        float: right;
+        text-align: right;
+      }
+      p {
+        float: right;
+        text-align: right;
+      }
+      .workpagelink {
+        float: right;
+        text-align: right;
+      }
+    }
+  }
+  .right {
+    .section-1 {
+      padding-right: 50 * $desk + vw;
+      float: right;
+      .info-circle {
+        right: 50 * $desk + vw;
+      }
+      .outer-image {
+        right: 150 * $desk + vw;
+        margin-top: 100 * $desk + vw;
+      }
+    }
+    .section-2 {
+      padding-left: 140 * $desk + vw;
+      float: left;
+      h3 {
+        float: left;
+        text-align: left;
+      }
+      h4 {
+        float: left;
+        text-align: left;
+      }
+      p {
+        float: left;
+        text-align: left;
+      }
+      .workpagelink {
+        float: left;
+        text-align: left;
+      }
+    }
+  }
+  .desktop {
+    .outer-image {
+      width: 606 * $desk + vw;
+      height: 470 * $desk + vw;
+      background-image: url("https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/desktop.png");
+      .inner-image-1 {
+        position: absolute;
+
+        top: 17 * $desk + vw;
+        left: 32 * $desk + vw;
+        width: 544 * $desk + vw;
+        height: 314 * $desk + vw;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .laptop {
+    .outer-image {
+      background-image: url("https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/laptop.png");
+      width: 655 * $desk + vw;
+      height: 420 * $desk + vw;
+    }
+    .inner-image-1 {
+      position: absolute;
+
+      top: 35 * $desk + vw;
+      left: 85 * $desk + vw;
+      width: 490 * $desk + vw;
+      height: 307 * $desk + vw;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .dual-mobile {
+    .outer-image {
+      background-image: url("https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/dual-mobile.png");
+      width: 600 * $desk + vw;
+      height: 542 * $desk + vw;
+      .inner-image-1 {
+        position: absolute;
+
+        top: 50 * $desk + vw;
+        left: 42 * $desk + vw;
+        width: 228 * $desk + vw;
+        height: 405 * $desk + vw;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .inner-image-2 {
+        position: absolute;
+
+        top: 50 * $desk + vw;
+        left: 330 * $desk + vw;
+        width: 228 * $desk + vw;
+        height: 405 * $desk + vw;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .tab-mobile {
+    .outer-image {
+      width: 685 * $desk + vw;
+      height: 425 * $desk + vw;
+      background-image: url("https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/tab-mobile.png");
+
+      .inner-image-1 {
+        position: absolute;
+
+        top: 25 * $desk + vw;
+        left: 72 * $desk + vw;
+        width: 454 * $desk + vw;
+        height: 343 * $desk + vw;
+        z-index: -1;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .inner-image-2 {
+        position: absolute;
+
+        top: 112 * $desk + vw;
+        left: 521 * $desk + vw;
+        width: 142 * $desk + vw;
+        height: 249 * $desk + vw;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .info-box-outer-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    //background-color: blue;
+    z-index: 20;
+    padding-top: 50 * $mul + vw;
+    margin-top: 50 * $mul + vw;
+    margin-left: 50 * $mul + vw;
+    padding-right: 0 * $mul + vw;
+    padding-bottom: 70 * $mul + vw;
+    .info-box-container {
+      position: relative;
+      width: 90%;
+      height: 90%;
+      .section-1 {
+        position: relative;
+
+        .info-circle {
+          position: relative;
+          width: 610 * $mul + vw;
+          height: 610 * $mul + vw;
+          background-color: #00e6ea;
+          animation: rotate 30s linear infinite;
+        }
+        .outer-image {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+
+          //margin: 0 * $mul + vw auto;
+
+          background-position: center center;
+          background-size: cover;
+        }
+      }
+      .section-2 {
+        position: relative;
+        height: 100%;
+        //background-color: green;
+        h3 {
+          position: relative;
+          color: #fff;
+          font-family: SofiaPro-SemiBold;
+          font-weight: normal;
+          font-size: 84 * $mul + vw;
+          line-height: 90 * $mul + vw;
+          letter-spacing: -1px;
+        }
+        h4 {
+          margin: 0;
+          padding: 0;
+          position: relative;
+          font-family: SofiaPro-Bold;
+          width: 100%;
+          margin-bottom: 70 * $mul + vw;
+          letter-spacing: 4 * $mul + vw;
+          text-transform: uppercase;
+          color: #01b9c2;
+          font-size: 20 * $mul + vw;
+        }
+        p {
+          position: relative;
+          margin: 0px auto;
+          color: #7c8898;
+          text-align: center;
+          font-family: SofiaPro-Regular;
+          font-weight: normal;
+          font-size: 32 * $mul + vw;
+          line-height: 50 * $mul + vw;
+          width: 85%;
+        }
+      }
+    }
+    .right,
+    .left {
+      .section-1 {
+        width: 100%;
+        padding-left: 0 * $mul + vw;
+
+        float: left;
+        .info-circle {
+          left: 0 * $mul + vw;
+        }
+        .outer-image {
+          left: 0 * $mul + vw;
+          margin-top: 100 * $mul + vw;
+        }
+      }
+      .section-2 {
+        width: 100%;
+        padding-right: 0 * $mul + vw;
+        padding-left: 0 * $mul + vw;
+        float: left;
+        h3 {
+          float: none;
+          margin: 100 * $mul + vw auto;
+          text-align: left;
+        }
+        h4 {
+          margin: -65 * $mul + vw auto;
+          text-align: left;
+        }
+        p {
+          margin: -60 * $mul + vw 0;
+          float: none;
+          text-align: left;
+        }
+        .workpagelink {
+          margin: 50 * $mul + vw 0;
+          float: left;
+          text-align: left;
+        }
+      }
+    }
+    .desktop {
+      .outer-image {
+        width: 606 * $mul + vw;
+        height: 470 * $mul + vw;
+        background-image: url("https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/desktop.png");
+        .inner-image-1 {
+          position: absolute;
+
+          top: 17 * $mul + vw;
+          left: 32 * $mul + vw;
+          width: 544 * $mul + vw;
+          height: 314 * $mul + vw;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+    .laptop {
+      .outer-image {
+        background-image: url("https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/laptop.png");
+        width: 655 * $mul + vw;
+        height: 420 * $mul + vw;
+      }
+      .inner-image-1 {
+        position: absolute;
+
+        top: 35 * $mul + vw;
+        left: 85 * $mul + vw;
+        width: 490 * $mul + vw;
+        height: 307 * $mul + vw;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .dual-mobile {
+      .outer-image {
+        background-image: url("https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/dual-mobile.png");
+        width: 600 * $mul + vw;
+        height: 542 * $mul + vw;
+        .inner-image-1 {
+          position: absolute;
+
+          top: 50 * $mul + vw;
+          left: 42 * $mul + vw;
+          width: 228 * $mul + vw;
+          height: 405 * $mul + vw;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .inner-image-2 {
+          position: absolute;
+
+          top: 50 * $mul + vw;
+          left: 330 * $mul + vw;
+          width: 228 * $mul + vw;
+          height: 405 * $mul + vw;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+    .tab-mobile {
+      .outer-image {
+        width: 685 * $mul + vw;
+        height: 425 * $mul + vw;
+        background-image: url("https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/tab-mobile.png");
+
+        .inner-image-1 {
+          position: absolute;
+
+          top: 25 * $mul + vw;
+          left: 72 * $mul + vw;
+          width: 454 * $mul + vw;
+          height: 343 * $mul + vw;
+          z-index: -1;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .inner-image-2 {
+          position: absolute;
+
+          top: 112 * $mul + vw;
+          left: 521 * $mul + vw;
+          width: 142 * $mul + vw;
+          height: 249 * $mul + vw;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
