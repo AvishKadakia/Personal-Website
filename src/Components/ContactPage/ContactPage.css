@@ -55,6 +55,7 @@
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
   top: 0px;
@@ -193,7 +194,7 @@
   font-weight: normal;
   font-size: 1.5625vw;
   letter-spacing: -1px;
-  cursor: none;
+  cursor: pointer;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }

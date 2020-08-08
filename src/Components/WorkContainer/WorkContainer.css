@@ -18,6 +18,11 @@
   src: url("../Fonts/woff2Format/SofiaPro-SemiBold.woff2") format("woff2");
 }
 
+.WorkContainer {
+  height: auto;
+  overflow: auto;
+}
+
 .WorkContainer .work-container {
   width: 70vw;
   height: 31.25vw;

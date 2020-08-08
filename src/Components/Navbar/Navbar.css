@@ -93,6 +93,7 @@
   right: 0.26042vw;
   height: 4.42708vw;
   width: 4.42708vw;
+  cursor: pointer;
 }
 
 .navigation-container .navbar .rightBar .navbar-container .hamburger .bubble-wrap {

@@ -73,9 +73,9 @@
   margin: 0px auto;
   width: 46.875vw;
   height: 46.875vw;
-  border: #273040 solid 2px;
-  -webkit-box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.2), 0 0 90px rgba(0, 0, 0, 0.8);
-          box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.2), 0 0 90px rgba(0, 0, 0, 0.8);
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: none;
   -webkit-animation: none;
           animation: none;
@@ -155,7 +155,7 @@
   -ms-flex-item-align: center;
       align-self: center;
   justify-self: center;
-  z-index: 10;
+  z-index: 0;
 }
 
 .section-container .plane-container .plane {
@@ -281,6 +281,10 @@
   z-index: -200;
 }
 
+.hideme {
+  opacity: 0;
+}
+
 @media screen and (max-width: 800px) {
   .section-container .circle-section {
     width: 100%;
@@ -291,9 +295,9 @@
     margin-top: 41.25vw;
     width: 87.5vw;
     height: 87.5vw;
-    border: #273040 solid 2px;
-    -webkit-box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.2), 0 0 90px rgba(0, 0, 0, 0.8);
-            box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.2), 0 0 90px rgba(0, 0, 0, 0.8);
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     background-color: none;
     -webkit-animation: none;
             animation: none;
@@ -303,15 +307,15 @@
     position: absolute;
     -webkit-animation: rotate 30s linear infinite;
             animation: rotate 30s linear infinite;
-    width: 43.75vw;
-    height: 43.75vw;
+    width: 56.25vw;
+    height: 56.25vw;
     background-color: #00e5ea;
     z-index: -190;
   }
   .section-container .circle-section .circle-big .map {
     position: relative;
-    width: 65vw;
-    height: 52.5vw;
+    width: 77.5vw;
+    height: 65vw;
   }
   .section-container .circle-section .heading-container {
     position: absolute;
@@ -364,6 +368,7 @@
         align-self: center;
     justify-self: center;
     z-index: 10;
+    display: none;
   }
   .section-container .plane-container .plane {
     position: relative;
@@ -439,7 +444,7 @@
   }
   .section-container .circle-2 {
     margin-top: 0vw;
-    margin-bottom: 37.5vw;
+    margin-bottom: 0vw;
   }
   .section-container .circle-2 .circle-big {
     margin-top: 12.5vw;

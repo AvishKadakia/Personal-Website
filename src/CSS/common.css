@@ -27,7 +27,6 @@ body {
   margin: 0 !important;
   width: 100%;
   height: auto;
-  cursor: none;
 }
 
 img {
@@ -65,7 +64,7 @@ img {
 
 input,
 textarea {
-  cursor: none;
+  cursor: pointer;
 }
 
 .blob-animation {
@@ -95,11 +94,11 @@ textarea {
 
 a {
   text-decoration: none;
-  cursor: none;
+  cursor: pointer;
 }
 
 a span {
-  cursor: none;
+  cursor: pointer;
 }
 
 .float-left {

@@ -45,30 +45,13 @@
 
 .pageTransition-container .page-transition {
   position: fixed;
-  z-index: 3000;
-  visibility: hidden;
-}
-
-.pageTransition-container .page-transition .top-box {
-  position: fixed;
-  height: 50vh;
+  z-index: 30000;
+  visibility: visible;
   width: 100vw;
+  height: 100vh;
+  top: 0px;
   left: 0px;
-  top: -50vh;
   background-color: #000;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-.pageTransition-container .page-transition .bottom-box {
-  position: fixed;
-  height: 50vh;
-  width: 100vw;
-  left: 0px;
-  bottom: -50vh;
-  background-color: #000;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
 }
 
 .pageTransition-container .page-transition .loading-bar {
@@ -77,12 +60,9 @@
   left: 50%;
   top: 50%;
   height: 0.20833vw;
-  visibility: visible;
   width: 30vw;
   opacity: 1;
   background-color: #273040;
-  -webkit-backface-visibility: visible;
-          backface-visibility: visible;
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   border-radius: 0.52083vw;
@@ -131,11 +111,6 @@
 }
 
 @media screen and (max-width: 800px) {
-  .pageTransition-container .page-transition {
-    position: fixed;
-    z-index: 3000;
-    visibility: hidden;
-  }
   .pageTransition-container .page-transition .loading-bar {
     height: 0.3125vw;
     width: 30vw;

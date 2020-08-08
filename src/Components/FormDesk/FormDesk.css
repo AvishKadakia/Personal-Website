@@ -148,6 +148,7 @@
   width: 100vw;
   height: auto;
   position: relative;
+  overflow-x: hidden;
 }
 
 .FormDesk-container .section-container .background {

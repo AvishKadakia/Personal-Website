@@ -148,6 +148,7 @@
   width: 100vw;
   height: auto;
   position: relative;
+  overflow-x: hidden;
 }
 
 .Morphlab-container .section-container .background {
