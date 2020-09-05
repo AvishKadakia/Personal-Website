@@ -278,8 +278,6 @@ class Navbar extends React.Component {
                 <a
                   href="https://res.cloudinary.com/dleeu99na/image/upload/v1593752865/personal%20website/Documents/Resume_qivxp9.pdf"
                   download="Avish Kadakia Resume"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   <img src={cvIcon} alt="Resume" />
                 </a>
