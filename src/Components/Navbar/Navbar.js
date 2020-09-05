@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 //import $ from "jquery";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import resume from "../../Documents/Resume.pdf";
 // import ReactGA from "react-ga";
 // import auth from "./auth.ts"; // Sample authentication provider
 
@@ -25,6 +26,7 @@ let linkdenIcon =
   "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/linkden-icon.png";
 let instaIcon =
   "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/insta-icon.png";
+
 function setBorderRadius() {
   var slides = document.getElementsByClassName("blob-animation");
   for (var i = 0; i < slides.length; i++) {
@@ -275,10 +277,7 @@ class Navbar extends React.Component {
                 </a>
               </div>
               <div className="social-media-icon">
-                <a
-                  href="https://res.cloudinary.com/dleeu99na/image/upload/v1593752865/personal%20website/Documents/Resume_qivxp9.pdf"
-                  download="Avish Kadakia Resume"
-                >
+                <a href="https://drive.google.com/file/d/110JBa4-rnZ5b0_rIMxGMr8joAJltyPeX/view?usp=sharing">
                   <img src={cvIcon} alt="Resume" />
                 </a>
               </div>
