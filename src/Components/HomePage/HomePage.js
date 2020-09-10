@@ -55,8 +55,8 @@ class HomePage extends React.Component {
   componentDidMount() {
     new Typed("#typed", {
       strings: [
-        "Programmer",
-        "Full Stack Developer",
+        "Web Developer",
+        "Full Stack Dev",
         "Philosopher",
         "Entrepreneur",
       ],

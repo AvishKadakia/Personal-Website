@@ -41,10 +41,11 @@ $mul: 100/800;
       margin: 0px auto;
       width: 900 * $desk + vw;
       height: 900 * $desk + vw;
-      border: none;
-      box-shadow: none;
+      border: #273040 solid 2px;
+      box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.2),
+        0 0 90px rgba(0, 0, 0, 0.8);
 
-      background-color: none;
+      background-color: transparent;
       animation: none;
       margin-top: -50 * $desk + vw;
       z-index: -200;
@@ -248,7 +249,7 @@ $mul: 100/800;
 
       .circle-big {
         margin: 100 * $mul + vw auto;
-        margin-top: 330 * $mul + vw;
+        margin-top: 200 * $mul + vw;
 
         width: 700 * $mul + vw;
         height: 700 * $mul + vw;
