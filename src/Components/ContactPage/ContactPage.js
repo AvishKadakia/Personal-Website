@@ -18,7 +18,11 @@ class ContactPage extends React.Component {
     this.state = { forgotPasswordPopupStatus: false };
   }
   componentDidMount() {}
-
+  sendEmail() {
+    alert(
+      "Email service are temporarily down. Please feel free to contact me over whatsapp at +91 7977905493 or you can send an email me directly at avishkadakia1996@gmail.com"
+    );
+  }
   render() {
     return (
       <div className={"contact-container  " + this.props.className}>
@@ -85,7 +89,12 @@ class ContactPage extends React.Component {
                 <input type="text" id="name" required />
                 <label htmlFor="name">What's your message?</label>
               </div> */}
-              <div className="send-button float-left">Send Message</div>
+              <div
+                className="send-button float-left"
+                onClick={() => this.sendEmail()}
+              >
+                Send Message
+              </div>
             </div>
           </form>
         </div>
