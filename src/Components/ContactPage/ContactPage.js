@@ -20,7 +20,7 @@ class ContactPage extends React.Component {
   componentDidMount() {}
   sendEmail() {
     alert(
-      "Email service are temporarily down. Please feel free to contact me over whatsapp at +91 7977905493 or you can send an email me directly at avishkadakia1996@gmail.com"
+      "Email service are temporarily down. Please feel free to get in touch with me using whatsapp(+91 7977905493) or email(avishkadakia1996@gmail.com)"
     );
   }
   render() {
