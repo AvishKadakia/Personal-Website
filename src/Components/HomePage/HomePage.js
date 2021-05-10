@@ -160,8 +160,8 @@ class HomePage extends React.Component {
           <h2 data-aos="fade-in">Hello, I'm Avish</h2>
           <p data-aos="fade-in">
             I create beautiful things, that make a difference. I turn ideas into
-            reality. Innovation &amp; creativy are at the heart of everything I
-            do. I strive to acheive perfection in every task I undertake.
+            reality. Innovation &amp; creativity are at the heart of everything
+            I do. I strive to achieve perfection in every task I undertake.
             {/* Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
