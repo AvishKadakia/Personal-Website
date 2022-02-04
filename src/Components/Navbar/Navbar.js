@@ -26,7 +26,8 @@ let linkdenIcon =
   "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/linkden-icon.png";
 let instaIcon =
   "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/insta-icon.png";
-
+let githubIcon =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1644012485/personal%20website/Images/githubicon.png";
 function setBorderRadius() {
   var slides = document.getElementsByClassName("blob-animation");
   for (var i = 0; i < slides.length; i++) {
@@ -277,7 +278,16 @@ class Navbar extends React.Component {
                 </a>
               </div>
               <div className="social-media-icon">
-                <a href="https://drive.google.com/file/d/110JBa4-rnZ5b0_rIMxGMr8joAJltyPeX/view?usp=sharing">
+                <a
+                  href="https://github.com/AvishKadakia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={githubIcon} alt="Github Icon" />
+                </a>
+              </div>
+              <div className="social-media-icon">
+                <a href="https://drive.google.com/file/d/1vJ1lScuyHxB3h36IgE3QVSZO-C3A-5Kx/view?usp=sharing">
                   <img src={cvIcon} alt="Resume" />
                 </a>
               </div>

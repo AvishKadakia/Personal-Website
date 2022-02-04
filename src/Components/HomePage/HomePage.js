@@ -54,12 +54,7 @@ class HomePage extends React.Component {
   }
   componentDidMount() {
     new Typed("#typed", {
-      strings: [
-        "Web Developer",
-        "Full Stack Dev",
-        "Philosopher",
-        "Entrepreneur",
-      ],
+      strings: ["ML Dev OPS", "Full Stack Dev", "Entrepreneur"],
       typeSpeed: 50,
       startDelay: 0,
       backSpeed: 30,

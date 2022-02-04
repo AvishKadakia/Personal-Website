@@ -105,8 +105,11 @@ $mul: 100/800;
       }
     }
     .section-2 {
-      padding-right: 140 * $desk + vw;
+      //padding-right: 140 * $desk + vw;
       float: right;
+      display: flex;
+      flex-direction: column;
+      margin-right: 20px;
       h3 {
         float: right;
         text-align: right;
@@ -118,6 +121,7 @@ $mul: 100/800;
       p {
         float: right;
         text-align: right;
+        margin-right: 0px;
       }
       .workpagelink {
         float: right;
@@ -138,6 +142,8 @@ $mul: 100/800;
       }
     }
     .section-2 {
+      display: flex;
+      flex-direction: column;
       padding-left: 140 * $desk + vw;
       float: left;
       h3 {
@@ -151,6 +157,7 @@ $mul: 100/800;
       p {
         float: left;
         text-align: left;
+        margin-left: 0px;
       }
       .workpagelink {
         float: left;
