@@ -3,7 +3,7 @@ import "./AboutPage.scss";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import Skillz from "../Skillz/Skillz";
-
+import Footer from "../Footer/Footer";
 import Particle from "../Particle/Particle";
 import WorkContainer from "../WorkContainer/WorkContainer";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -173,6 +173,7 @@ class AboutPage extends React.Component {
           className="bottle"
           title="Check out my work"
         ></WorkContainer>
+        <Footer />
       </div>
     );
   }

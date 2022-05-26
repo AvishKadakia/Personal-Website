@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import Skillz from "../Skillz/Skillz";
 import Particle from "../Particle/Particle";
 import InfoBox from "../InfoBox/InfoBox";
+import Footer from "../Footer/Footer";
 import Typed from "typed.js";
 import $ from "jquery";
 // ..
@@ -330,6 +331,7 @@ class HomePage extends React.Component {
         <div className="bubble5">
           <LazyLoadImage alt="Bubble Effect 5" src={bubble5} />
         </div>
+        <Footer />
       </div>
     );
   }

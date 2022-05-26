@@ -8,6 +8,7 @@ import WorkContainer from "../WorkContainer/WorkContainer";
 import Pallette from "../Pallette/Pallette";
 import MobileView from "../MobileView/MobileView";
 import WebView from "../WebView/WebView";
+
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 let logo =
