@@ -98,7 +98,7 @@ class AboutPage extends React.Component {
             alt="Book"
             title="Education"
             className="left"
-            label="June 2002 - March 2018"
+            label="May 2022"
           >
             Technology has been a subject of interest for me since my childhood
             (Must have been all those video games). So at a very early age I had
@@ -106,7 +106,8 @@ class AboutPage extends React.Component {
             technologies . As a result I went on to get a Diploma &amp;
             Bachelor's Degree in Computer Engineering. After completing my
             Bachelor's Degree I decided to get some practical experience and
-            decided to get a job.
+            decided to get a job. I have also recently completed my Master's in
+            computer science from Lakehead University Canada
           </Skillz>
           <Skillz
             src={diploma}
@@ -129,7 +130,7 @@ class AboutPage extends React.Component {
             alt="Bucket"
             title="Devomark Digital Agency"
             className="left image-fix-2"
-            label="March 2018 - October 2019"
+            label="March 2019 - October 2019"
           >
             After I left MAQ software I had an oppurtunity to work as a project
             manager for Devomark. Given my previous experience as a software
@@ -144,7 +145,7 @@ class AboutPage extends React.Component {
             alt="Microphone"
             title="Profero Techno"
             className="right "
-            label="November 2019 - Present"
+            label="November 2019 - November 2021"
           >
             Working at Profero Techno has greatly improved my communication
             skills as a project manager due to constant interaction with
