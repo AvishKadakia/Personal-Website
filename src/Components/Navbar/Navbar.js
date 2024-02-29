@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 //import $ from "jquery";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
-import resume from "../../Documents/Resume.pdf";
+import resume from "../../Documents/[Resume] Avish_Kadakia .pdf";
 // import ReactGA from "react-ga";
 // import auth from "./auth.ts"; // Sample authentication provider
 
