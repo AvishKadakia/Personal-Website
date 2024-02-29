@@ -22,8 +22,8 @@ let logo =
   "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/logo2.png";
 let WhatsappIcon =
   "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/whatsapp-icon.png";
-let linkdenIcon =
-  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/linkden-icon.png";
+let linkedinIcon =
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/linkedin-icon.png";
 let instaIcon =
   "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/insta-icon.png";
 let githubIcon =
@@ -274,7 +274,7 @@ class Navbar extends React.Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={linkdenIcon} alt="Linkden Icon" />
+                  <img src={linkedinIcon} alt="linkedin Icon" />
                 </a>
               </div>
               <div className="social-media-icon">
@@ -287,7 +287,7 @@ class Navbar extends React.Component {
                 </a>
               </div>
               <div className="social-media-icon">
-                <a href="https://drive.google.com/file/d/1RnjpD8VUjXjOO0hnCjDbZRMEqkAG-pWi/view?usp=sharing">
+                <a href="https://drive.google.com/file/d/1PW_VulnFbX6Ak3vBm4e3a_lOgU8NRfGR/view?usp=sharing">
                   <img src={cvIcon} alt="Resume" />
                 </a>
               </div>
