@@ -23,7 +23,7 @@ let logo =
 let WhatsappIcon =
   "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/whatsapp-icon.png";
 let linkedinIcon =
-  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/linkedin-icon.png";
+  "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/linkden-icon.png";
 let instaIcon =
   "https://res.cloudinary.com/dleeu99na/image/upload/v1593753249/personal%20website/Images/insta-icon.png";
 let githubIcon =
