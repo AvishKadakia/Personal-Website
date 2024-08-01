@@ -66,6 +66,7 @@ class Navbar extends React.Component {
           link.onclick = (e) => {
             e.preventDefault();
             console.log(link);
+// ################
             if (window.location.href !== link.getAttribute("href")) {
               document
                 .querySelector(".page-transition")
@@ -163,9 +164,9 @@ class Navbar extends React.Component {
         <div className="navbar">
           <div className="leftBar">
             <div className="navLink left-navLink">
-              <Link className="link" href="/about">
+              <a className="link" href="/about">
                 About Me
-              </Link>
+              </a>
             </div>
             <div className="copyright">
               <h4>&#169; Avish Kadakia {this.getYear()}</h4>
