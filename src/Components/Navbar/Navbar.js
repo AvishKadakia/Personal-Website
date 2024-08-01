@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.scss";
-import { connect,Link } from "react-redux";
+import { connect} from "react-redux";
+import {Link} from "react-router-dom";
 //import $ from "jquery";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
