@@ -1,10 +1,11 @@
 import React from "react";
 import "./Navbar.scss";
-import { connect } from "react-redux";
+import { connect,Link } from "react-redux";
 //import $ from "jquery";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import resume from "../../Documents/[Resume] Avish_Kadakia .pdf";
+
 // import ReactGA from "react-ga";
 // import auth from "./auth.ts"; // Sample authentication provider
 
@@ -199,17 +200,17 @@ class Navbar extends React.Component {
                     </a>
                   </div>
                   <div className="nav-item">
-                    <a className="link" href="/about">
+                    <Link className="link" href="/about">
                       My Story
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="nav-column double-column">
                   <h2 className="nav-title">Work</h2>
                   <div className="nav-item float-left">
-                    <a className="link" href="/devomark">
+                    <Link className="link" href="/devomark">
                       Devomark
-                    </a>
+                    </Link>
                   </div>
                   <div className="nav-item float-right">
                     <a className="link" href="/savrai">
