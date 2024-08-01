@@ -52,7 +52,7 @@ function App() {
             getCookie("loadedOnce") !== "True" ? (
               <Loading layout="1" />
             ) : (
-              <Loading layout="2" />
+              null
             )
           }
         >
