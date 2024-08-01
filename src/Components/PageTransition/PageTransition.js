@@ -17,6 +17,8 @@ class PageTransition extends React.Component {
     } else {
       document.querySelector(".page-transition-2").style.visibility = "hidden";
       document.querySelector(".page-transition").style.visibility = "hidden";
+      document.querySelector(".page-transition-2").classList.remove("active");
+      document.querySelector(".page-transition").classList.remove("active");
     }
 
     var els = document.querySelectorAll(
