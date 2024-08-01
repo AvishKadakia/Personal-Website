@@ -16,7 +16,7 @@ class PageTransition extends React.Component {
       localStorage.setItem("loadingNewPage", false);
     } else {
       document.querySelector(".page-transition-2").style.visibility = "hidden";
-      ddocument.querySelector(".page-transition").style.visibility = "hidden";
+      document.querySelector(".page-transition").style.visibility = "hidden";
     }
 
     var els = document.querySelectorAll(
