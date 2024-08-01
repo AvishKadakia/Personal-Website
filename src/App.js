@@ -60,7 +60,8 @@ function App() {
           {getCookie("loadedOnce") !== "True" ? <Loading layout="1" /> : null}
 
           <Navbar />
-          <PageTransition />
+          {getCookie("loadedOnce") !== "True" ? <PageTransition /> : null}
+          
           <Switch>
             <Route path="/" exact>
               <HomePage />
