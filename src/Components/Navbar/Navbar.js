@@ -164,9 +164,9 @@ class Navbar extends React.Component {
         <div className="navbar">
           <div className="leftBar">
             <div className="navLink left-navLink">
-              <a className="link" href="/about">
+              <Link className="link" href="/about">
                 About Me
-              </a>
+              </Link>
             </div>
             <div className="copyright">
               <h4>&#169; Avish Kadakia {this.getYear()}</h4>
