@@ -64,8 +64,8 @@ class Navbar extends React.Component {
       navLinks.forEach((link) => {
         if (link.classList.contains("link")) {
           link.onclick = (e) => {
-            e.preventDefault();
-            console.log(link);
+            // e.preventDefault();
+            // console.log(link);
 // ################
             if (window.location.href !== link.getAttribute("href")) {
               document
