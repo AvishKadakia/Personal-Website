@@ -29,7 +29,7 @@ class Page404 extends React.Component {
               <div className="blob-animation circle-small"></div>
 
               <div className="heading-container">
-                <h1 className="type-wrap typed">Coming Soon.</h1>
+                <h1 className="type-wrap typed">{this.props.message}</h1>
               </div>
             </div>
           </div>

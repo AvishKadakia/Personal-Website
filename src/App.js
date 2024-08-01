@@ -64,7 +64,10 @@ function App() {
           
           <Switch>
             <Route path="/" exact>
-              <HomePage />
+              <HomePage index/>
+              <Route path="*" >
+              <Page404 message="Page Not Found"/>
+              </Route>
             </Route>
             <Route path="/contact" exact>
               <ContactPage />
@@ -76,10 +79,10 @@ function App() {
               <FormDesk />
             </Route>
             <Route path="/savrai" exact>
-              <Page404 />
+              <Page404 message="Coming Soon"/>
             </Route>
             <Route path="/rlagent" exact>
-              <Page404 />
+              <Page404 message="Coming Soon"/>
             </Route>
             <Route path="/morphlab" exact>
               <Morphlab />
@@ -87,9 +90,7 @@ function App() {
             <Route path="/devomark" exact>
               <Devomark />
             </Route>
-            <Route path="*" >
-              <Page404 />
-            </Route>
+            
           </Switch>
         </Suspense>
       </BrowserRouter>
