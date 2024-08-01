@@ -10,7 +10,7 @@ import React, { Suspense, lazy } from "react";
 // import FormDesk from "./Components/FormDesk/FormDesk";
 // import Devomark from "./Components/Devomark/Devomark";
 import Loading from "./Components/Loading/Loading";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import "./CSS/common.scss";
 
@@ -46,7 +46,7 @@ function App() {
           renders the first one that matches the current URL. */}
       {/* <Loading></Loading> */}
 
-      <HashRouter>
+      <BrowserRouter>
         <Suspense
           fallback={
             getCookie("loadedOnce") !== "True" ? (
@@ -92,7 +92,7 @@ function App() {
               </Route>
           </Switch>
         </Suspense>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }
