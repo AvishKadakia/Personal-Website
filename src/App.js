@@ -87,7 +87,7 @@ function App() {
             <Route path="/devomark" exact>
               <Devomark />
             </Route>
-            <Route path="*" exact>
+            <Route path="*" >
               <Page404 />
             </Route>
           </Switch>
