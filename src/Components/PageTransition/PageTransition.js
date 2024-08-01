@@ -11,7 +11,7 @@ class PageTransition extends React.Component {
     if (localStorage.getItem("loadingNewPage") === "true") {
       setTimeout(function () {
         document.querySelector(".page-transition-2").classList.toggle("active");
-      }, 100);
+      }, 500);
       localStorage.setItem("loadingNewPage", false);
     } else {
       document.querySelector(".page-transition-2").style.visibility = "hidden";
