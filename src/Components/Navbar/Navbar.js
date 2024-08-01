@@ -1,7 +1,6 @@
 import React from "react";
 import "./Navbar.scss";
 import { connect} from "react-redux";
-import {Link} from "react-router-dom";
 //import $ from "jquery";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
@@ -201,17 +200,17 @@ class Navbar extends React.Component {
                     </a>
                   </div>
                   <div className="nav-item">
-                    <Link className="link" href="/about">
+                    <a className="link" href="/about">
                       My Story
-                    </Link>
+                    </a>
                   </div>
                 </div>
                 <div className="nav-column double-column">
                   <h2 className="nav-title">Work</h2>
                   <div className="nav-item float-left">
-                    <Link className="link" href="/devomark">
+                    <a className="link" href="/devomark">
                       Devomark
-                    </Link>
+                    </a>
                   </div>
                   <div className="nav-item float-right">
                     <a className="link" href="/savrai">
