@@ -66,7 +66,6 @@ class Navbar extends React.Component {
           link.onclick = (e) => {
             e.preventDefault();
             console.log(link);
-
             if (window.location.href !== link.getAttribute("href")) {
               document
                 .querySelector(".page-transition")
