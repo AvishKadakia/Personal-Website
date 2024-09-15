@@ -27,7 +27,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-      public_url: /
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -39,7 +38,7 @@ jobs:
         with:
           node-version: "12.18.0"
       - run: yarn install
-      - run: CI=false npm run build
+      - run: CI=false PUBLIC_URL=/ npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
