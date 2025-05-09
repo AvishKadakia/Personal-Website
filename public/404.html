@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      // Store the full path the user tried to access, including the search query and hash
+      const path = location.pathname + location.search + location.hash;
+
+      // Store it in sessionStorage before redirecting
+      // Using sessionStorage ensures it's available only for the next page load
+      sessionStorage.redirect = path;
+
+      // Redirect to the root (index.html) using the meta tag
+      // Using replace ensures the 404 page isn't added to the browser history
+    </script>
+    <meta http-equiv="refresh" content="0;URL='/'">
+  </head>
+  <body>
+    <p>If you are not redirected automatically, follow this <a href='/'>link to the homepage</a>.</p>
+  </body>
+</html>
