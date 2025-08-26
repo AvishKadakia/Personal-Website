@@ -287,7 +287,7 @@ class Navbar extends React.Component {
                 </a>
               </div>
               <div className="social-media-icon">
-                <a href="https://drive.google.com/file/d/1xhsv8GzkNCf4iUmyoLUx_NJTXLOWhS5V/view?usp=sharing">
+                <a href="https://drive.google.com/file/d/1x01M8V3sbEpNstHxveQQzWlokLafNQxi/view?usp=sharing">
                   <img src={cvIcon} alt="Resume" />
                 </a>
               </div>
